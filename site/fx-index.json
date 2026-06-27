@@ -1,7 +1,7 @@
 {
   "name": "fx-lab",
   "version": "0.1.0",
-  "homepage": "https://rosuh.github.io/fx-lab/",
+  "homepage": "https://rosuh.me/fx-lab/",
   "sections": [
     {
       "id": "generative",
@@ -103,7 +103,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/gradient.md",
+      "url": "https://rosuh.me/fx-lab/effects/gradient.md",
       "preview": null
     },
     {
@@ -144,7 +144,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/dots.md",
+      "url": "https://rosuh.me/fx-lab/effects/dots.md",
       "preview": null
     },
     {
@@ -185,7 +185,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/metaballs.md",
+      "url": "https://rosuh.me/fx-lab/effects/metaballs.md",
       "preview": null
     },
     {
@@ -226,7 +226,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/aurora.md",
+      "url": "https://rosuh.me/fx-lab/effects/aurora.md",
       "preview": null
     },
     {
@@ -267,7 +267,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/ripple.md",
+      "url": "https://rosuh.me/fx-lab/effects/ripple.md",
       "preview": null
     },
     {
@@ -308,7 +308,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/voronoi.md",
+      "url": "https://rosuh.me/fx-lab/effects/voronoi.md",
       "preview": null
     },
     {
@@ -348,7 +348,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/truchet.md",
+      "url": "https://rosuh.me/fx-lab/effects/truchet.md",
       "preview": null
     },
     {
@@ -388,7 +388,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/kaleido.md",
+      "url": "https://rosuh.me/fx-lab/effects/kaleido.md",
       "preview": null
     },
     {
@@ -429,7 +429,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/raymarch.md",
+      "url": "https://rosuh.me/fx-lab/effects/raymarch.md",
       "preview": null
     },
     {
@@ -470,7 +470,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/vapor.md",
+      "url": "https://rosuh.me/fx-lab/effects/vapor.md",
       "preview": null
     },
     {
@@ -511,7 +511,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/glitch.md",
+      "url": "https://rosuh.me/fx-lab/effects/glitch.md",
       "preview": null
     },
     {
@@ -554,7 +554,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/field.md",
+      "url": "https://rosuh.me/fx-lab/effects/field.md",
       "preview": null
     },
     {
@@ -594,7 +594,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/seigaiha.md",
+      "url": "https://rosuh.me/fx-lab/effects/seigaiha.md",
       "preview": null
     },
     {
@@ -634,7 +634,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/girih.md",
+      "url": "https://rosuh.me/fx-lab/effects/girih.md",
       "preview": null
     },
     {
@@ -674,7 +674,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/celtic.md",
+      "url": "https://rosuh.me/fx-lab/effects/celtic.md",
       "preview": null
     },
     {
@@ -716,7 +716,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/aboriginal.md",
+      "url": "https://rosuh.me/fx-lab/effects/aboriginal.md",
       "preview": null
     },
     {
@@ -759,7 +759,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/inkwash.md",
+      "url": "https://rosuh.me/fx-lab/effects/inkwash.md",
       "preview": null
     },
     {
@@ -798,7 +798,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/opart.md",
+      "url": "https://rosuh.me/fx-lab/effects/opart.md",
       "preview": null
     },
     {
@@ -837,7 +837,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/bauhaus.md",
+      "url": "https://rosuh.me/fx-lab/effects/bauhaus.md",
       "preview": null
     },
     {
@@ -876,7 +876,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/memphis.md",
+      "url": "https://rosuh.me/fx-lab/effects/memphis.md",
       "preview": null
     },
     {
@@ -919,7 +919,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/matrix.md",
+      "url": "https://rosuh.me/fx-lab/effects/matrix.md",
       "preview": null
     },
     {
@@ -959,7 +959,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/scope.md",
+      "url": "https://rosuh.me/fx-lab/effects/scope.md",
       "preview": null
     },
     {
@@ -1002,7 +1002,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/starfield.md",
+      "url": "https://rosuh.me/fx-lab/effects/starfield.md",
       "preview": null
     },
     {
@@ -1040,7 +1040,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/halftone.md",
+      "url": "https://rosuh.me/fx-lab/effects/halftone.md",
       "preview": null
     },
     {
@@ -1078,7 +1078,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/ascii.md",
+      "url": "https://rosuh.me/fx-lab/effects/ascii.md",
       "preview": null
     },
     {
@@ -1118,7 +1118,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/topo.md",
+      "url": "https://rosuh.me/fx-lab/effects/topo.md",
       "preview": null
     },
     {
@@ -1158,7 +1158,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/quasicrystal.md",
+      "url": "https://rosuh.me/fx-lab/effects/quasicrystal.md",
       "preview": null
     },
     {
@@ -1199,7 +1199,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/phyllotaxis.md",
+      "url": "https://rosuh.me/fx-lab/effects/phyllotaxis.md",
       "preview": null
     },
     {
@@ -1240,7 +1240,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/rose.md",
+      "url": "https://rosuh.me/fx-lab/effects/rose.md",
       "preview": null
     },
     {
@@ -1281,7 +1281,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/spiro.md",
+      "url": "https://rosuh.me/fx-lab/effects/spiro.md",
       "preview": null
     },
     {
@@ -1322,7 +1322,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/lissajous.md",
+      "url": "https://rosuh.me/fx-lab/effects/lissajous.md",
       "preview": null
     },
     {
@@ -1363,7 +1363,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/superformula.md",
+      "url": "https://rosuh.me/fx-lab/effects/superformula.md",
       "preview": null
     },
     {
@@ -1404,7 +1404,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/hexgrid.md",
+      "url": "https://rosuh.me/fx-lab/effects/hexgrid.md",
       "preview": null
     },
     {
@@ -1445,7 +1445,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/concentric.md",
+      "url": "https://rosuh.me/fx-lab/effects/concentric.md",
       "preview": null
     },
     {
@@ -1486,7 +1486,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/spiralarc.md",
+      "url": "https://rosuh.me/fx-lab/effects/spiralarc.md",
       "preview": null
     },
     {
@@ -1527,7 +1527,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/interference.md",
+      "url": "https://rosuh.me/fx-lab/effects/interference.md",
       "preview": null
     },
     {
@@ -1568,7 +1568,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/chevron.md",
+      "url": "https://rosuh.me/fx-lab/effects/chevron.md",
       "preview": null
     },
     {
@@ -1609,7 +1609,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/herringbone.md",
+      "url": "https://rosuh.me/fx-lab/effects/herringbone.md",
       "preview": null
     },
     {
@@ -1649,7 +1649,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/polka.md",
+      "url": "https://rosuh.me/fx-lab/effects/polka.md",
       "preview": null
     },
     {
@@ -1690,7 +1690,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/houndstooth.md",
+      "url": "https://rosuh.me/fx-lab/effects/houndstooth.md",
       "preview": null
     },
     {
@@ -1731,7 +1731,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/plaid.md",
+      "url": "https://rosuh.me/fx-lab/effects/plaid.md",
       "preview": null
     },
     {
@@ -1772,7 +1772,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/starburst.md",
+      "url": "https://rosuh.me/fx-lab/effects/starburst.md",
       "preview": null
     },
     {
@@ -1813,7 +1813,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/wavelines.md",
+      "url": "https://rosuh.me/fx-lab/effects/wavelines.md",
       "preview": null
     },
     {
@@ -1852,7 +1852,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/mandelbrot.md",
+      "url": "https://rosuh.me/fx-lab/effects/mandelbrot.md",
       "preview": null
     },
     {
@@ -1890,7 +1890,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/julia.md",
+      "url": "https://rosuh.me/fx-lab/effects/julia.md",
       "preview": null
     },
     {
@@ -1932,7 +1932,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/clifford.md",
+      "url": "https://rosuh.me/fx-lab/effects/clifford.md",
       "preview": null
     },
     {
@@ -1974,7 +1974,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/dejong.md",
+      "url": "https://rosuh.me/fx-lab/effects/dejong.md",
       "preview": null
     },
     {
@@ -2017,7 +2017,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/lorenz.md",
+      "url": "https://rosuh.me/fx-lab/effects/lorenz.md",
       "preview": null
     },
     {
@@ -2056,7 +2056,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/fern.md",
+      "url": "https://rosuh.me/fx-lab/effects/fern.md",
       "preview": null
     },
     {
@@ -2095,7 +2095,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/sierpinski.md",
+      "url": "https://rosuh.me/fx-lab/effects/sierpinski.md",
       "preview": null
     },
     {
@@ -2134,7 +2134,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/dragon.md",
+      "url": "https://rosuh.me/fx-lab/effects/dragon.md",
       "preview": null
     },
     {
@@ -2173,7 +2173,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/fractaltree.md",
+      "url": "https://rosuh.me/fx-lab/effects/fractaltree.md",
       "preview": null
     },
     {
@@ -2217,7 +2217,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/life.md",
+      "url": "https://rosuh.me/fx-lab/effects/life.md",
       "preview": null
     },
     {
@@ -2262,7 +2262,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/briansbrain.md",
+      "url": "https://rosuh.me/fx-lab/effects/briansbrain.md",
       "preview": null
     },
     {
@@ -2306,7 +2306,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/langton.md",
+      "url": "https://rosuh.me/fx-lab/effects/langton.md",
       "preview": null
     },
     {
@@ -2351,7 +2351,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/boids.md",
+      "url": "https://rosuh.me/fx-lab/effects/boids.md",
       "preview": null
     },
     {
@@ -2397,7 +2397,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/doomfire.md",
+      "url": "https://rosuh.me/fx-lab/effects/doomfire.md",
       "preview": null
     },
     {
@@ -2441,7 +2441,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/sandfall.md",
+      "url": "https://rosuh.me/fx-lab/effects/sandfall.md",
       "preview": null
     },
     {
@@ -2483,7 +2483,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/pendulum.md",
+      "url": "https://rosuh.me/fx-lab/effects/pendulum.md",
       "preview": null
     },
     {
@@ -2525,7 +2525,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/orbits.md",
+      "url": "https://rosuh.me/fx-lab/effects/orbits.md",
       "preview": null
     },
     {
@@ -2565,7 +2565,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/asanoha.md",
+      "url": "https://rosuh.me/fx-lab/effects/asanoha.md",
       "preview": null
     },
     {
@@ -2605,7 +2605,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/kolam.md",
+      "url": "https://rosuh.me/fx-lab/effects/kolam.md",
       "preview": null
     },
     {
@@ -2645,7 +2645,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/greekkey.md",
+      "url": "https://rosuh.me/fx-lab/effects/greekkey.md",
       "preview": null
     },
     {
@@ -2686,7 +2686,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/aztec.md",
+      "url": "https://rosuh.me/fx-lab/effects/aztec.md",
       "preview": null
     },
     {
@@ -2726,7 +2726,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/kente.md",
+      "url": "https://rosuh.me/fx-lab/effects/kente.md",
       "preview": null
     },
     {
@@ -2766,7 +2766,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/talavera.md",
+      "url": "https://rosuh.me/fx-lab/effects/talavera.md",
       "preview": null
     },
     {
@@ -2806,7 +2806,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/cloud.md",
+      "url": "https://rosuh.me/fx-lab/effects/cloud.md",
       "preview": null
     },
     {
@@ -2845,7 +2845,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/koru.md",
+      "url": "https://rosuh.me/fx-lab/effects/koru.md",
       "preview": null
     },
     {
@@ -2885,7 +2885,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/paisley.md",
+      "url": "https://rosuh.me/fx-lab/effects/paisley.md",
       "preview": null
     },
     {
@@ -2925,7 +2925,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/tunnel.md",
+      "url": "https://rosuh.me/fx-lab/effects/tunnel.md",
       "preview": null
     },
     {
@@ -2966,7 +2966,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/plasma.md",
+      "url": "https://rosuh.me/fx-lab/effects/plasma.md",
       "preview": null
     },
     {
@@ -3007,7 +3007,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/rotozoom.md",
+      "url": "https://rosuh.me/fx-lab/effects/rotozoom.md",
       "preview": null
     },
     {
@@ -3048,7 +3048,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/copperbars.md",
+      "url": "https://rosuh.me/fx-lab/effects/copperbars.md",
       "preview": null
     },
     {
@@ -3088,7 +3088,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/sevenseg.md",
+      "url": "https://rosuh.me/fx-lab/effects/sevenseg.md",
       "preview": null
     },
     {
@@ -3129,7 +3129,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/ledmatrix.md",
+      "url": "https://rosuh.me/fx-lab/effects/ledmatrix.md",
       "preview": null
     },
     {
@@ -3170,7 +3170,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/radar.md",
+      "url": "https://rosuh.me/fx-lab/effects/radar.md",
       "preview": null
     },
     {
@@ -3211,7 +3211,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/ekg.md",
+      "url": "https://rosuh.me/fx-lab/effects/ekg.md",
       "preview": null
     },
     {
@@ -3253,7 +3253,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/cursortrail.md",
+      "url": "https://rosuh.me/fx-lab/effects/cursortrail.md",
       "preview": null
     },
     {
@@ -3292,7 +3292,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/crosshair.md",
+      "url": "https://rosuh.me/fx-lab/effects/crosshair.md",
       "preview": null
     },
     {
@@ -3334,7 +3334,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/ripplewater.md",
+      "url": "https://rosuh.me/fx-lab/effects/ripplewater.md",
       "preview": null
     },
     {
@@ -3373,7 +3373,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/blobcursor.md",
+      "url": "https://rosuh.me/fx-lab/effects/blobcursor.md",
       "preview": null
     },
     {
@@ -3413,7 +3413,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/ironfilings.md",
+      "url": "https://rosuh.me/fx-lab/effects/ironfilings.md",
       "preview": null
     },
     {
@@ -3456,7 +3456,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/vortex.md",
+      "url": "https://rosuh.me/fx-lab/effects/vortex.md",
       "preview": null
     },
     {
@@ -3498,7 +3498,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/confetti.md",
+      "url": "https://rosuh.me/fx-lab/effects/confetti.md",
       "preview": null
     },
     {
@@ -3540,7 +3540,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/fireworks.md",
+      "url": "https://rosuh.me/fx-lab/effects/fireworks.md",
       "preview": null
     },
     {
@@ -3579,7 +3579,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/bokeh.md",
+      "url": "https://rosuh.me/fx-lab/effects/bokeh.md",
       "preview": null
     },
     {
@@ -3619,7 +3619,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/nebula.md",
+      "url": "https://rosuh.me/fx-lab/effects/nebula.md",
       "preview": null
     },
     {
@@ -3661,7 +3661,7 @@
       },
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/lightning.md",
+      "url": "https://rosuh.me/fx-lab/effects/lightning.md",
       "preview": null
     },
     {
@@ -3701,7 +3701,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/neonpipes.md",
+      "url": "https://rosuh.me/fx-lab/effects/neonpipes.md",
       "preview": null
     },
     {
@@ -3739,7 +3739,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/spinners.md",
+      "url": "https://rosuh.me/fx-lab/effects/spinners.md",
       "preview": null
     },
     {
@@ -3779,7 +3779,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/wavegrid.md",
+      "url": "https://rosuh.me/fx-lab/effects/wavegrid.md",
       "preview": null
     },
     {
@@ -3817,7 +3817,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/audiobars.md",
+      "url": "https://rosuh.me/fx-lab/effects/audiobars.md",
       "preview": null
     },
     {
@@ -3856,7 +3856,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/heatmap.md",
+      "url": "https://rosuh.me/fx-lab/effects/heatmap.md",
       "preview": null
     },
     {
@@ -3886,7 +3886,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/scramble.md",
+      "url": "https://rosuh.me/fx-lab/effects/scramble.md",
       "preview": null
     },
     {
@@ -3916,7 +3916,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/magnetic.md",
+      "url": "https://rosuh.me/fx-lab/effects/magnetic.md",
       "preview": null
     },
     {
@@ -3946,7 +3946,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/kinetic.md",
+      "url": "https://rosuh.me/fx-lab/effects/kinetic.md",
       "preview": null
     },
     {
@@ -3976,7 +3976,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/marquee.md",
+      "url": "https://rosuh.me/fx-lab/effects/marquee.md",
       "preview": null
     },
     {
@@ -4006,7 +4006,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/tilt.md",
+      "url": "https://rosuh.me/fx-lab/effects/tilt.md",
       "preview": null
     },
     {
@@ -4036,7 +4036,7 @@
       "state": null,
       "license": "MIT",
       "attribution": null,
-      "url": "https://rosuh.github.io/fx-lab/effects/spot.md",
+      "url": "https://rosuh.me/fx-lab/effects/spot.md",
       "preview": null
     }
   ]
