@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://rosuh.me/fx-lab/schema/effect.schema.json",
+  "$id": "https://fx.rosuh.me/schema/effect.schema.json",
   "title": "FX Lab effect meta",
   "description": "The co-located meta object on every src/effects/<kind>/<id>.js module (CONTRACT 1). Derived fields (source/snippet/mountSnippet/runtimeNotes/url/preview) are NOT part of this schema.",
   "type": "object",

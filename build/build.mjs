@@ -10,8 +10,10 @@ import { buildSnippet } from './snippet.js';
 import { validateAll, validate, loadEffectSchema } from './validate.mjs';
 import { readFileSync } from 'node:fs';
 
-// homepage: edit here. No trailing slash. (Served via the account's custom Pages domain.)
-const HOMEPAGE = 'https://rosuh.me/fx-lab';
+// Custom Pages domain for this project. The CNAME file is emitted into site/ on every build so
+// the GitHub Actions deploy keeps the custom domain. HOMEPAGE is derived from it (no trailing slash).
+const PAGES_DOMAIN = 'fx.rosuh.me';
+const HOMEPAGE = `https://${PAGES_DOMAIN}`;
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = join(ROOT, 'site');
@@ -206,6 +208,7 @@ export function buildSite() {
   if (mErrs.length) throw new Error('fx-index.json failed manifest schema:\n' + mErrs.join('\n'));
 
   w('fx-index.json', JSON.stringify(manifest, null, 2));
+  w('CNAME', PAGES_DOMAIN + '\n'); // keeps the GitHub Pages custom domain across Actions deploys
   w('llms.txt', llmsTxt());
   w('llms.zh.txt', llmsTxtZh());
   w('llms-full.txt', fullMdChunks.join('\n\n---\n\n'));

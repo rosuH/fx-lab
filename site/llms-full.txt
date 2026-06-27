@@ -12,7 +12,7 @@
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [gradient.json](https://rosuh.me/fx-lab/effects/gradient.json).
+See full GLSL + drop-in snippet in [gradient.json](https://fx.rosuh.me/effects/gradient.json).
 
 ## Runtime notes
 
@@ -39,7 +39,7 @@ WebGL2 fragment shader compiled against the shared PRE preamble (uniforms iResol
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [dots.json](https://rosuh.me/fx-lab/effects/dots.json).
+See full GLSL + drop-in snippet in [dots.json](https://fx.rosuh.me/effects/dots.json).
 
 ## Runtime notes
 
@@ -66,7 +66,7 @@ WebGL2 fragment shader compiled against the shared PRE preamble (uniforms iResol
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [metaballs.json](https://rosuh.me/fx-lab/effects/metaballs.json).
+See full GLSL + drop-in snippet in [metaballs.json](https://fx.rosuh.me/effects/metaballs.json).
 
 ## Runtime notes
 
@@ -93,7 +93,7 @@ WebGL2 fragment shader compiled against the shared PRE preamble (uniforms iResol
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [aurora.json](https://rosuh.me/fx-lab/effects/aurora.json).
+See full GLSL + drop-in snippet in [aurora.json](https://fx.rosuh.me/effects/aurora.json).
 
 ## Runtime notes
 
@@ -120,7 +120,7 @@ WebGL2 fragment shader compiled against the shared PRE preamble (uniforms iResol
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [ripple.json](https://rosuh.me/fx-lab/effects/ripple.json).
+See full GLSL + drop-in snippet in [ripple.json](https://fx.rosuh.me/effects/ripple.json).
 
 ## Runtime notes
 
@@ -147,7 +147,7 @@ WebGL2 fragment shader compiled against the shared PRE preamble (uniforms iResol
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [voronoi.json](https://rosuh.me/fx-lab/effects/voronoi.json).
+See full GLSL + drop-in snippet in [voronoi.json](https://fx.rosuh.me/effects/voronoi.json).
 
 ## Runtime notes
 
@@ -174,7 +174,7 @@ WebGL2 fragment shader compiled against the shared PRE preamble (uniforms iResol
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [truchet.json](https://rosuh.me/fx-lab/effects/truchet.json).
+See full GLSL + drop-in snippet in [truchet.json](https://fx.rosuh.me/effects/truchet.json).
 
 ## Runtime notes
 
@@ -201,7 +201,7 @@ WebGL2 fragment shader compiled against the shared PRE preamble (uniforms iResol
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [kaleido.json](https://rosuh.me/fx-lab/effects/kaleido.json).
+See full GLSL + drop-in snippet in [kaleido.json](https://fx.rosuh.me/effects/kaleido.json).
 
 ## Runtime notes
 
@@ -228,7 +228,7 @@ WebGL2 fragment shader compiled against the shared PRE preamble (uniforms iResol
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [raymarch.json](https://rosuh.me/fx-lab/effects/raymarch.json).
+See full GLSL + drop-in snippet in [raymarch.json](https://fx.rosuh.me/effects/raymarch.json).
 
 ## Runtime notes
 
@@ -255,7 +255,7 @@ WebGL2 fragment shader compiled against the shared PRE preamble (uniforms iResol
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [vapor.json](https://rosuh.me/fx-lab/effects/vapor.json).
+See full GLSL + drop-in snippet in [vapor.json](https://fx.rosuh.me/effects/vapor.json).
 
 ## Runtime notes
 
@@ -282,7 +282,7 @@ WebGL2 fragment shader compiled against the shared PRE preamble (uniforms iResol
 
 ## Drop-in snippet
 
-See full GLSL + drop-in snippet in [glitch.json](https://rosuh.me/fx-lab/effects/glitch.json).
+See full GLSL + drop-in snippet in [glitch.json](https://fx.rosuh.me/effects/glitch.json).
 
 ## Runtime notes
 

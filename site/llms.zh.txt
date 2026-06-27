@@ -5,127 +5,127 @@
 氛围标签 vibe（先按意图匹配）：calm · ambient · meditative · minimal · elegant · cozy · energetic · playful · hypnotic · psychedelic · dramatic · aggressive · organic · geometric · technical · cultural · retro · futuristic。
 
 ## 生成
-- [Gradient Flow](https://rosuh.me/fx-lab/effects/gradient.md): 域扭曲 FBM · 跟随光标
-- [Dot-Matrix Wave](https://rosuh.me/fx-lab/effects/dots.md): 点阵波动 + 光标隆起
-- [Metaballs](https://rosuh.me/fx-lab/effects/metaballs.md): 有机融合光球
-- [Aurora Ribbons](https://rosuh.me/fx-lab/effects/aurora.md): 极光丝带
-- [Ripple Grid](https://rosuh.me/fx-lab/effects/ripple.md): 光标涟漪位移
-- [Voronoi Cells](https://rosuh.me/fx-lab/effects/voronoi.md): 细胞晶格 · 自然分形
-- [Truchet Tiles](https://rosuh.me/fx-lab/effects/truchet.md): 程序化迷宫纹
-- [Kaleidoscope](https://rosuh.me/fx-lab/effects/kaleido.md): 万花筒 · 曼陀罗
-- [Raymarch SDF](https://rosuh.me/fx-lab/effects/raymarch.md): 光线步进 · 旋转环面
+- [Gradient Flow](https://fx.rosuh.me/effects/gradient.md): 域扭曲 FBM · 跟随光标
+- [Dot-Matrix Wave](https://fx.rosuh.me/effects/dots.md): 点阵波动 + 光标隆起
+- [Metaballs](https://fx.rosuh.me/effects/metaballs.md): 有机融合光球
+- [Aurora Ribbons](https://fx.rosuh.me/effects/aurora.md): 极光丝带
+- [Ripple Grid](https://fx.rosuh.me/effects/ripple.md): 光标涟漪位移
+- [Voronoi Cells](https://fx.rosuh.me/effects/voronoi.md): 细胞晶格 · 自然分形
+- [Truchet Tiles](https://fx.rosuh.me/effects/truchet.md): 程序化迷宫纹
+- [Kaleidoscope](https://fx.rosuh.me/effects/kaleido.md): 万花筒 · 曼陀罗
+- [Raymarch SDF](https://fx.rosuh.me/effects/raymarch.md): 光线步进 · 旋转环面
 
 ## 后处理·印刷
-- [Vaporwave Grid](https://rosuh.me/fx-lab/effects/vapor.md): 落日 + 透视霓虹网格
-- [Chromatic Glitch](https://rosuh.me/fx-lab/effects/glitch.md): RGB 分离 + 扫描线
+- [Vaporwave Grid](https://fx.rosuh.me/effects/vapor.md): 落日 + 透视霓虹网格
+- [Chromatic Glitch](https://fx.rosuh.me/effects/glitch.md): RGB 分离 + 扫描线
 
 ## 世界纹样
-- [青海波](https://rosuh.me/fx-lab/effects/seigaiha.md): 和风波纹
-- [几何](https://rosuh.me/fx-lab/effects/girih.md): 八角星镶嵌 · 金线
-- [Celtic Knot](https://rosuh.me/fx-lab/effects/celtic.md): 交织绳结 · 流光
-- [Dot Painting](https://rosuh.me/fx-lab/effects/aboriginal.md): 同心点画 · 大地色
-- [水墨](https://rosuh.me/fx-lab/effects/inkwash.md): 晕染笔触 · 跟手
+- [青海波](https://fx.rosuh.me/effects/seigaiha.md): 和风波纹
+- [几何](https://fx.rosuh.me/effects/girih.md): 八角星镶嵌 · 金线
+- [Celtic Knot](https://fx.rosuh.me/effects/celtic.md): 交织绳结 · 流光
+- [Dot Painting](https://fx.rosuh.me/effects/aboriginal.md): 同心点画 · 大地色
+- [水墨](https://fx.rosuh.me/effects/inkwash.md): 晕染笔触 · 跟手
 
 ## 设计流派
-- [Op-Art Moiré](https://rosuh.me/fx-lab/effects/opart.md): 莫尔条纹 · 错视
-- [Bauhaus](https://rosuh.me/fx-lab/effects/bauhaus.md): 三原色几何构成
-- [Memphis 80s](https://rosuh.me/fx-lab/effects/memphis.md): 撞色碎片 · 波普
+- [Op-Art Moiré](https://fx.rosuh.me/effects/opart.md): 莫尔条纹 · 错视
+- [Bauhaus](https://fx.rosuh.me/effects/bauhaus.md): 三原色几何构成
+- [Memphis 80s](https://fx.rosuh.me/effects/memphis.md): 撞色碎片 · 波普
 
 ## 数据·系统
-- [Flow Field](https://rosuh.me/fx-lab/effects/field.md): 粒子星座 · 光标搅动
-- [Matrix Rain](https://rosuh.me/fx-lab/effects/matrix.md): 片假名数字雨
-- [Oscilloscope](https://rosuh.me/fx-lab/effects/scope.md): 示波器波形 · 荧光
-- [Starfield Warp](https://rosuh.me/fx-lab/effects/starfield.md): 星空跃迁
+- [Flow Field](https://fx.rosuh.me/effects/field.md): 粒子星座 · 光标搅动
+- [Matrix Rain](https://fx.rosuh.me/effects/matrix.md): 片假名数字雨
+- [Oscilloscope](https://fx.rosuh.me/effects/scope.md): 示波器波形 · 荧光
+- [Starfield Warp](https://fx.rosuh.me/effects/starfield.md): 星空跃迁
 
 ## 交互
-- [Decode Text](https://rosuh.me/fx-lab/effects/scramble.md): 乱码归位
-- [Magnetic Cursor](https://rosuh.me/fx-lab/effects/magnetic.md): 磁吸自定义光标
-- [Kinetic Type](https://rosuh.me/fx-lab/effects/kinetic.md): 可变字重波动
-- [Marquee Ticker](https://rosuh.me/fx-lab/effects/marquee.md): 无缝跑马灯
-- [3D Tilt Card](https://rosuh.me/fx-lab/effects/tilt.md): 透视倾斜 · 跟手
-- [Spotlight Mask](https://rosuh.me/fx-lab/effects/spot.md): 光标聚光揭示
+- [Decode Text](https://fx.rosuh.me/effects/scramble.md): 乱码归位
+- [Magnetic Cursor](https://fx.rosuh.me/effects/magnetic.md): 磁吸自定义光标
+- [Kinetic Type](https://fx.rosuh.me/effects/kinetic.md): 可变字重波动
+- [Marquee Ticker](https://fx.rosuh.me/effects/marquee.md): 无缝跑马灯
+- [3D Tilt Card](https://fx.rosuh.me/effects/tilt.md): 透视倾斜 · 跟手
+- [Spotlight Mask](https://fx.rosuh.me/effects/spot.md): 光标聚光揭示
 
 ## 几何·曲线
-- [Phyllotaxis](https://rosuh.me/fx-lab/effects/phyllotaxis.md): 向日葵螺旋 · 黄金角
-- [Rose Curve](https://rosuh.me/fx-lab/effects/rose.md): 玫瑰线 · 玫瑰花形
-- [Spirograph](https://rosuh.me/fx-lab/effects/spiro.md): 万花尺 · 内旋轮线
-- [Lissajous](https://rosuh.me/fx-lab/effects/lissajous.md): 李萨如图形
-- [Superformula](https://rosuh.me/fx-lab/effects/superformula.md): 超公式 · 万象有机形
-- [Hex Grid](https://rosuh.me/fx-lab/effects/hexgrid.md): 六边形波动网格
-- [Concentric](https://rosuh.me/fx-lab/effects/concentric.md): 同心方 · 色相轮转
-- [Spiral](https://rosuh.me/fx-lab/effects/spiralarc.md): 阿基米德螺线
-- [Chevron](https://rosuh.me/fx-lab/effects/chevron.md): 人字折线 · 流动
-- [Herringbone](https://rosuh.me/fx-lab/effects/herringbone.md): 鱼骨拼贴
-- [Polka Dots](https://rosuh.me/fx-lab/effects/polka.md): 波点 · 呼吸
-- [Houndstooth](https://rosuh.me/fx-lab/effects/houndstooth.md): 千鸟格
-- [Tartan Plaid](https://rosuh.me/fx-lab/effects/plaid.md): 苏格兰格纹
-- [Starburst](https://rosuh.me/fx-lab/effects/starburst.md): 放射扇面
-- [Wave Lines](https://rosuh.me/fx-lab/effects/wavelines.md): 叠层正弦波带
+- [Phyllotaxis](https://fx.rosuh.me/effects/phyllotaxis.md): 向日葵螺旋 · 黄金角
+- [Rose Curve](https://fx.rosuh.me/effects/rose.md): 玫瑰线 · 玫瑰花形
+- [Spirograph](https://fx.rosuh.me/effects/spiro.md): 万花尺 · 内旋轮线
+- [Lissajous](https://fx.rosuh.me/effects/lissajous.md): 李萨如图形
+- [Superformula](https://fx.rosuh.me/effects/superformula.md): 超公式 · 万象有机形
+- [Hex Grid](https://fx.rosuh.me/effects/hexgrid.md): 六边形波动网格
+- [Concentric](https://fx.rosuh.me/effects/concentric.md): 同心方 · 色相轮转
+- [Spiral](https://fx.rosuh.me/effects/spiralarc.md): 阿基米德螺线
+- [Chevron](https://fx.rosuh.me/effects/chevron.md): 人字折线 · 流动
+- [Herringbone](https://fx.rosuh.me/effects/herringbone.md): 鱼骨拼贴
+- [Polka Dots](https://fx.rosuh.me/effects/polka.md): 波点 · 呼吸
+- [Houndstooth](https://fx.rosuh.me/effects/houndstooth.md): 千鸟格
+- [Tartan Plaid](https://fx.rosuh.me/effects/plaid.md): 苏格兰格纹
+- [Starburst](https://fx.rosuh.me/effects/starburst.md): 放射扇面
+- [Wave Lines](https://fx.rosuh.me/effects/wavelines.md): 叠层正弦波带
 
 ## 分形·混沌
-- [Lorenz](https://rosuh.me/fx-lab/effects/lorenz.md): 洛伦兹蝴蝶
-- [Dragon Curve](https://rosuh.me/fx-lab/effects/dragon.md): 龙形曲线
-- [Fractal Tree](https://rosuh.me/fx-lab/effects/fractaltree.md): 分形树 · 风动
+- [Lorenz](https://fx.rosuh.me/effects/lorenz.md): 洛伦兹蝴蝶
+- [Dragon Curve](https://fx.rosuh.me/effects/dragon.md): 龙形曲线
+- [Fractal Tree](https://fx.rosuh.me/effects/fractaltree.md): 分形树 · 风动
 
 ## 元胞·物理
-- [Boids Flocking](https://rosuh.me/fx-lab/effects/boids.md): 鸟群 · 跟手
-- [Double Pendulum](https://rosuh.me/fx-lab/effects/pendulum.md): 双摆混沌
-- [Orbits](https://rosuh.me/fx-lab/effects/orbits.md): 行星轨道
+- [Boids Flocking](https://fx.rosuh.me/effects/boids.md): 鸟群 · 跟手
+- [Double Pendulum](https://fx.rosuh.me/effects/pendulum.md): 双摆混沌
+- [Orbits](https://fx.rosuh.me/effects/orbits.md): 行星轨道
 
 ## 世界纹样 II
-- [麻の葉](https://rosuh.me/fx-lab/effects/asanoha.md): 麻叶几何
-- [Kolam](https://rosuh.me/fx-lab/effects/kolam.md): 点格环线
-- [Greek Key](https://rosuh.me/fx-lab/effects/greekkey.md): 回纹 · 流动
-- [Aztec Step-Fret](https://rosuh.me/fx-lab/effects/aztec.md): 阶梯回纹
-- [Kente Cloth](https://rosuh.me/fx-lab/effects/kente.md): 肯特织锦
-- [Talavera](https://rosuh.me/fx-lab/effects/talavera.md): 陶砖花
-- [云纹](https://rosuh.me/fx-lab/effects/cloud.md): 祥云回旋
-- [Koru](https://rosuh.me/fx-lab/effects/koru.md): 蕨芽螺旋
-- [佩斯利](https://rosuh.me/fx-lab/effects/paisley.md): 火腿纹 boteh
+- [麻の葉](https://fx.rosuh.me/effects/asanoha.md): 麻叶几何
+- [Kolam](https://fx.rosuh.me/effects/kolam.md): 点格环线
+- [Greek Key](https://fx.rosuh.me/effects/greekkey.md): 回纹 · 流动
+- [Aztec Step-Fret](https://fx.rosuh.me/effects/aztec.md): 阶梯回纹
+- [Kente Cloth](https://fx.rosuh.me/effects/kente.md): 肯特织锦
+- [Talavera](https://fx.rosuh.me/effects/talavera.md): 陶砖花
+- [云纹](https://fx.rosuh.me/effects/cloud.md): 祥云回旋
+- [Koru](https://fx.rosuh.me/effects/koru.md): 蕨芽螺旋
+- [佩斯利](https://fx.rosuh.me/effects/paisley.md): 火腿纹 boteh
 
 ## 屏幕·信号
-- [Copper Bars](https://rosuh.me/fx-lab/effects/copperbars.md): 铜条 · Amiga
-- [7-Segment](https://rosuh.me/fx-lab/effects/sevenseg.md): 数码管 · 实时钟
-- [LED Matrix](https://rosuh.me/fx-lab/effects/ledmatrix.md): 点阵屏波动
-- [Radar Sweep](https://rosuh.me/fx-lab/effects/radar.md): 雷达扫描
-- [EKG Monitor](https://rosuh.me/fx-lab/effects/ekg.md): 心电图 · 滚动
+- [Copper Bars](https://fx.rosuh.me/effects/copperbars.md): 铜条 · Amiga
+- [7-Segment](https://fx.rosuh.me/effects/sevenseg.md): 数码管 · 实时钟
+- [LED Matrix](https://fx.rosuh.me/effects/ledmatrix.md): 点阵屏波动
+- [Radar Sweep](https://fx.rosuh.me/effects/radar.md): 雷达扫描
+- [EKG Monitor](https://fx.rosuh.me/effects/ekg.md): 心电图 · 滚动
 
 ## 交互·生成 II
-- [Cursor Trail](https://rosuh.me/fx-lab/effects/cursortrail.md): 彩虹拖尾
-- [Crosshair HUD](https://rosuh.me/fx-lab/effects/crosshair.md): 准星 + 坐标读出
-- [Iron Filings](https://rosuh.me/fx-lab/effects/ironfilings.md): 磁场铁屑
-- [Vortex](https://rosuh.me/fx-lab/effects/vortex.md): 粒子漩涡
-- [Confetti](https://rosuh.me/fx-lab/effects/confetti.md): 纸屑飘落
-- [Fireworks](https://rosuh.me/fx-lab/effects/fireworks.md): 烟花 · 点击放
-- [Bokeh](https://rosuh.me/fx-lab/effects/bokeh.md): 焦外光斑
-- [Nebula](https://rosuh.me/fx-lab/effects/nebula.md): 星云叠加
-- [Lightning](https://rosuh.me/fx-lab/effects/lightning.md): 闪电分叉
-- [Neon Pipes](https://rosuh.me/fx-lab/effects/neonpipes.md): 发光管线
-- [Loaders](https://rosuh.me/fx-lab/effects/spinners.md): 加载动画集
-- [Wave Grid](https://rosuh.me/fx-lab/effects/wavegrid.md): 透视波点阵
-- [Audio Bars](https://rosuh.me/fx-lab/effects/audiobars.md): 频谱律动
+- [Cursor Trail](https://fx.rosuh.me/effects/cursortrail.md): 彩虹拖尾
+- [Crosshair HUD](https://fx.rosuh.me/effects/crosshair.md): 准星 + 坐标读出
+- [Iron Filings](https://fx.rosuh.me/effects/ironfilings.md): 磁场铁屑
+- [Vortex](https://fx.rosuh.me/effects/vortex.md): 粒子漩涡
+- [Confetti](https://fx.rosuh.me/effects/confetti.md): 纸屑飘落
+- [Fireworks](https://fx.rosuh.me/effects/fireworks.md): 烟花 · 点击放
+- [Bokeh](https://fx.rosuh.me/effects/bokeh.md): 焦外光斑
+- [Nebula](https://fx.rosuh.me/effects/nebula.md): 星云叠加
+- [Lightning](https://fx.rosuh.me/effects/lightning.md): 闪电分叉
+- [Neon Pipes](https://fx.rosuh.me/effects/neonpipes.md): 发光管线
+- [Loaders](https://fx.rosuh.me/effects/spinners.md): 加载动画集
+- [Wave Grid](https://fx.rosuh.me/effects/wavegrid.md): 透视波点阵
+- [Audio Bars](https://fx.rosuh.me/effects/audiobars.md): 频谱律动
 
 ## 可选（重型 / 小众）
 CPU 较重或非移动端友好的特效——上下文有限的 agent 可跳过。
-- [Halftone CMYK](https://rosuh.me/fx-lab/effects/halftone.md): 网点半调 · 套色
-- [ASCII Field](https://rosuh.me/fx-lab/effects/ascii.md): 字符明度场
-- [Topographic](https://rosuh.me/fx-lab/effects/topo.md): 等高线地形 · 跟手
-- [Quasicrystal](https://rosuh.me/fx-lab/effects/quasicrystal.md): 五重对称干涉
-- [Interference](https://rosuh.me/fx-lab/effects/interference.md): 双源波纹干涉
-- [Mandelbrot](https://rosuh.me/fx-lab/effects/mandelbrot.md): 曼德博集合 · 缩放
-- [Julia Set](https://rosuh.me/fx-lab/effects/julia.md): 朱利亚集 · 漂移
-- [Clifford Attractor](https://rosuh.me/fx-lab/effects/clifford.md): 奇异吸引子
-- [De Jong](https://rosuh.me/fx-lab/effects/dejong.md): 德容吸引子
-- [Barnsley Fern](https://rosuh.me/fx-lab/effects/fern.md): 分形蕨
-- [Sierpinski](https://rosuh.me/fx-lab/effects/sierpinski.md): 谢尔宾斯基三角
-- [Game of Life](https://rosuh.me/fx-lab/effects/life.md): 康威生命游戏
-- [Brian's Brain](https://rosuh.me/fx-lab/effects/briansbrain.md): 三态元胞
-- [Langton's Ant](https://rosuh.me/fx-lab/effects/langton.md): 兰顿蚂蚁
-- [Doom Fire](https://rosuh.me/fx-lab/effects/doomfire.md): 毁灭战士火焰
-- [Falling Sand](https://rosuh.me/fx-lab/effects/sandfall.md): 落沙模拟 · 跟手
-- [Tunnel](https://rosuh.me/fx-lab/effects/tunnel.md): 棋盘隧道
-- [Plasma](https://rosuh.me/fx-lab/effects/plasma.md): 经典等离子
-- [Rotozoom](https://rosuh.me/fx-lab/effects/rotozoom.md): 旋转缩放贴图
-- [Water Ripple](https://rosuh.me/fx-lab/effects/ripplewater.md): 水波高度场
-- [Gooey Blob](https://rosuh.me/fx-lab/effects/blobcursor.md): 融合光标
-- [Heatmap](https://rosuh.me/fx-lab/effects/heatmap.md): 噪声热力 · 跟手
+- [Halftone CMYK](https://fx.rosuh.me/effects/halftone.md): 网点半调 · 套色
+- [ASCII Field](https://fx.rosuh.me/effects/ascii.md): 字符明度场
+- [Topographic](https://fx.rosuh.me/effects/topo.md): 等高线地形 · 跟手
+- [Quasicrystal](https://fx.rosuh.me/effects/quasicrystal.md): 五重对称干涉
+- [Interference](https://fx.rosuh.me/effects/interference.md): 双源波纹干涉
+- [Mandelbrot](https://fx.rosuh.me/effects/mandelbrot.md): 曼德博集合 · 缩放
+- [Julia Set](https://fx.rosuh.me/effects/julia.md): 朱利亚集 · 漂移
+- [Clifford Attractor](https://fx.rosuh.me/effects/clifford.md): 奇异吸引子
+- [De Jong](https://fx.rosuh.me/effects/dejong.md): 德容吸引子
+- [Barnsley Fern](https://fx.rosuh.me/effects/fern.md): 分形蕨
+- [Sierpinski](https://fx.rosuh.me/effects/sierpinski.md): 谢尔宾斯基三角
+- [Game of Life](https://fx.rosuh.me/effects/life.md): 康威生命游戏
+- [Brian's Brain](https://fx.rosuh.me/effects/briansbrain.md): 三态元胞
+- [Langton's Ant](https://fx.rosuh.me/effects/langton.md): 兰顿蚂蚁
+- [Doom Fire](https://fx.rosuh.me/effects/doomfire.md): 毁灭战士火焰
+- [Falling Sand](https://fx.rosuh.me/effects/sandfall.md): 落沙模拟 · 跟手
+- [Tunnel](https://fx.rosuh.me/effects/tunnel.md): 棋盘隧道
+- [Plasma](https://fx.rosuh.me/effects/plasma.md): 经典等离子
+- [Rotozoom](https://fx.rosuh.me/effects/rotozoom.md): 旋转缩放贴图
+- [Water Ripple](https://fx.rosuh.me/effects/ripplewater.md): 水波高度场
+- [Gooey Blob](https://fx.rosuh.me/effects/blobcursor.md): 融合光标
+- [Heatmap](https://fx.rosuh.me/effects/heatmap.md): 噪声热力 · 跟手
