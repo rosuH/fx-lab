@@ -1,0 +1,44 @@
+{
+  "id": "sevenseg",
+  "kind": "canvas",
+  "name": "7-Segment",
+  "nameLocal": null,
+  "section": "screen-and-signal",
+  "summary": "Red seven-segment digits show a live HH:MM:SS clock on near-black; crisp retro electronics.",
+  "description": "Draws six seven-segment display digits updated every frame to show the current local time. Segments glow red against a near-black background using direct rect primitives. Use as an inline widget, overlay, or retro UI accent.",
+  "descriptionZh": "数码管 · 实时钟",
+  "tags": [
+    "clock",
+    "geometry",
+    "grid",
+    "canvas2d",
+    "inline"
+  ],
+  "vibe": [
+    "technical",
+    "retro",
+    "minimal"
+  ],
+  "culture": "signal / electronics / display",
+  "accuracyNote": null,
+  "perf": {
+    "gpu": "low",
+    "cpu": "low",
+    "mobileSafe": true
+  },
+  "interactive": {
+    "followsCursor": false,
+    "trigger": "auto"
+  },
+  "reducedMotion": "freeze",
+  "deterministic": false,
+  "state": null,
+  "license": "MIT",
+  "attribution": null,
+  "source": "function sevenseg(ctx,w,h,t){ ctx.fillStyle='#0a0c0a';ctx.fillRect(0,0,w,h);const segs={0:[1,1,1,1,1,1,0],1:[0,1,1,0,0,0,0],2:[1,1,0,1,1,0,1],3:[1,1,1,1,0,0,1],4:[0,1,1,0,0,1,1],5:[1,0,1,1,0,1,1],6:[1,0,1,1,1,1,1],7:[1,1,1,0,0,0,0],8:[1,1,1,1,1,1,1],9:[1,1,1,1,0,1,1]};const tm=new Date(),str=[tm.getHours(),tm.getMinutes(),tm.getSeconds()].map(v=>String(v).padStart(2,'0')).join(''),dw=w/6.5,x0=dw*0.3;for(let d=0;d<6;d++){const seg=segs[+str[d]],bx=x0+d*dw,by=h*0.34,sw=dw*0.55,sh=h*0.32;ctx.fillStyle='#ff3a3a';const dr=(i,x,y,wv,hv)=>{if(seg[i])ctx.fillRect(bx+x,by+y,wv,hv);};dr(0,4,0,sw-8,4);dr(1,sw-2,2,4,sh/2-3);dr(2,sw-2,sh/2,4,sh/2-3);dr(3,4,sh-4,sw-8,4);dr(4,0,sh/2,4,sh/2-3);dr(5,0,2,4,sh/2-3);dr(6,4,sh/2-2,sw-8,4);}}",
+  "snippet": "<!-- fx-lab effect: sevenseg — 7-Segment (canvas) · license MIT -->\n<canvas id=\"fx-sevenseg\" style=\"display:block;width:100%;height:100%;min-height:240px\"></canvas>\n<script type=\"module\">\nconst draw = function sevenseg(ctx,w,h,t){ ctx.fillStyle='#0a0c0a';ctx.fillRect(0,0,w,h);const segs={0:[1,1,1,1,1,1,0],1:[0,1,1,0,0,0,0],2:[1,1,0,1,1,0,1],3:[1,1,1,1,0,0,1],4:[0,1,1,0,0,1,1],5:[1,0,1,1,0,1,1],6:[1,0,1,1,1,1,1],7:[1,1,1,0,0,0,0],8:[1,1,1,1,1,1,1],9:[1,1,1,1,0,1,1]};const tm=new Date(),str=[tm.getHours(),tm.getMinutes(),tm.getSeconds()].map(v=>String(v).padStart(2,'0')).join(''),dw=w/6.5,x0=dw*0.3;for(let d=0;d<6;d++){const seg=segs[+str[d]],bx=x0+d*dw,by=h*0.34,sw=dw*0.55,sh=h*0.32;ctx.fillStyle='#ff3a3a';const dr=(i,x,y,wv,hv)=>{if(seg[i])ctx.fillRect(bx+x,by+y,wv,hv);};dr(0,4,0,sw-8,4);dr(1,sw-2,2,4,sh/2-3);dr(2,sw-2,sh/2,4,sh/2-3);dr(3,4,sh-4,sw-8,4);dr(4,0,sh/2,4,sh/2-3);dr(5,0,2,4,sh/2-3);dr(6,4,sh/2-2,sw-8,4);}};\nconst cv = document.getElementById('fx-sevenseg');\nconst ctx = cv.getContext('2d');\nconst DPR = Math.min(2, window.devicePixelRatio || 1);\nconst state = {};\nlet mx = -9999, my = -9999; // -9999 == not hovering (CONTRACT 2)\ncv.addEventListener('pointermove', (e) => {\n  const r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top;\n});\ncv.addEventListener('pointerleave', () => { mx = -9999; my = -9999; });\nconst t0 = performance.now();\n(function frame() {\n  const w = Math.max(1, cv.clientWidth || 300), h = Math.max(1, cv.clientHeight || 240);\n  if (cv.width !== Math.round(w * DPR) || cv.height !== Math.round(h * DPR)) {\n    cv.width = Math.round(w * DPR); cv.height = Math.round(h * DPR);\n  }\n  ctx.setTransform(DPR, 0, 0, DPR, 0, 0); // draw in CSS px\n  const t = (performance.now() - t0) / 1000;\n  draw(ctx, w, h, t, mx, my, state);\n  requestAnimationFrame(frame);\n})();\n</script>",
+  "mountSnippet": "import { mount } from 'fx-lab';\nmount(document.querySelector('#app'), 'sevenseg');",
+  "runtimeNotes": "Canvas2D: draw(ctx, w, h, t, mx, my, state) runs each frame; w/h and mx/my are CSS px (mx,my = -9999 when not hovering), ctx is pre-scaled by DPR = min(2, devicePixelRatio). Perf budget — gpu: low, cpu: low, mobileSafe: true. Non-deterministic: uses unseeded randomness or wall-clock time, so output differs run to run. Reduced motion: freeze.",
+  "url": "/effects/sevenseg.md",
+  "preview": null
+}

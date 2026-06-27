@@ -1,0 +1,4043 @@
+{
+  "name": "fx-lab",
+  "version": "0.1.0",
+  "homepage": "https://fx-lab.example/",
+  "sections": [
+    {
+      "id": "generative",
+      "name": "Generative",
+      "nameLocal": "生成"
+    },
+    {
+      "id": "post-and-print",
+      "name": "Post & Print",
+      "nameLocal": "后处理·印刷"
+    },
+    {
+      "id": "world-patterns",
+      "name": "World Patterns",
+      "nameLocal": "世界纹样"
+    },
+    {
+      "id": "design-movements",
+      "name": "Design Movements",
+      "nameLocal": "设计流派"
+    },
+    {
+      "id": "data-and-system",
+      "name": "Data & System",
+      "nameLocal": "数据·系统"
+    },
+    {
+      "id": "interaction",
+      "name": "Interaction",
+      "nameLocal": "交互"
+    },
+    {
+      "id": "geometry-and-curves",
+      "name": "Geometry & Curves",
+      "nameLocal": "几何·曲线"
+    },
+    {
+      "id": "fractal-and-chaos",
+      "name": "Fractal & Chaos",
+      "nameLocal": "分形·混沌"
+    },
+    {
+      "id": "cellular-and-physics",
+      "name": "Cellular & Physics",
+      "nameLocal": "元胞·物理"
+    },
+    {
+      "id": "world-patterns-ii",
+      "name": "World Patterns II",
+      "nameLocal": "世界纹样 II"
+    },
+    {
+      "id": "screen-and-signal",
+      "name": "Screen & Signal",
+      "nameLocal": "屏幕·信号"
+    },
+    {
+      "id": "interaction-and-generative",
+      "name": "Interaction & Generative II",
+      "nameLocal": "交互·生成 II"
+    }
+  ],
+  "effects": [
+    {
+      "id": "gradient",
+      "kind": "shader",
+      "name": "Gradient Flow",
+      "nameLocal": null,
+      "section": "generative",
+      "summary": "Silky domain-warped color field in deep blue, purple and teal; slow hypnotic drift.",
+      "description": "Layered FBM domain-warp generates a continuously morphing gradient across the frame. Mouse position subtly shifts the warp anchor, making the color field breathe toward the cursor. Ideal as a calm animated background behind text or UI.",
+      "descriptionZh": "域扭曲 FBM · 跟随光标",
+      "tags": [
+        "noise",
+        "flow",
+        "plasma",
+        "glow",
+        "webgl2",
+        "background"
+      ],
+      "vibe": [
+        "calm",
+        "ambient",
+        "meditative"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/gradient.md",
+      "preview": null
+    },
+    {
+      "id": "dots",
+      "kind": "shader",
+      "name": "Dot-Matrix Wave",
+      "nameLocal": null,
+      "section": "generative",
+      "summary": "Blue-teal dot grid pulses in rolling waves; cursor pushes dots outward in a satisfying bulge.",
+      "description": "A 24×24 grid of round dots ripples with a traveling sine wave keyed to each cell's distance from the origin. Moving the cursor creates a localized bulge that expands nearby dots. Works as a subtle animated overlay or panel background.",
+      "descriptionZh": "点阵波动 + 光标隆起",
+      "tags": [
+        "dots",
+        "grid",
+        "waves",
+        "noise",
+        "webgl2",
+        "background"
+      ],
+      "vibe": [
+        "calm",
+        "playful",
+        "geometric"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/dots.md",
+      "preview": null
+    },
+    {
+      "id": "metaballs",
+      "kind": "shader",
+      "name": "Metaballs",
+      "nameLocal": null,
+      "section": "generative",
+      "summary": "Five glowing purple-magenta blobs orbit and merge organically; cursor draws in a sixth.",
+      "description": "Five metaballs travel sine-path orbits and merge via a smooth potential-field threshold. The cursor injects a sixth ball, pulling the fluid mass toward the pointer. Good for psychedelic loading states or dark hero backgrounds.",
+      "descriptionZh": "有机融合光球",
+      "tags": [
+        "metaballs",
+        "plasma",
+        "glow",
+        "fluid",
+        "webgl2",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "psychedelic",
+        "organic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/metaballs.md",
+      "preview": null
+    },
+    {
+      "id": "aurora",
+      "kind": "shader",
+      "name": "Aurora Ribbons",
+      "nameLocal": null,
+      "section": "generative",
+      "summary": "Shimmering green-and-purple aurora curtains stream down a starry night sky; serene fullscreen background.",
+      "description": "Three fbm-driven aurora curtains with vertical rays sway over a faint starfield, fading into a horizon glow and cycling through green-to-purple hues on a near-black sky. The cursor's vertical position nudges the curtains. Slow and meditative; ideal as a dark-mode hero background.",
+      "descriptionZh": "极光丝带",
+      "tags": [
+        "aurora",
+        "waves",
+        "glow",
+        "noise",
+        "webgl2",
+        "background"
+      ],
+      "vibe": [
+        "calm",
+        "meditative",
+        "ambient"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/aurora.md",
+      "preview": null
+    },
+    {
+      "id": "ripple",
+      "kind": "shader",
+      "name": "Ripple Grid",
+      "nameLocal": null,
+      "section": "generative",
+      "summary": "Teal grid lines bend under expanding ripple rings that emanate from the cursor.",
+      "description": "An 18×18 cell grid is distorted by a sine ripple that decays exponentially away from the mouse pointer. Far cells remain crisp while near cells warp dramatically. Use as an interactive background for demos or landing pages.",
+      "descriptionZh": "光标涟漪位移",
+      "tags": [
+        "ripple",
+        "grid",
+        "waves",
+        "noise",
+        "webgl2",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "technical",
+        "geometric"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/ripple.md",
+      "preview": null
+    },
+    {
+      "id": "voronoi",
+      "kind": "shader",
+      "name": "Voronoi Cells",
+      "nameLocal": null,
+      "section": "generative",
+      "summary": "Animated colour-cell mosaic with drifting seeds in jewel tones; organic and hypnotic.",
+      "description": "A Voronoi partition whose seed points travel sine-path orbits, making cells grow and shrink continuously. Each cell's colour is derived from its hashed seed. Fits as a bold geometric background or section divider.",
+      "descriptionZh": "细胞晶格 · 自然分形",
+      "tags": [
+        "voronoi",
+        "cellular",
+        "geometry",
+        "noise",
+        "webgl2",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "organic",
+        "geometric"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/voronoi.md",
+      "preview": null
+    },
+    {
+      "id": "truchet",
+      "kind": "shader",
+      "name": "Truchet Tiles",
+      "nameLocal": null,
+      "section": "generative",
+      "summary": "Scrolling arc-tile maze in dark teal; endlessly generative, calm, low-contrast texture.",
+      "description": "Each tile is randomly assigned one of two Truchet arc orientations, producing a connected maze-like pattern. The pattern scrolls horizontally over time. A calm, low-contrast texture for backgrounds or overlays.",
+      "descriptionZh": "程序化迷宫纹",
+      "tags": [
+        "tiling",
+        "geometry",
+        "lines",
+        "webgl2",
+        "background"
+      ],
+      "vibe": [
+        "calm",
+        "geometric",
+        "meditative"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/truchet.md",
+      "preview": null
+    },
+    {
+      "id": "kaleido",
+      "kind": "shader",
+      "name": "Kaleidoscope",
+      "nameLocal": null,
+      "section": "generative",
+      "summary": "8-fold FBM kaleidoscope blooms with shifting hues; cursor tilts the mandala in real time.",
+      "description": "UV coordinates are folded into 8 symmetric segments before sampling layered FBM noise. Colour cycles slowly over time; mouse position shifts the noise anchor for live pattern control. Lush and hypnotic as a fullscreen hero or overlay.",
+      "descriptionZh": "万花筒 · 曼陀罗",
+      "tags": [
+        "kaleidoscope",
+        "mandala",
+        "fractal",
+        "noise",
+        "webgl2",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "psychedelic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/kaleido.md",
+      "preview": null
+    },
+    {
+      "id": "raymarch",
+      "kind": "shader",
+      "name": "Raymarch SDF",
+      "nameLocal": null,
+      "section": "generative",
+      "summary": "Glowing torus spins in deep space via 48-step SDF raymarching; blue-to-magenta Fresnel rim.",
+      "description": "A torus SDF is raymarched with dual-axis rotation driven by time. Fresnel shading produces a cool blue core transitioning to magenta at glancing angles on a near-black void. Best as a centerpiece or 3D-flavoured hero element.",
+      "descriptionZh": "光线步进 · 旋转环面",
+      "tags": [
+        "geometry",
+        "orbit",
+        "glow",
+        "rings",
+        "webgl2",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "futuristic",
+        "technical"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/raymarch.md",
+      "preview": null
+    },
+    {
+      "id": "vapor",
+      "kind": "shader",
+      "name": "Vaporwave Grid",
+      "nameLocal": null,
+      "section": "post-and-print",
+      "summary": "Retro vaporwave: banded sunset sun over a perspective cyan neon grid scrolling to the horizon.",
+      "description": "The upper half renders a purple-to-pink sky with a horizontally-banded sun; the lower half draws a perspective-projected cyan grid that scrolls forward over time. A self-contained 80s aesthetic requiring no assets.",
+      "descriptionZh": "落日 + 透视霓虹网格",
+      "tags": [
+        "grid",
+        "neon",
+        "geometry",
+        "lines",
+        "webgl2",
+        "background"
+      ],
+      "vibe": [
+        "retro",
+        "calm",
+        "futuristic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/vapor.md",
+      "preview": null
+    },
+    {
+      "id": "glitch",
+      "kind": "shader",
+      "name": "Chromatic Glitch",
+      "nameLocal": null,
+      "section": "post-and-print",
+      "summary": "Horizontal RGB bands jitter and split over CRT scanlines; aggressive retro glitch.",
+      "description": "Hash-based band selection randomly shifts the R and B channels horizontally, creating chromatic aberration bursts. A scanline multiply darkens every other row for a CRT feel. Use as an aggressive overlay for retro or cyberpunk themes.",
+      "descriptionZh": "RGB 分离 + 扫描线",
+      "tags": [
+        "glitch",
+        "scanlines",
+        "noise",
+        "neon",
+        "webgl2",
+        "overlay"
+      ],
+      "vibe": [
+        "aggressive",
+        "retro",
+        "dramatic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "med",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/glitch.md",
+      "preview": null
+    },
+    {
+      "id": "field",
+      "kind": "canvas",
+      "name": "Flow Field",
+      "nameLocal": null,
+      "section": "data-and-system",
+      "summary": "Dim constellation of drifting particles draws faint connecting lines; cursor repels the swarm.",
+      "description": "Maintains 60 particles drifting with gentle noise, connected by faint blue lines when close, leaving soft trails via a partial alpha fill. The cursor repels nearby particles. Ideal as an ambient background for dark-themed interfaces.",
+      "descriptionZh": "粒子星座 · 光标搅动",
+      "tags": [
+        "particles",
+        "canvas2d",
+        "flow",
+        "trail",
+        "lines"
+      ],
+      "vibe": [
+        "calm",
+        "ambient",
+        "elegant"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Particle positions and connecting-line trails accumulate via partial alpha clear"
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/field.md",
+      "preview": null
+    },
+    {
+      "id": "seigaiha",
+      "kind": "canvas",
+      "name": "Seigaiha",
+      "nameLocal": "青海波",
+      "section": "world-patterns",
+      "summary": "Serene overlapping blue-white wave fans tile the screen; calm Japanese oceanic elegance.",
+      "description": "Overlapping semicircle fans in offset rows form the traditional Japanese Seigaiha wave tiling on a deep navy ground. A subtle per-column sine offset gives the grid a gentle undulating quality. Use as a serene, refined background for Japan-themed or coastal designs.",
+      "descriptionZh": "和风波纹",
+      "tags": [
+        "waves",
+        "tiling",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "calm",
+        "elegant",
+        "cultural"
+      ],
+      "culture": "Japan",
+      "accuracyNote": "Procedural approximation of Japanese Seigaiha wave tiling; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/seigaiha.md",
+      "preview": null
+    },
+    {
+      "id": "girih",
+      "kind": "canvas",
+      "name": "Girih",
+      "nameLocal": "几何",
+      "section": "world-patterns",
+      "summary": "Dark ground of slowly rotating golden octagram lattice; elegant Islamic geometric meditation.",
+      "description": "Two overlapping rotated squares and a central octagon tile the canvas with gold lines on a near-black ground, evoking Islamic girih geometric art. The entire lattice rotates imperceptibly slowly, lending a hypnotic depth. Use as a dark, elegant background for cultural or luxury interfaces.",
+      "descriptionZh": "八角星镶嵌 · 金线",
+      "tags": [
+        "geometry",
+        "tiling",
+        "mosaic",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "elegant",
+        "hypnotic",
+        "cultural"
+      ],
+      "culture": "Islamic",
+      "accuracyNote": "Procedural approximation of Islamic girih tiling; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/girih.md",
+      "preview": null
+    },
+    {
+      "id": "celtic",
+      "kind": "canvas",
+      "name": "Celtic Knot",
+      "nameLocal": null,
+      "section": "world-patterns",
+      "summary": "Glowing green interlace arcs weave across a dark field with a flowing animated dash; hypnotic.",
+      "description": "Pairs of quarter-circle arcs are drawn with an animated dashed stroke whose offset advances each frame, creating the illusion of light flowing through an interlaced knot grid. The alternating arc directions mimic an over-under weave. Use as a moody background for Celtic-themed or fantasy designs.",
+      "descriptionZh": "交织绳结 · 流光",
+      "tags": [
+        "knot",
+        "weave",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "elegant",
+        "cultural"
+      ],
+      "culture": "Celtic",
+      "accuracyNote": "Procedural approximation of Celtic knotwork interlace; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/celtic.md",
+      "preview": null
+    },
+    {
+      "id": "aboriginal",
+      "kind": "canvas",
+      "name": "Dot Painting",
+      "nameLocal": null,
+      "section": "world-patterns",
+      "summary": "Warm earth-tone concentric dot rings orbit fixed anchors on dark brown; organic and meditative.",
+      "description": "Six randomly placed anchor points each emit six rings of coloured dots in ochre, sienna, cream, and red that slowly orbit in alternating directions. Positions are randomised once per mount and then persist. Inspired by the concentric dot technique of Australian Aboriginal art.",
+      "descriptionZh": "同心点画 · 大地色",
+      "tags": [
+        "dots",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "meditative",
+        "organic",
+        "cultural"
+      ],
+      "culture": "Aboriginal Australian",
+      "accuracyNote": "Procedural approximation of Aboriginal Australian dot painting; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Dot centre positions generated once on first frame via Math.random."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/aboriginal.md",
+      "preview": null
+    },
+    {
+      "id": "inkwash",
+      "kind": "canvas",
+      "name": "Ink Wash",
+      "nameLocal": "水墨",
+      "section": "world-patterns",
+      "summary": "Soft ink blobs drift on cream paper; hover to drop a brushstroke wash at the cursor.",
+      "description": "Five radial-gradient ink blobs drift in slow Lissajous paths across a warm cream background, building a gently stained ink-wash field. Moving the cursor adds a darker ink mark at the pointer, simulating a brush touching paper. Use for meditative overlays or East Asian-themed interfaces.",
+      "descriptionZh": "晕染笔触 · 跟手",
+      "tags": [
+        "ink",
+        "canvas2d",
+        "background",
+        "overlay"
+      ],
+      "vibe": [
+        "calm",
+        "meditative",
+        "cultural",
+        "minimal"
+      ],
+      "culture": "China",
+      "accuracyNote": "Procedural approximation of Chinese ink wash painting; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Ink blob positions generated once on first frame via Math.random."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/inkwash.md",
+      "preview": null
+    },
+    {
+      "id": "opart",
+      "kind": "canvas",
+      "name": "Op-Art Moiré",
+      "nameLocal": null,
+      "section": "design-movements",
+      "summary": "Black-and-white concentric rings create a dizzying moiré illusion; cursor shifts the offset.",
+      "description": "Draws two sets of concentric rings composited with `difference` mode to produce a moiré interference pattern. The second ring set tracks the cursor or auto-animates. Striking as a bold background or portfolio statement.",
+      "descriptionZh": "莫尔条纹 · 错视",
+      "tags": [
+        "moire",
+        "canvas2d",
+        "optical",
+        "rings",
+        "geometry"
+      ],
+      "vibe": [
+        "hypnotic",
+        "geometric"
+      ],
+      "culture": "Op-Art / optical illusion",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/opart.md",
+      "preview": null
+    },
+    {
+      "id": "bauhaus",
+      "kind": "canvas",
+      "name": "Bauhaus",
+      "nameLocal": null,
+      "section": "design-movements",
+      "summary": "Bold Bauhaus shapes — blue circle, red arc, yellow triangle — slow-turn in primary colours.",
+      "description": "Draws a Bauhaus-inspired geometric composition: a blue circle, a slowly rotating red half-disc, and a yellow triangle on a warm grey field, anchored by two horizontal black bars. Minimal and rhythmic — works well as a design-movement background or splash screen.",
+      "descriptionZh": "三原色几何构成",
+      "tags": [
+        "geometry",
+        "canvas2d",
+        "curves",
+        "lines"
+      ],
+      "vibe": [
+        "elegant",
+        "geometric",
+        "minimal"
+      ],
+      "culture": "Bauhaus / design movement",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/bauhaus.md",
+      "preview": null
+    },
+    {
+      "id": "memphis",
+      "kind": "canvas",
+      "name": "Memphis 80s",
+      "nameLocal": null,
+      "section": "design-movements",
+      "summary": "Neon Memphis shapes drift and spin on dark; vibrant 80s pop-design energy.",
+      "description": "Scatters 16 coloured shapes — filled circles, triangles, outline circles, and crosses — across a dark field, each bobbing and rotating to its own phase. Palette echoes 80s Memphis design. Works as a vibrant background or decorative overlay.",
+      "descriptionZh": "撞色碎片 · 波普",
+      "tags": [
+        "geometry",
+        "canvas2d",
+        "particles",
+        "lines"
+      ],
+      "vibe": [
+        "playful",
+        "energetic",
+        "retro"
+      ],
+      "culture": "Memphis / pop design",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/memphis.md",
+      "preview": null
+    },
+    {
+      "id": "matrix",
+      "kind": "canvas",
+      "name": "Matrix Rain",
+      "nameLocal": null,
+      "section": "data-and-system",
+      "summary": "Green Katakana glyphs cascade in columns on black; iconic hacker-terminal rain effect.",
+      "description": "Renders falling Katakana characters with a partial alpha fill that leaves persistent green trails, recreating the classic Matrix rain aesthetic. Each column resets at a random interval. An unmistakable retro-cyber background.",
+      "descriptionZh": "片假名数字雨",
+      "tags": [
+        "ascii",
+        "canvas2d",
+        "rain",
+        "trail",
+        "neon"
+      ],
+      "vibe": [
+        "retro",
+        "dramatic",
+        "technical"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Column y-positions and character trails accumulate via partial alpha clear"
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/matrix.md",
+      "preview": null
+    },
+    {
+      "id": "scope",
+      "kind": "canvas",
+      "name": "Oscilloscope",
+      "nameLocal": null,
+      "section": "data-and-system",
+      "summary": "Phosphor-green oscilloscope waveform glows on a dim CRT grid; calm technical atmosphere.",
+      "description": "Simulates a CRT oscilloscope: a faint green grid overlays a dark background, and a compound glowing sine wave sweeps across the full display each frame. Use for data-vis dashboards, retro instrument UI, or lofi ambient backgrounds.",
+      "descriptionZh": "示波器波形 · 荧光",
+      "tags": [
+        "oscilloscope",
+        "canvas2d",
+        "waves",
+        "glow",
+        "grid"
+      ],
+      "vibe": [
+        "calm",
+        "technical",
+        "retro"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/scope.md",
+      "preview": null
+    },
+    {
+      "id": "starfield",
+      "kind": "canvas",
+      "name": "Starfield Warp",
+      "nameLocal": null,
+      "section": "data-and-system",
+      "summary": "Stars streak inward at warp speed from a deep-space vanishing point; hypnotic forward pull.",
+      "description": "Projects 150 stars from a central origin outward, drawing each as a streak from its previous to current position. Stars brighten and widen as they near the viewport edge, leaving soft warp trails via a partial alpha fill. Perfect for sci-fi hero sections or loading screens.",
+      "descriptionZh": "星空跃迁",
+      "tags": [
+        "starfield",
+        "canvas2d",
+        "stars",
+        "trail",
+        "tunnel"
+      ],
+      "vibe": [
+        "futuristic",
+        "hypnotic",
+        "energetic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Star positions and warp-streak trails accumulate via partial alpha clear"
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/starfield.md",
+      "preview": null
+    },
+    {
+      "id": "halftone",
+      "kind": "canvas",
+      "name": "Halftone CMYK",
+      "nameLocal": null,
+      "section": "post-and-print",
+      "summary": "Warm CMYK halftone dots bloom from cursor position; editorial print-design feel.",
+      "description": "Renders three overlapping dot screens — cyan, magenta, yellow — using multiply blending. Dot radius swells toward the cursor or a slow auto-animated hotspot. Ideal as a decorative background or poster overlay.",
+      "descriptionZh": "网点半调 · 套色",
+      "tags": [
+        "halftone",
+        "dots",
+        "canvas2d",
+        "geometry"
+      ],
+      "vibe": [
+        "elegant",
+        "retro"
+      ],
+      "culture": "print / design",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/halftone.md",
+      "preview": null
+    },
+    {
+      "id": "ascii",
+      "kind": "canvas",
+      "name": "ASCII Field",
+      "nameLocal": null,
+      "section": "post-and-print",
+      "summary": "Blue-purple ASCII characters pulse in sine-wave brightness waves; retro terminal glow.",
+      "description": "Maps compound sine-wave luminance to an ASCII brightness ramp drawn on a dark background. Colour shifts from dim blue to bright violet with intensity. Use as an ambient animated background for dark-themed or terminal-aesthetic UIs.",
+      "descriptionZh": "字符明度场",
+      "tags": [
+        "ascii",
+        "canvas2d",
+        "waves",
+        "neon"
+      ],
+      "vibe": [
+        "retro",
+        "energetic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/ascii.md",
+      "preview": null
+    },
+    {
+      "id": "topo",
+      "kind": "canvas",
+      "name": "Topographic",
+      "nameLocal": null,
+      "section": "data-and-system",
+      "summary": "Animated teal contour lines map slowly shifting noise terrain; cursor warps the topology.",
+      "description": "Uses value noise to generate a scrolling height field and draws teal isolines wherever the field crosses fixed level thresholds. The cursor horizontally warps the noise domain in real time. Best as a calm ambient background for data or nature-themed UIs.",
+      "descriptionZh": "等高线地形 · 跟手",
+      "tags": [
+        "terrain",
+        "canvas2d",
+        "noise",
+        "flow",
+        "lines"
+      ],
+      "vibe": [
+        "calm",
+        "ambient",
+        "organic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/topo.md",
+      "preview": null
+    },
+    {
+      "id": "quasicrystal",
+      "kind": "canvas",
+      "name": "Quasicrystal",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Shimmering five-fold crystal interference; blue-purple moiré tiles slowly pulse and breathe.",
+      "description": "Sums five cosine waves at pentagonal angles per pixel to generate a quasicrystal interference pattern. The combined phase shifts over time, producing a pulsing blue-purple-gold moiré field. CPU-heavy; best as a small inline tile or low-resolution background.",
+      "descriptionZh": "五重对称干涉",
+      "tags": [
+        "moire",
+        "optical",
+        "geometry",
+        "noise",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "psychedelic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/quasicrystal.md",
+      "preview": null
+    },
+    {
+      "id": "phyllotaxis",
+      "kind": "canvas",
+      "name": "Phyllotaxis",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Sunflower spiral of rainbow glowing dots; golden-angle phyllotaxis slowly rotating outward.",
+      "description": "Places 420 dots using the golden angle (~137.5°) to recreate the seed-packing geometry found in sunflowers and pine cones. Each dot's hue advances with time, making the spiral bloom through rainbow color. Lightweight and meditative; suits dark backgrounds or inline ornaments.",
+      "descriptionZh": "向日葵螺旋 · 黄金角",
+      "tags": [
+        "dots",
+        "spiral",
+        "geometry",
+        "particles",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "calm",
+        "meditative",
+        "organic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/phyllotaxis.md",
+      "preview": null
+    },
+    {
+      "id": "rose",
+      "kind": "canvas",
+      "name": "Rose Curve",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Soft pink rose curve cycling through 3-to-8-petal forms on a dark field; elegant math bloom.",
+      "description": "Traces the polar rose equation r = cos(k·θ), stepping k through integer values over time to produce 3-, 4-, 5-, 6-, 7-, and 8-petal flowers. Each petal count redraws cleanly with a single pink stroke. A minimal, elegant mathematical curve suited to dark inline or background use.",
+      "descriptionZh": "玫瑰线 · 玫瑰花形",
+      "tags": [
+        "curves",
+        "geometry",
+        "spiral",
+        "rings",
+        "canvas2d",
+        "inline"
+      ],
+      "vibe": [
+        "elegant",
+        "minimal",
+        "calm"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/rose.md",
+      "preview": null
+    },
+    {
+      "id": "spiro",
+      "kind": "canvas",
+      "name": "Spirograph",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Electric-blue spirograph tracing a hypotrochoid; intricate lace-like winding slowly rotates.",
+      "description": "Animates a hypotrochoid — the path of a point on a smaller gear rolling inside a larger gear — producing an interlocking lace-like loop. The inner gear rotates continuously over time, shifting the winding. Crisp blue stroke on dark navy; works as a centered inline ornament or calm background.",
+      "descriptionZh": "万花尺 · 内旋轮线",
+      "tags": [
+        "curves",
+        "spiral",
+        "geometry",
+        "rings",
+        "canvas2d",
+        "inline"
+      ],
+      "vibe": [
+        "elegant",
+        "hypnotic",
+        "geometric"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/spiro.md",
+      "preview": null
+    },
+    {
+      "id": "lissajous",
+      "kind": "canvas",
+      "name": "Lissajous",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Glowing green Lissajous figure cycling through phase; oscilloscope curve on dark background.",
+      "description": "Draws a 3:4 Lissajous figure with a slowly advancing phase offset, making the loop knot and unknot continuously. A soft shadow glow reinforces the oscilloscope aesthetic. Lightweight and hypnotic; ideal for technical dashboards or dark overlay accents.",
+      "descriptionZh": "李萨如图形",
+      "tags": [
+        "curves",
+        "oscilloscope",
+        "geometry",
+        "lines",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "technical",
+        "minimal"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/lissajous.md",
+      "preview": null
+    },
+    {
+      "id": "superformula",
+      "kind": "canvas",
+      "name": "Superformula",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Purple superformula outline morphing through stars, flowers, and polygons; organic math shapes.",
+      "description": "Implements Johan Gielis's superformula — a single polar equation that generates stars, flowers, polygons, and organic blobs by varying one symmetry parameter. The parameter m steps over time, cycling through 14 distinct silhouettes. Elegant on dark backgrounds as a centered inline motif.",
+      "descriptionZh": "超公式 · 万象有机形",
+      "tags": [
+        "curves",
+        "geometry",
+        "rings",
+        "spiral",
+        "canvas2d",
+        "inline"
+      ],
+      "vibe": [
+        "elegant",
+        "hypnotic",
+        "organic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/superformula.md",
+      "preview": null
+    },
+    {
+      "id": "hexgrid",
+      "kind": "canvas",
+      "name": "Hex Grid",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Pulsing blue honeycomb grid; a rippling brightness wave sweeps across hex cells.",
+      "description": "Fills the canvas with a regular hexagonal grid, each cell's stroke opacity modulated by a sine wave traveling diagonally. The ripple gives the lattice a living, breathing quality. Works well as a background for tech, futuristic, or sci-fi themes.",
+      "descriptionZh": "六边形波动网格",
+      "tags": [
+        "hexgrid",
+        "geometry",
+        "grid",
+        "waves",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "technical",
+        "futuristic",
+        "ambient"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/hexgrid.md",
+      "preview": null
+    },
+    {
+      "id": "concentric",
+      "kind": "canvas",
+      "name": "Concentric",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Rainbow concentric squares scrolling outward from center; bold, cycling hue tunnel effect.",
+      "description": "Draws 26 nested squares whose sizes and hues advance with time, creating a continuous outward-scroll tunnel of color. The rapid hue cycling produces a vivid, psychedelic depth effect. Use as a bold background or retro-style overlay.",
+      "descriptionZh": "同心方 · 色相轮转",
+      "tags": [
+        "geometry",
+        "rings",
+        "optical",
+        "grid",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "psychedelic",
+        "energetic",
+        "hypnotic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/concentric.md",
+      "preview": null
+    },
+    {
+      "id": "spiralarc",
+      "kind": "canvas",
+      "name": "Spiral",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Clean white Archimedean spiral slowly rotating on pure black; minimal and meditative.",
+      "description": "Traces an Archimedean spiral (radius proportional to angle) and rotates it continuously over time. Pure monochrome — white stroke on black. Minimal and timeless; suits centered inline use or as a backdrop for text overlays.",
+      "descriptionZh": "阿基米德螺线",
+      "tags": [
+        "spiral",
+        "curves",
+        "geometry",
+        "lines",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "minimal",
+        "meditative",
+        "calm"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/spiralarc.md",
+      "preview": null
+    },
+    {
+      "id": "interference",
+      "kind": "canvas",
+      "name": "Interference",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Blue interference fringes from two point-sources pulsing across canvas; hypnotic wave moiré.",
+      "description": "Simulates two-source wave interference by summing sinusoidal wavefronts per pixel. One source oscillates laterally over time, continuously shifting the fringe pattern. CPU-heavy pixel raster; best at a fixed small tile or reduced canvas resolution.",
+      "descriptionZh": "双源波纹干涉",
+      "tags": [
+        "moire",
+        "waves",
+        "optical",
+        "noise",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "technical",
+        "psychedelic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/interference.md",
+      "preview": null
+    },
+    {
+      "id": "chevron",
+      "kind": "canvas",
+      "name": "Chevron",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Scrolling multicolor chevron stripes; vivid zigzag rows stream in retro palette.",
+      "description": "Draws alternating V-shaped chevron rows in four vivid colors — coral, yellow, teal, and violet — that scroll horizontally over time. The repeating zigzag creates an energetic, retro-textile feel. Ideal as a lively background or banner pattern.",
+      "descriptionZh": "人字折线 · 流动",
+      "tags": [
+        "chevron",
+        "stripes",
+        "geometry",
+        "lines",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "energetic",
+        "playful",
+        "retro"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/chevron.md",
+      "preview": null
+    },
+    {
+      "id": "herringbone",
+      "kind": "canvas",
+      "name": "Herringbone",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Warm gold herringbone tile weave on dark brown; a rich static textile pattern.",
+      "description": "Renders interlocking diagonal rectangular tiles in the classic herringbone arrangement — gold on dark brown. The geometry is fully static with no animation. A warm, tactile textile backdrop suited to cozy or editorial layouts.",
+      "descriptionZh": "鱼骨拼贴",
+      "tags": [
+        "geometry",
+        "tiling",
+        "weave",
+        "stripes",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "elegant",
+        "cozy",
+        "retro"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "none"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/herringbone.md",
+      "preview": null
+    },
+    {
+      "id": "polka",
+      "kind": "canvas",
+      "name": "Polka Dots",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "White polka dots gently breathing on vivid hot-pink; cheerful and playful pop-art pattern.",
+      "description": "Fills a hot-pink canvas with a staggered grid of white circles whose radii pulse with a slow sine wave. The breathing rhythm gives a light, bouncy energy. Great as a retro or pop-art background.",
+      "descriptionZh": "波点 · 呼吸",
+      "tags": [
+        "dots",
+        "geometry",
+        "grid",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "playful",
+        "energetic",
+        "retro"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/polka.md",
+      "preview": null
+    },
+    {
+      "id": "houndstooth",
+      "kind": "canvas",
+      "name": "Houndstooth",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Classic black-and-white houndstooth check slowly scrolling; crisp tailoring pattern.",
+      "description": "Tiles the traditional houndstooth check in pure black and white, with the pattern scrolling diagonally over time. Each tile uses the characteristic interlocking angular comma-shapes. Sharp and graphic; suits fashion-forward or editorial backgrounds.",
+      "descriptionZh": "千鸟格",
+      "tags": [
+        "geometry",
+        "tiling",
+        "stripes",
+        "grid",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "elegant",
+        "retro",
+        "minimal"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/houndstooth.md",
+      "preview": null
+    },
+    {
+      "id": "plaid",
+      "kind": "canvas",
+      "name": "Tartan Plaid",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Scrolling tartan plaid in forest green, red, and cream; classic Scottish textile in motion.",
+      "description": "Lays overlapping horizontal and vertical translucent color bands on a dark green ground, mimicking tartan weave structure. The bands scroll diagonally over time. A warm, culturally evocative backdrop for heritage, seasonal, or cozy themes.",
+      "descriptionZh": "苏格兰格纹",
+      "tags": [
+        "stripes",
+        "geometry",
+        "tiling",
+        "grid",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "cozy",
+        "retro",
+        "elegant"
+      ],
+      "culture": "Scotland",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/plaid.md",
+      "preview": null
+    },
+    {
+      "id": "starburst",
+      "kind": "canvas",
+      "name": "Starburst",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Yellow and pink radiating wedges slowly spinning; bold retro sunburst from canvas center.",
+      "description": "Divides the canvas into 40 alternating yellow and pink triangular sectors radiating from the center, forming a classic starburst motif. The whole pattern rotates slowly over time. Bold and festive; works as a hero background or vintage-style overlay.",
+      "descriptionZh": "放射扇面",
+      "tags": [
+        "geometry",
+        "spiral",
+        "rings",
+        "lines",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "energetic",
+        "playful",
+        "retro"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/starburst.md",
+      "preview": null
+    },
+    {
+      "id": "wavelines",
+      "kind": "canvas",
+      "name": "Wave Lines",
+      "nameLocal": null,
+      "section": "geometry-and-curves",
+      "summary": "Stacked rainbow sine waves undulating on dark blue-black; hypnotic layered ribbon flow.",
+      "description": "Draws 20 overlapping sine waves across the canvas, each with a different phase, frequency offset, and hue cycling through blue-to-rainbow range. Amplitudes oscillate slowly, creating a rippling layered ribbon effect. Ideal as a calm ambient background.",
+      "descriptionZh": "叠层正弦波带",
+      "tags": [
+        "waves",
+        "lines",
+        "geometry",
+        "flow",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "calm",
+        "ambient",
+        "hypnotic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/wavelines.md",
+      "preview": null
+    },
+    {
+      "id": "mandelbrot",
+      "kind": "canvas",
+      "name": "Mandelbrot",
+      "nameLocal": null,
+      "section": "fractal-and-chaos",
+      "summary": "Hypnotic zoom into the Mandelbrot set; cycling hues trace infinite fractal complexity.",
+      "description": "Renders the Mandelbrot set pixel-by-pixel in 2×2 blocks, slowly zooming into a detail region near the boundary at (-0.745, 0.115). Escape-time coloring cycles the full hue spectrum as time advances. Use as a meditative or psychedelic fullscreen background.",
+      "descriptionZh": "曼德博集合 · 缩放",
+      "tags": [
+        "fractal",
+        "geometry",
+        "curves",
+        "pixel"
+      ],
+      "vibe": [
+        "hypnotic",
+        "psychedelic",
+        "meditative"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/mandelbrot.md",
+      "preview": null
+    },
+    {
+      "id": "julia",
+      "kind": "canvas",
+      "name": "Julia Set",
+      "nameLocal": null,
+      "section": "fractal-and-chaos",
+      "summary": "Julia set blooms through parameter space; vivid fractal shapes drift and morph in cyan-blue.",
+      "description": "Iterates the Julia set on every pixel with a slowly rotating complex parameter c = 0.7885·(cos t, sin t). Escape-time coloring in cyan-to-blue hues produces intricate fractal boundaries that morph continuously. Use as a hypnotic animated background.",
+      "descriptionZh": "朱利亚集 · 漂移",
+      "tags": [
+        "fractal",
+        "geometry",
+        "curves",
+        "pixel"
+      ],
+      "vibe": [
+        "hypnotic",
+        "psychedelic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/julia.md",
+      "preview": null
+    },
+    {
+      "id": "clifford",
+      "kind": "canvas",
+      "name": "Clifford Attractor",
+      "nameLocal": null,
+      "section": "fractal-and-chaos",
+      "summary": "Electric-blue dust swirls into alien strange-attractor shapes; meditative accumulator on dark.",
+      "description": "Plots 2200 Clifford attractor points per frame in cyan-blue over a near-black background that fades rather than clears, letting the attractor's loop-and-wing topology build up gradually. Parameter a oscillates slowly over time. Use for atmospheric tech or ambient backgrounds.",
+      "descriptionZh": "奇异吸引子",
+      "tags": [
+        "attractor",
+        "geometry",
+        "curves",
+        "particles"
+      ],
+      "vibe": [
+        "hypnotic",
+        "ambient",
+        "technical"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": {
+        "persistent": true,
+        "notes": "Accumulates 2200 dots per frame; canvas only partially erased each frame (alpha fade, not full clear)."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/clifford.md",
+      "preview": null
+    },
+    {
+      "id": "dejong",
+      "kind": "canvas",
+      "name": "De Jong",
+      "nameLocal": null,
+      "section": "fractal-and-chaos",
+      "summary": "Pink dust drifts into strange alien loops; a De Jong attractor slowly builds on dark violet.",
+      "description": "Plots 2200 De Jong attractor points per frame in pink-magenta over a near-black background that fades rather than clears, letting the folded-wing shape accumulate over time. Parameter a oscillates slowly. Best as an ambient or sci-fi background.",
+      "descriptionZh": "德容吸引子",
+      "tags": [
+        "attractor",
+        "geometry",
+        "curves",
+        "particles"
+      ],
+      "vibe": [
+        "hypnotic",
+        "ambient",
+        "technical"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": {
+        "persistent": true,
+        "notes": "Accumulates 2200 dots per frame; canvas only partially erased each frame (alpha fade, not full clear)."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/dejong.md",
+      "preview": null
+    },
+    {
+      "id": "lorenz",
+      "kind": "canvas",
+      "name": "Lorenz",
+      "nameLocal": null,
+      "section": "fractal-and-chaos",
+      "summary": "Electric-blue butterfly trace of the Lorenz attractor; calm chaotic orbit on dark navy.",
+      "description": "Numerically integrates the Lorenz system (σ=10, ρ=28, β=8/3) and draws a trailing 900-point path projected onto the XZ plane, redrawn each frame over a cleared background. The butterfly attractor slowly unfurls. Ideal as a calm scientific or ambient overlay.",
+      "descriptionZh": "洛伦兹蝴蝶",
+      "tags": [
+        "attractor",
+        "curves",
+        "geometry",
+        "trail"
+      ],
+      "vibe": [
+        "calm",
+        "ambient",
+        "technical",
+        "hypnotic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": {
+        "persistent": true,
+        "notes": "Accumulates up to 900 XZ path points across frames."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/lorenz.md",
+      "preview": null
+    },
+    {
+      "id": "fern",
+      "kind": "canvas",
+      "name": "Barnsley Fern",
+      "nameLocal": null,
+      "section": "fractal-and-chaos",
+      "summary": "Bright green Barnsley fern materializes from chaos; organic fractal nature on dark green.",
+      "description": "Applies the Barnsley iterated function system to scatter 7000 random points each frame, painting a photorealistic fern silhouette in bright green on near-black. Uses Math.random() so each rendered frame is unique. Best as a decorative or meditative panel.",
+      "descriptionZh": "分形蕨",
+      "tags": [
+        "fractal",
+        "particles",
+        "geometry",
+        "noise"
+      ],
+      "vibe": [
+        "calm",
+        "organic",
+        "meditative"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/fern.md",
+      "preview": null
+    },
+    {
+      "id": "sierpinski",
+      "kind": "canvas",
+      "name": "Sierpinski",
+      "nameLocal": null,
+      "section": "fractal-and-chaos",
+      "summary": "Warm amber Sierpinski triangle emerges from the chaos game; minimal fractal on dark.",
+      "description": "Uses the chaos game algorithm — repeatedly jumping halfway to a random vertex — to paint 7000 points per frame as a Sierpinski triangle in warm amber. Math.random() means each frame is a unique instance. Clean and minimal for decorative use.",
+      "descriptionZh": "谢尔宾斯基三角",
+      "tags": [
+        "fractal",
+        "geometry",
+        "particles",
+        "dots"
+      ],
+      "vibe": [
+        "minimal",
+        "geometric",
+        "hypnotic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/sierpinski.md",
+      "preview": null
+    },
+    {
+      "id": "dragon",
+      "kind": "canvas",
+      "name": "Dragon Curve",
+      "nameLocal": null,
+      "section": "fractal-and-chaos",
+      "summary": "Purple dragon-curve fractal slowly rotates; clean self-similar line on dark violet.",
+      "description": "Precomputes an 11-generation dragon curve sequence and renders it as a connected line that slowly rotates over time. The self-similar L-system fold produces a space-filling dragon shape in lavender-purple. Low CPU; ideal as a subtle decorative background.",
+      "descriptionZh": "龙形曲线",
+      "tags": [
+        "fractal",
+        "curves",
+        "geometry",
+        "lines"
+      ],
+      "vibe": [
+        "minimal",
+        "geometric",
+        "hypnotic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/dragon.md",
+      "preview": null
+    },
+    {
+      "id": "fractaltree",
+      "kind": "canvas",
+      "name": "Fractal Tree",
+      "nameLocal": null,
+      "section": "fractal-and-chaos",
+      "summary": "Wind-blown fractal tree sways gently; organic green branches on dark, calm and alive.",
+      "description": "Recursively draws a branching tree up to 9 levels deep, with branch angle oscillating to a slow sine wave simulating wind. Colors shift from dark olive at the trunk to bright lime at the tips. Elegant and organic for calm or ambient backgrounds.",
+      "descriptionZh": "分形树 · 风动",
+      "tags": [
+        "fractal",
+        "curves",
+        "geometry",
+        "lines"
+      ],
+      "vibe": [
+        "calm",
+        "organic",
+        "ambient"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/fractaltree.md",
+      "preview": null
+    },
+    {
+      "id": "life",
+      "kind": "canvas",
+      "name": "Game of Life",
+      "nameLocal": null,
+      "section": "cellular-and-physics",
+      "summary": "Glowing green cells flicker on a dark grid; Conway's Game of Life evolves hypnotic patterns.",
+      "description": "Conway's Game of Life rendered on an 8-pixel cell grid, randomly seeded on each resize. Cells are born or killed by neighbour count, producing gliders, oscillators, and stable clusters over time. Use as a meditative background or retro terminal overlay.",
+      "descriptionZh": "康威生命游戏",
+      "tags": [
+        "cellular",
+        "grid",
+        "dots",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "technical",
+        "geometric"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Uint8Array cell grid accumulates across frames; never cleared between generation steps."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/life.md",
+      "preview": null
+    },
+    {
+      "id": "briansbrain",
+      "kind": "canvas",
+      "name": "Brian's Brain",
+      "nameLocal": null,
+      "section": "cellular-and-physics",
+      "summary": "White sparks and blue trailing echoes pulse across a dark grid; three-state cellular automaton.",
+      "description": "Brian's Brain three-state automaton: cells fire bright white, decay to blue, then rest before firing again. The interplay produces rolling spark-waves that perpetually travel the grid without stabilizing. Good for energetic sci-fi overlays.",
+      "descriptionZh": "三态元胞",
+      "tags": [
+        "cellular",
+        "grid",
+        "dots",
+        "particles",
+        "neon",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "technical",
+        "energetic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Uint8Array three-state cell grid accumulates across frames; never cleared between generation steps."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/briansbrain.md",
+      "preview": null
+    },
+    {
+      "id": "langton",
+      "kind": "canvas",
+      "name": "Langton's Ant",
+      "nameLocal": null,
+      "section": "cellular-and-physics",
+      "summary": "A lone ant traces deterministic yellow highways on a black grid, growing complex structure from nothing.",
+      "description": "Langton's Ant: a single deterministic agent turns left on white cells and right on black, flipping each visited cell. After roughly 10,000 steps it breaks out of apparent chaos into a periodic diagonal highway. Canvas accumulates incrementally — no full clear each frame.",
+      "descriptionZh": "兰顿蚂蚁",
+      "tags": [
+        "cellular",
+        "grid",
+        "geometry",
+        "attractor",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "technical",
+        "geometric"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": {
+        "persistent": true,
+        "notes": "Uint8Array cell grid and ant position accumulate; canvas is only partially redrawn each frame (no full clear)."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/langton.md",
+      "preview": null
+    },
+    {
+      "id": "boids",
+      "kind": "canvas",
+      "name": "Boids Flocking",
+      "nameLocal": null,
+      "section": "cellular-and-physics",
+      "summary": "60 pale-blue flecks flock and steer toward the cursor; fluid organic swarm with motion trails.",
+      "description": "Sixty triangle-shaped boids apply separation, alignment, and cohesion rules to flock naturally across the canvas. When the cursor hovers, boids are gently attracted to its position, reshaping the flock in real time. Canvas uses a 30%-opacity fade each frame rather than a full clear, leaving soft motion trails.",
+      "descriptionZh": "鸟群 · 跟手",
+      "tags": [
+        "flocking",
+        "particles",
+        "flow",
+        "trail",
+        "canvas2d",
+        "background",
+        "overlay"
+      ],
+      "vibe": [
+        "hypnotic",
+        "organic",
+        "ambient"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Canvas not fully cleared each frame; motion trail fades at 30% opacity overlay per tick."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/boids.md",
+      "preview": null
+    },
+    {
+      "id": "doomfire",
+      "kind": "canvas",
+      "name": "Doom Fire",
+      "nameLocal": null,
+      "section": "cellular-and-physics",
+      "summary": "Roiling orange-red fire climbs from a white-hot base; retro demoscene flame in warm pixel blocks.",
+      "description": "Recreation of the Doom (1993) fire algorithm: a bottom row of max-heat pixels propagates upward with random lateral drift and gradual cooling each step. Produces natural-looking animated flame rendered as coloured 4-pixel blocks on a black background. Classic demoscene effect; ideal as a dramatic or retro fullscreen background.",
+      "descriptionZh": "毁灭战士火焰",
+      "tags": [
+        "fire",
+        "particles",
+        "noise",
+        "trail",
+        "pixel",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "dramatic",
+        "aggressive",
+        "retro",
+        "energetic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Uint8Array heat-propagation grid accumulates upward each frame; bottom row stays at max heat."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/doomfire.md",
+      "preview": null
+    },
+    {
+      "id": "sandfall",
+      "kind": "canvas",
+      "name": "Falling Sand",
+      "nameLocal": null,
+      "section": "cellular-and-physics",
+      "summary": "Colorful sand grains pour from the cursor and settle into dunes; playful particle physics.",
+      "description": "Colored sand grains spawn at the cursor position (or screen center) each frame and fall under cellular gravity, piling and avalanching into natural dunes. Five distinct particle colors accumulate in a persistent grid each session. Use for playful or generative-art backgrounds.",
+      "descriptionZh": "落沙模拟 · 跟手",
+      "tags": [
+        "particles",
+        "cellular",
+        "grid",
+        "dots",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "playful",
+        "organic",
+        "ambient"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Uint8Array particle grid accumulates settled grains each frame; dunes grow until canvas is full."
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/sandfall.md",
+      "preview": null
+    },
+    {
+      "id": "pendulum",
+      "kind": "canvas",
+      "name": "Double Pendulum",
+      "nameLocal": null,
+      "section": "cellular-and-physics",
+      "summary": "A double pendulum traces chaotic pink arcs on a deep-blue field; beautiful deterministic chaos.",
+      "description": "A double pendulum simulates chaotic Newtonian mechanics via numerical integration, running three sub-steps per frame. The tip draws a pink motion trail (last 120 points) forming ever-changing Lissajous-like arcs. Use as a calm scientific or dramatic overlay background.",
+      "descriptionZh": "双摆混沌",
+      "tags": [
+        "pendulum",
+        "trail",
+        "attractor",
+        "curves",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "technical",
+        "dramatic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/pendulum.md",
+      "preview": null
+    },
+    {
+      "id": "orbits",
+      "kind": "canvas",
+      "name": "Orbits",
+      "nameLocal": null,
+      "section": "cellular-and-physics",
+      "summary": "Four colored planets orbit a golden sun on deep space; calm, minimal cosmic loop.",
+      "description": "Four planets with distinct colors and angular speeds orbit a central yellow star, with faint circular orbital rings drawn each frame. Positions are computed analytically from elapsed time — fully deterministic and zero-accumulation. A calm, minimal background for space or science themes.",
+      "descriptionZh": "行星轨道",
+      "tags": [
+        "orbit",
+        "rings",
+        "stars",
+        "dots",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "calm",
+        "ambient",
+        "meditative"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/orbits.md",
+      "preview": null
+    },
+    {
+      "id": "asanoha",
+      "kind": "canvas",
+      "name": "Asanoha",
+      "nameLocal": "麻の葉",
+      "section": "world-patterns-ii",
+      "summary": "Crisp blue-white hemp-leaf hexagonal lattice on indigo; serene Japanese textile geometry.",
+      "description": "Triangle pairs radiate from each node of a hexagonal grid to form the traditional Japanese Asanoha (hemp-leaf) tiling in soft blue on dark indigo. The pattern is fully static — the same tessellation is drawn every frame. Use as a refined textile-inspired background.",
+      "descriptionZh": "麻叶几何",
+      "tags": [
+        "geometry",
+        "tiling",
+        "grid",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "minimal",
+        "elegant",
+        "cultural"
+      ],
+      "culture": "Japan",
+      "accuracyNote": "Procedural approximation of Japanese Asanoha hemp-leaf tiling; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/asanoha.md",
+      "preview": null
+    },
+    {
+      "id": "kolam",
+      "kind": "canvas",
+      "name": "Kolam",
+      "nameLocal": null,
+      "section": "world-patterns-ii",
+      "summary": "Pink circle rings and warm dots repeat on deep plum; delicate South Indian threshold geometry.",
+      "description": "A grid of pink stroke circles interleaves with warm beige dots at each lattice vertex, evoking the loop-and-dot structure of South Indian Kolam floor art on a deep plum ground. The pattern is static and tiles seamlessly to any canvas size. Use as a decorative cultural background.",
+      "descriptionZh": "点格环线",
+      "tags": [
+        "dots",
+        "geometry",
+        "tiling",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "elegant",
+        "meditative",
+        "cultural"
+      ],
+      "culture": "India",
+      "accuracyNote": "Procedural approximation of South Indian Kolam floor patterns; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/kolam.md",
+      "preview": null
+    },
+    {
+      "id": "greekkey",
+      "kind": "canvas",
+      "name": "Greek Key",
+      "nameLocal": null,
+      "section": "world-patterns-ii",
+      "summary": "Gold meander hooks scroll steadily across deep navy, forming a flowing ancient Greek frieze.",
+      "description": "The classic Greek meander (key) motif is drawn as interlocking right-angle hook strokes in gold on a deep navy ground. The horizontal offset advances with time, making the entire frieze scroll continuously. Use as a bold border accent or animated classical background.",
+      "descriptionZh": "回纹 · 流动",
+      "tags": [
+        "geometry",
+        "lines",
+        "tiling",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "elegant",
+        "cultural",
+        "retro"
+      ],
+      "culture": "Greece",
+      "accuracyNote": "Procedural approximation of Greek meander (key) pattern; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/greekkey.md",
+      "preview": null
+    },
+    {
+      "id": "aztec",
+      "kind": "canvas",
+      "name": "Aztec Step-Fret",
+      "nameLocal": null,
+      "section": "world-patterns-ii",
+      "summary": "Earthy step-fret squares in terracotta and teal tile boldly; vivid Mesoamerican graphic rhythm.",
+      "description": "A chequerboard of terracotta, amber, teal, and red squares each contain two nested concentric squares, evoking the step-fret motif found in Mesoamerican stonework and textiles. The pattern is fully static. Use as a bold, colourful cultural background.",
+      "descriptionZh": "阶梯回纹",
+      "tags": [
+        "geometry",
+        "mosaic",
+        "tiling",
+        "grid",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "energetic",
+        "cultural",
+        "geometric"
+      ],
+      "culture": "Mesoamerica",
+      "accuracyNote": "Procedural approximation of Mesoamerican step-fret pattern; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/aztec.md",
+      "preview": null
+    },
+    {
+      "id": "kente",
+      "kind": "canvas",
+      "name": "Kente Cloth",
+      "nameLocal": null,
+      "section": "world-patterns-ii",
+      "summary": "Vivid gold, green and red colour bands tile in the rhythm of West African Kente weaving.",
+      "description": "Interlocking horizontal colour blocks in gold, green, red, black, and blue repeat across the canvas in a pattern that echoes the alternating strip-woven structure of West African Kente cloth. The pattern is fully static and scales to any canvas. Use as a celebratory, high-energy cultural background.",
+      "descriptionZh": "肯特织锦",
+      "tags": [
+        "stripes",
+        "weave",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "energetic",
+        "cultural",
+        "geometric"
+      ],
+      "culture": "West Africa",
+      "accuracyNote": "Procedural approximation of West African Kente cloth weaving; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/kente.md",
+      "preview": null
+    },
+    {
+      "id": "talavera",
+      "kind": "canvas",
+      "name": "Talavera",
+      "nameLocal": null,
+      "section": "world-patterns-ii",
+      "summary": "Cream tiles edged in cobalt, petalled in gold; bright repeating Mexican Talavera ceramics.",
+      "description": "Square tiles on a cream ground are outlined in cobalt blue, decorated with eight radiating gold petal ellipses and a central cobalt circle, evoking the painted floral motifs of Mexican Talavera ceramics. The pattern is static and tiles seamlessly. Use as a warm decorative background for Latin-themed designs.",
+      "descriptionZh": "陶砖花",
+      "tags": [
+        "mosaic",
+        "tiling",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "elegant",
+        "cultural",
+        "playful"
+      ],
+      "culture": "Mexico",
+      "accuracyNote": "Procedural approximation of Mexican Talavera ceramic tile; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/talavera.md",
+      "preview": null
+    },
+    {
+      "id": "cloud",
+      "kind": "canvas",
+      "name": "Ruyi Cloud",
+      "nameLocal": "云纹",
+      "section": "world-patterns-ii",
+      "summary": "Crimson field of pulsing five-lobed cloud medallions; festive and elegant Chinese folk pattern.",
+      "description": "Each tile contains a star-shaped cloud outline whose radius oscillates via a five-lobe sinusoidal waveform, creating a slow pulsing ruyi-cloud medallion on a deep crimson ground. A small arc accents each centre. Use as a festive East Asian or Chinese New Year themed background.",
+      "descriptionZh": "祥云回旋",
+      "tags": [
+        "curves",
+        "geometry",
+        "tiling",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "elegant",
+        "cultural",
+        "calm"
+      ],
+      "culture": "China",
+      "accuracyNote": "Procedural approximation of Chinese Ruyi cloud patterns; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/cloud.md",
+      "preview": null
+    },
+    {
+      "id": "koru",
+      "kind": "canvas",
+      "name": "Koru",
+      "nameLocal": null,
+      "section": "world-patterns-ii",
+      "summary": "Cream fern spirals slowly uncoil across a dark forest ground; meditative Māori koru motif.",
+      "description": "Expanding Archimedean spirals rotate gently across a dark green-black ground, evoking the koru — the unfurling silver-fern frond central to Māori art. The rotation is slow and continuous, lending an organic meditative quality. Use as a background for New Zealand or nature-themed designs.",
+      "descriptionZh": "蕨芽螺旋",
+      "tags": [
+        "spiral",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "meditative",
+        "organic",
+        "cultural"
+      ],
+      "culture": "Maori",
+      "accuracyNote": "Procedural approximation of Māori Koru spiral motif; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/koru.md",
+      "preview": null
+    },
+    {
+      "id": "paisley",
+      "kind": "canvas",
+      "name": "Paisley",
+      "nameLocal": "佩斯利",
+      "section": "world-patterns-ii",
+      "summary": "Jewel-toned boteh teardrops gently sway on deep indigo; lush Persian paisley textile rhythm.",
+      "description": "Bezier-curve teardrop (boteh) shapes in amber, pink, and teal are arranged in offset rows and gently rock with a sinusoidal rotation, evoking the repeating motif of Persian paisley textiles. The inner void gives each shape its characteristic hollow. Use as a rich, ornate background for textile or fashion themes.",
+      "descriptionZh": "火腿纹 boteh",
+      "tags": [
+        "curves",
+        "geometry",
+        "tiling",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "elegant",
+        "cultural",
+        "hypnotic"
+      ],
+      "culture": "Persia",
+      "accuracyNote": "Procedural approximation of Persian Paisley (boteh) textile pattern; not a faithful reproduction of any specific historical motif.",
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/paisley.md",
+      "preview": null
+    },
+    {
+      "id": "tunnel",
+      "kind": "canvas",
+      "name": "Tunnel",
+      "nameLocal": null,
+      "section": "screen-and-signal",
+      "summary": "Hypnotic blue checkerboard rushes toward you in an infinite demoscene tunnel flythrough.",
+      "description": "Maps every pixel to polar coordinates — angle for the column, inverse-radius for depth — then shades a checkerboard pattern driven by time. The result is an endless forward rush through a cylindrical tunnel with depth-based shading. Best as a fullscreen looping background or retro hero section.",
+      "descriptionZh": "棋盘隧道",
+      "tags": [
+        "tunnel",
+        "geometry",
+        "grid",
+        "optical",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "retro"
+      ],
+      "culture": "demoscene",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/tunnel.md",
+      "preview": null
+    },
+    {
+      "id": "plasma",
+      "kind": "canvas",
+      "name": "Plasma",
+      "nameLocal": null,
+      "section": "screen-and-signal",
+      "summary": "Swirling rainbow sine-wave blobs morph endlessly; psychedelic demoscene classic.",
+      "description": "Sums four sinusoidal fields — horizontal, vertical, diagonal, and radial — to produce continuously shifting color blobs. The combined value drives HSL hue, producing a full-spectrum wash that cycles over time. A CPU-heavy effect; best used as a looping fullscreen background.",
+      "descriptionZh": "经典等离子",
+      "tags": [
+        "plasma",
+        "waves",
+        "noise",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "psychedelic",
+        "energetic",
+        "retro"
+      ],
+      "culture": "demoscene",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/plasma.md",
+      "preview": null
+    },
+    {
+      "id": "rotozoom",
+      "kind": "canvas",
+      "name": "Rotozoom",
+      "nameLocal": null,
+      "section": "screen-and-signal",
+      "summary": "Pink-and-dark checkerboard spins and zooms in and out; retro demoscene rotozoom.",
+      "description": "Transforms pixel coordinates through a time-varying rotation matrix with a sinusoidally oscillating zoom factor, sampling a simple checkerboard texture. The result is a classic infinite-tile pattern that rotates and pulses. Use as a retro fullscreen background or looping transition.",
+      "descriptionZh": "旋转缩放贴图",
+      "tags": [
+        "geometry",
+        "grid",
+        "tiling",
+        "optical",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "hypnotic",
+        "retro",
+        "playful"
+      ],
+      "culture": "demoscene",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/rotozoom.md",
+      "preview": null
+    },
+    {
+      "id": "copperbars",
+      "kind": "canvas",
+      "name": "Copper Bars",
+      "nameLocal": null,
+      "section": "screen-and-signal",
+      "summary": "Five glowing colored bars bounce on black; warm Amiga Copper demoscene glow.",
+      "description": "Renders five hue-shifted horizontal bars that oscillate vertically via sine waves, each with a bright centre fading to dark edges — mimicking the colour-per-scanline trick of Amiga Copper hardware. Lightweight and mobile-safe. Use as a retro looping backdrop or section divider.",
+      "descriptionZh": "铜条 · Amiga",
+      "tags": [
+        "lines",
+        "neon",
+        "glow",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "retro",
+        "energetic",
+        "playful"
+      ],
+      "culture": "demoscene / Amiga",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/copperbars.md",
+      "preview": null
+    },
+    {
+      "id": "sevenseg",
+      "kind": "canvas",
+      "name": "7-Segment",
+      "nameLocal": null,
+      "section": "screen-and-signal",
+      "summary": "Red seven-segment digits show a live HH:MM:SS clock on near-black; crisp retro electronics.",
+      "description": "Draws six seven-segment display digits updated every frame to show the current local time. Segments glow red against a near-black background using direct rect primitives. Use as an inline widget, overlay, or retro UI accent.",
+      "descriptionZh": "数码管 · 实时钟",
+      "tags": [
+        "clock",
+        "geometry",
+        "grid",
+        "canvas2d",
+        "inline"
+      ],
+      "vibe": [
+        "technical",
+        "retro",
+        "minimal"
+      ],
+      "culture": "signal / electronics / display",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/sevenseg.md",
+      "preview": null
+    },
+    {
+      "id": "ledmatrix",
+      "kind": "canvas",
+      "name": "LED Matrix",
+      "nameLocal": null,
+      "section": "screen-and-signal",
+      "summary": "Amber LED dot grid ripples with a traveling sine wave; warm retro electronics glow.",
+      "description": "Fills the canvas with a tight grid of circular dot-matrix LEDs whose brightness ripples as a diagonal traveling wave. Dots glow amber-orange against near-black, fading to dim at the trough. Works as a warm retro background or ambient overlay.",
+      "descriptionZh": "点阵屏波动",
+      "tags": [
+        "dots",
+        "grid",
+        "waves",
+        "neon",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "retro",
+        "technical",
+        "ambient"
+      ],
+      "culture": "signal / electronics / display",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/ledmatrix.md",
+      "preview": null
+    },
+    {
+      "id": "radar",
+      "kind": "canvas",
+      "name": "Radar Sweep",
+      "nameLocal": null,
+      "section": "screen-and-signal",
+      "summary": "Phosphor-green radar sweep rotates over range rings on dark; tense sci-fi monitor.",
+      "description": "Draws four concentric range rings and a rotating sweep arm in phosphor green on a near-black field. The arm leaves a fading wedge trail behind it as it advances clockwise with time. Use as a sci-fi dashboard background or dramatic overlay.",
+      "descriptionZh": "雷达扫描",
+      "tags": [
+        "radar",
+        "geometry",
+        "rings",
+        "canvas2d",
+        "background",
+        "overlay"
+      ],
+      "vibe": [
+        "technical",
+        "futuristic",
+        "dramatic"
+      ],
+      "culture": "signal / military / sci-fi",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/radar.md",
+      "preview": null
+    },
+    {
+      "id": "ekg",
+      "kind": "canvas",
+      "name": "EKG Monitor",
+      "nameLocal": null,
+      "section": "screen-and-signal",
+      "summary": "Green heartbeat trace scrolls across a dark grid; tense clinical EKG monitor simulation.",
+      "description": "Animates a stylised ECG waveform that scrolls left to right at a steady pace, with characteristic P, QRS spike, and T deflections per cycle. A phosphor-green glow and faint vertical grid overlay reinforce the medical monitor aesthetic. Use as an inline widget, dramatic overlay, or looping background.",
+      "descriptionZh": "心电图 · 滚动",
+      "tags": [
+        "oscilloscope",
+        "grid",
+        "lines",
+        "canvas2d",
+        "inline",
+        "overlay"
+      ],
+      "vibe": [
+        "technical",
+        "dramatic",
+        "minimal"
+      ],
+      "culture": "signal / medical",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/ekg.md",
+      "preview": null
+    },
+    {
+      "id": "cursortrail",
+      "kind": "canvas",
+      "name": "Cursor Trail",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Flowing rainbow streak follows the cursor across a dark canvas; playful, energetic overlay.",
+      "description": "A colour-cycling stroke trail follows the mouse across a dark background, fading from opaque at the tip to transparent at the tail. The trail auto-orbits gracefully when no cursor is present. Use as a fun cursor overlay on creative or portfolio sites.",
+      "descriptionZh": "彩虹拖尾",
+      "tags": [
+        "trail",
+        "particles",
+        "cursor",
+        "overlay",
+        "canvas2d"
+      ],
+      "vibe": [
+        "playful",
+        "energetic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": {
+        "persistent": true,
+        "notes": "Trail point array s.tr accumulates cursor positions across frames"
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/cursortrail.md",
+      "preview": null
+    },
+    {
+      "id": "crosshair",
+      "kind": "canvas",
+      "name": "Crosshair HUD",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Sci-fi HUD crosshair locks to the cursor with real-time coordinate readout; minimal, technical.",
+      "description": "A green monospace HUD crosshair with full-width guide lines tracks the cursor and prints live X/Y pixel coordinates. Falls back to a slow circular orbit when no pointer is detected. Use as a sci-fi or game-style interactive overlay.",
+      "descriptionZh": "准星 + 坐标读出",
+      "tags": [
+        "lines",
+        "geometry",
+        "cursor",
+        "overlay",
+        "canvas2d"
+      ],
+      "vibe": [
+        "technical",
+        "minimal"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/crosshair.md",
+      "preview": null
+    },
+    {
+      "id": "ripplewater",
+      "kind": "canvas",
+      "name": "Water Ripple",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Blue water ripples spread from cursor touch across a CPU-simulated height field; calm, fluid.",
+      "description": "A 2D wave-propagation height field simulates water ripples from the cursor position, rendered as tinted blue pixels. Two Float32Array grids swap each frame with 0.95 damping to sustain oscillation. Best used as a confined interactive panel; skip on mobile due to CPU cost.",
+      "descriptionZh": "水波高度场",
+      "tags": [
+        "ripple",
+        "waves",
+        "fluid",
+        "canvas2d",
+        "overlay"
+      ],
+      "vibe": [
+        "calm",
+        "organic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": {
+        "persistent": true,
+        "notes": "Two Float32Array height field buffers s.a and s.b swap and accumulate wave energy across frames"
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/ripplewater.md",
+      "preview": null
+    },
+    {
+      "id": "blobcursor",
+      "kind": "canvas",
+      "name": "Gooey Blob",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Pulsing purple gooey blob clings to the cursor with orbiting metaball satellites; playful, organic.",
+      "description": "Six orbiting metaball satellites fuse with a central blob that tracks the cursor, drawing an implicit-surface isoline via per-pixel threshold sampling. The blob colour shifts from purple to vivid pink at the hottest isovalue. Use as a playful cursor overlay on dark interactive pages.",
+      "descriptionZh": "融合光标",
+      "tags": [
+        "metaballs",
+        "fluid",
+        "cursor",
+        "overlay",
+        "canvas2d"
+      ],
+      "vibe": [
+        "playful",
+        "organic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/blobcursor.md",
+      "preview": null
+    },
+    {
+      "id": "ironfilings",
+      "kind": "canvas",
+      "name": "Iron Filings",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Tiny iron filings snap to magnetic field lines emanating from the cursor; geometric, hypnotic.",
+      "description": "Short line segments across a regular grid rotate to align tangent to the magnetic field of a point source at the cursor, producing a classic iron-filings pattern. The simulation is purely trigonometric with no random state. Use as a physics-inspired interactive overlay.",
+      "descriptionZh": "磁场铁屑",
+      "tags": [
+        "lines",
+        "geometry",
+        "flow",
+        "cursor",
+        "overlay",
+        "canvas2d"
+      ],
+      "vibe": [
+        "geometric",
+        "hypnotic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/ironfilings.md",
+      "preview": null
+    },
+    {
+      "id": "vortex",
+      "kind": "canvas",
+      "name": "Vortex",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Colourful particles spiral into the cursor in an accelerating vortex; hypnotic, energetic overlay.",
+      "description": "140 particles continuously spiral inward toward the cursor, colour-shifting by radial distance and hue-cycling over time. The canvas fades partially each frame (alpha 0.2), painting a glowing vortex trail. Use as a hypnotic cursor-following overlay on dark hero sections.",
+      "descriptionZh": "粒子漩涡",
+      "tags": [
+        "particles",
+        "spiral",
+        "orbit",
+        "cursor",
+        "overlay",
+        "canvas2d"
+      ],
+      "vibe": [
+        "hypnotic",
+        "energetic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Particle positions in s.p accumulate motion each frame; canvas fades partially (alpha 0.2 fill)"
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/vortex.md",
+      "preview": null
+    },
+    {
+      "id": "confetti",
+      "kind": "canvas",
+      "name": "Confetti",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Colourful confetti flakes drift down with gentle sine sway; celebratory, playful overlay.",
+      "description": "Coloured rectangular confetti pieces spawn at the top and drift down with sine-wave sway and random spin until they exit the canvas. Up to 120 particles are maintained; new pieces spawn each frame at random. Use as a celebration overlay for achievement or success moments.",
+      "descriptionZh": "纸屑飘落",
+      "tags": [
+        "confetti",
+        "particles",
+        "trail",
+        "canvas2d",
+        "overlay"
+      ],
+      "vibe": [
+        "playful",
+        "energetic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Particle array s.p grows each frame up to cap; particles removed when off-screen"
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/confetti.md",
+      "preview": null
+    },
+    {
+      "id": "fireworks",
+      "kind": "canvas",
+      "name": "Fireworks",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Glittering firework bursts erupt automatically across a dark sky with gravity fade; dramatic.",
+      "description": "Particle bursts of 50 sparks erupt automatically every 40 frames at or near the cursor, spreading radially with slight gravity and fading out. The canvas partially clears each frame, creating motion-blur trails. Use as a celebratory background or click-effect overlay.",
+      "descriptionZh": "烟花 · 点击放",
+      "tags": [
+        "particles",
+        "stars",
+        "fire",
+        "canvas2d",
+        "overlay"
+      ],
+      "vibe": [
+        "energetic",
+        "dramatic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Particle array s.p and frame counter s.acc persist; bursts fire automatically every 40 frames; canvas fades partially each frame"
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/fireworks.md",
+      "preview": null
+    },
+    {
+      "id": "bokeh",
+      "kind": "canvas",
+      "name": "Bokeh",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Soft luminous circles drift upward like out-of-focus lights; calm, elegant background.",
+      "description": "24 blurred radial-gradient circles in cyan-to-blue hues drift slowly upward in a loop, simulating the bokeh circles of a shallow-depth-of-field photograph. Composite mode 'lighter' adds soft glow overlap. Use as an ambient atmospheric background.",
+      "descriptionZh": "焦外光斑",
+      "tags": [
+        "dots",
+        "glow",
+        "particles",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "calm",
+        "elegant"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/bokeh.md",
+      "preview": null
+    },
+    {
+      "id": "nebula",
+      "kind": "canvas",
+      "name": "Nebula",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Drifting cloud wisps and twinkling stars form a deep-space nebula; ambient, meditative background.",
+      "description": "14 slowly swaying radial-gradient clouds in blue-violet hues overlay 40 twinkling star points against a near-black background. Composite mode 'lighter' blends the clouds for a luminous depth effect. Use as a space-themed ambient background or hero section backdrop.",
+      "descriptionZh": "星云叠加",
+      "tags": [
+        "nebula",
+        "stars",
+        "starfield",
+        "glow",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "ambient",
+        "meditative"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/nebula.md",
+      "preview": null
+    },
+    {
+      "id": "lightning",
+      "kind": "canvas",
+      "name": "Lightning",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Jagged electric bolt crackles from top to cursor with blue glow flicker; dramatic, aggressive overlay.",
+      "description": "A jagged multi-segment bolt regenerates from the top of the canvas to the cursor every 30 frames, drawn with a blue neon glow. The stroke opacity pulses sinusoidally for a live electric flicker. Use as a dramatic foreground overlay for sci-fi or energy-themed sites.",
+      "descriptionZh": "闪电分叉",
+      "tags": [
+        "lightning",
+        "lines",
+        "glow",
+        "canvas2d",
+        "overlay"
+      ],
+      "vibe": [
+        "dramatic",
+        "aggressive"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": false,
+      "state": {
+        "persistent": true,
+        "notes": "Bolt path s.bolt and frame counter s.acc persist across frames"
+      },
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/lightning.md",
+      "preview": null
+    },
+    {
+      "id": "neonpipes",
+      "kind": "canvas",
+      "name": "Neon Pipes",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Six glowing neon sine waves undulate in cyan, magenta, and lime; retro, energetic background.",
+      "description": "Six horizontal sine-wave bands in cycling neon colours (cyan, magenta, lime, sky) undulate across a near-black canvas with canvas shadow glow. The waves are purely trigonometric with no random state. Use as a retro synth-wave background.",
+      "descriptionZh": "发光管线",
+      "tags": [
+        "neon",
+        "waves",
+        "lines",
+        "glow",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "retro",
+        "energetic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/neonpipes.md",
+      "preview": null
+    },
+    {
+      "id": "spinners",
+      "kind": "canvas",
+      "name": "Loaders",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Six loading spinner variants — arc, tick, pulse, ring, bar, fade — minimal, technical demo.",
+      "description": "Six animated loading-spinner archetypes — spinning arc, radial tick-fade, bouncing dots, tracked arc, rotating bar, and pulse circle — are drawn in a 3×2 grid. All are driven purely by time with no framework needed. Use as a reference panel or embed individual variants in UI mockups.",
+      "descriptionZh": "加载动画集",
+      "tags": [
+        "loader",
+        "dots",
+        "geometry",
+        "canvas2d"
+      ],
+      "vibe": [
+        "minimal",
+        "technical"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/spinners.md",
+      "preview": null
+    },
+    {
+      "id": "wavegrid",
+      "kind": "canvas",
+      "name": "Wave Grid",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Perspective dot grid ripples with sine waves receding into depth; geometric, hypnotic background.",
+      "description": "A 14×10 dot grid rendered in perspective with depth-colour scaling and a sine-wave displacement creates a rippling 3D plane effect. Dot size and hue shift smoothly with depth. Use as a futuristic or technical background.",
+      "descriptionZh": "透视波点阵",
+      "tags": [
+        "grid",
+        "dots",
+        "waves",
+        "geometry",
+        "canvas2d",
+        "background"
+      ],
+      "vibe": [
+        "geometric",
+        "hypnotic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/wavegrid.md",
+      "preview": null
+    },
+    {
+      "id": "audiobars",
+      "kind": "canvas",
+      "name": "Audio Bars",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Simulated spectrum bars pulse in blue-green gradient (no mic); energetic audio-visualiser look.",
+      "description": "32 vertical bars whose heights are driven by Math.sin combinations simulate a frequency-spectrum visualiser without any microphone or Web Audio API — the audio is entirely fake. Bar colours cycle from blue to green across the 32 bins. Use as a decorative audio-aesthetic background or loader.",
+      "descriptionZh": "频谱律动",
+      "tags": [
+        "oscilloscope",
+        "lines",
+        "geometry",
+        "canvas2d"
+      ],
+      "vibe": [
+        "energetic",
+        "technical"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/audiobars.md",
+      "preview": null
+    },
+    {
+      "id": "heatmap",
+      "kind": "canvas",
+      "name": "Heatmap",
+      "nameLocal": null,
+      "section": "interaction-and-generative",
+      "summary": "Noise-driven heatmap shifts cool-to-hot; cursor adds a warm bloom; technical, hypnotic overlay.",
+      "description": "A per-pixel noise field is coloured from cool blue (240°) to hot red (0°) using the runtime vnoise function, refreshed every frame with a slow vertical drift. When the cursor is active, a warm bloom radiates from the pointer position. Use as a data-aesthetic background or interactive heatmap overlay.",
+      "descriptionZh": "噪声热力 · 跟手",
+      "tags": [
+        "noise",
+        "flow",
+        "cursor",
+        "overlay",
+        "canvas2d"
+      ],
+      "vibe": [
+        "technical",
+        "hypnotic"
+      ],
+      "culture": null,
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "high",
+        "mobileSafe": false
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/heatmap.md",
+      "preview": null
+    },
+    {
+      "id": "scramble",
+      "kind": "dom",
+      "name": "Decode Text",
+      "nameLocal": null,
+      "section": "interaction",
+      "summary": "",
+      "description": "",
+      "descriptionZh": "乱码归位",
+      "tags": [],
+      "vibe": [],
+      "culture": "UI / typography",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/scramble.md",
+      "preview": null
+    },
+    {
+      "id": "magnetic",
+      "kind": "dom",
+      "name": "Magnetic Cursor",
+      "nameLocal": null,
+      "section": "interaction",
+      "summary": "",
+      "description": "",
+      "descriptionZh": "磁吸自定义光标",
+      "tags": [],
+      "vibe": [],
+      "culture": "UI / interaction",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/magnetic.md",
+      "preview": null
+    },
+    {
+      "id": "kinetic",
+      "kind": "dom",
+      "name": "Kinetic Type",
+      "nameLocal": null,
+      "section": "interaction",
+      "summary": "",
+      "description": "",
+      "descriptionZh": "可变字重波动",
+      "tags": [],
+      "vibe": [],
+      "culture": "typography / variable font",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/kinetic.md",
+      "preview": null
+    },
+    {
+      "id": "marquee",
+      "kind": "dom",
+      "name": "Marquee Ticker",
+      "nameLocal": null,
+      "section": "interaction",
+      "summary": "",
+      "description": "",
+      "descriptionZh": "无缝跑马灯",
+      "tags": [],
+      "vibe": [],
+      "culture": "UI / editorial",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": false,
+        "trigger": "auto"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/marquee.md",
+      "preview": null
+    },
+    {
+      "id": "tilt",
+      "kind": "dom",
+      "name": "3D Tilt Card",
+      "nameLocal": null,
+      "section": "interaction",
+      "summary": "",
+      "description": "",
+      "descriptionZh": "透视倾斜 · 跟手",
+      "tags": [],
+      "vibe": [],
+      "culture": "UI / 3D perspective",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/tilt.md",
+      "preview": null
+    },
+    {
+      "id": "spot",
+      "kind": "dom",
+      "name": "Spotlight Mask",
+      "nameLocal": null,
+      "section": "interaction",
+      "summary": "",
+      "description": "",
+      "descriptionZh": "光标聚光揭示",
+      "tags": [],
+      "vibe": [],
+      "culture": "UI / reveal",
+      "accuracyNote": null,
+      "perf": {
+        "gpu": "low",
+        "cpu": "low",
+        "mobileSafe": true
+      },
+      "interactive": {
+        "followsCursor": true,
+        "trigger": "hover"
+      },
+      "reducedMotion": "freeze",
+      "deterministic": true,
+      "state": null,
+      "license": "MIT",
+      "attribution": null,
+      "url": "/effects/spot.md",
+      "preview": null
+    }
+  ]
+}

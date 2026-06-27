@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+*.log
+.npmrc
+# internal planning/roadmap doc (AI-workflow + model-selection notes) — kept local, not published
+PLAN.md
+test-results/
+playwright-report/
+.playwright/
+# build outputs are intentionally committed (dist/, site/) for zero-infra GitHub Pages

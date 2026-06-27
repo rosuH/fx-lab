@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://fx-lab.example/schema/effect.schema.json",
+  "title": "FX Lab effect meta",
+  "description": "The co-located meta object on every src/effects/<kind>/<id>.js module (CONTRACT 1). Derived fields (source/snippet/mountSnippet/runtimeNotes/url/preview) are NOT part of this schema.",
+  "type": "object",
+  "required": [
+    "id", "kind", "name", "nameLocal", "section", "summary", "description",
+    "descriptionZh", "tags", "vibe", "culture", "accuracyNote", "perf",
+    "interactive", "reducedMotion", "deterministic", "state", "license", "attribution"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+$" },
+    "kind": { "type": "string", "enum": ["shader", "canvas", "dom"] },
+    "name": { "type": "string", "minLength": 1 },
+    "nameLocal": { "type": ["string", "null"] },
+    "section": {
+      "type": "string",
+      "enum": [
+        "generative", "post-and-print", "world-patterns", "design-movements",
+        "data-and-system", "interaction", "geometry-and-curves", "fractal-and-chaos",
+        "cellular-and-physics", "world-patterns-ii", "screen-and-signal",
+        "interaction-and-generative"
+      ]
+    },
+    "summary": { "type": "string", "description": "vibe-first, <=120 chars; may be empty placeholder pre-authoring" },
+    "description": { "type": "string" },
+    "descriptionZh": { "type": ["string", "null"] },
+    "tags": { "type": "array", "items": { "type": "string" }, "description": "0-8; taxonomy membership enforced by validateTaxonomy, not here" },
+    "vibe": { "type": "array", "items": { "type": "string" } },
+    "culture": { "type": ["string", "null"] },
+    "accuracyNote": { "type": ["string", "null"] },
+    "perf": {
+      "type": "object",
+      "required": ["gpu", "cpu", "mobileSafe"],
+      "properties": {
+        "gpu": { "type": "string", "enum": ["low", "med", "high"] },
+        "cpu": { "type": "string", "enum": ["low", "med", "high"] },
+        "mobileSafe": { "type": "boolean" }
+      }
+    },
+    "interactive": {
+      "type": "object",
+      "required": ["followsCursor", "trigger"],
+      "properties": {
+        "followsCursor": { "type": "boolean" },
+        "trigger": { "type": "string", "enum": ["none", "hover", "click", "scroll", "auto"] }
+      }
+    },
+    "reducedMotion": { "type": "string", "enum": ["freeze", "static", "crossfade", "animate"] },
+    "deterministic": { "type": "boolean" },
+    "state": {
+      "type": ["object", "null"],
+      "properties": {
+        "persistent": { "type": "boolean" },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "license": { "type": "string", "enum": ["MIT", "CC0", "custom"] },
+    "attribution": {
+      "type": ["object", "null"],
+      "properties": {
+        "author": { "type": "string" },
+        "url": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "fireworks",
+  "kind": "canvas",
+  "name": "Fireworks",
+  "nameLocal": null,
+  "section": "interaction-and-generative",
+  "summary": "Glittering firework bursts erupt automatically across a dark sky with gravity fade; dramatic.",
+  "description": "Particle bursts of 50 sparks erupt automatically every 40 frames at or near the cursor, spreading radially with slight gravity and fading out. The canvas partially clears each frame, creating motion-blur trails. Use as a celebratory background or click-effect overlay.",
+  "descriptionZh": "烟花 · 点击放",
+  "tags": [
+    "particles",
+    "stars",
+    "fire",
+    "canvas2d",
+    "overlay"
+  ],
+  "vibe": [
+    "energetic",
+    "dramatic"
+  ],
+  "culture": null,
+  "accuracyNote": null,
+  "perf": {
+    "gpu": "low",
+    "cpu": "low",
+    "mobileSafe": true
+  },
+  "interactive": {
+    "followsCursor": true,
+    "trigger": "auto"
+  },
+  "reducedMotion": "freeze",
+  "deterministic": false,
+  "state": {
+    "persistent": true,
+    "notes": "Particle array s.p and frame counter s.acc persist; bursts fire automatically every 40 frames; canvas fades partially each frame"
+  },
+  "license": "MIT",
+  "attribution": null,
+  "source": "function fireworks(ctx,w,h,t,mx,my,s){ if(!s.p){s.p=[];s.acc=0;}s.acc++;if(s.acc%40===0){const ox=mx>=0?mx:Math.random()*w,oy=my>=0?my:Math.random()*h*0.6,hue=Math.random()*360;for(let i=0;i<50;i++){const a=Math.random()*6.28,sp=Math.random()*3+1;s.p.push({x:ox,y:oy,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,life:1,hue});}}ctx.fillStyle='rgba(6,6,14,0.22)';ctx.fillRect(0,0,w,h);s.p=s.p.filter(p=>p.life>0);for(const p of s.p){p.x+=p.vx;p.y+=p.vy;p.vy+=0.04;p.life-=0.012;ctx.fillStyle='hsla('+p.hue+',90%,65%,'+p.life.toFixed(2)+')';ctx.fillRect(p.x,p.y,2.4,2.4);} }",
+  "snippet": "<!-- fx-lab effect: fireworks — Fireworks (canvas) · license MIT -->\n<canvas id=\"fx-fireworks\" style=\"display:block;width:100%;height:100%;min-height:240px\"></canvas>\n<script type=\"module\">\nconst draw = function fireworks(ctx,w,h,t,mx,my,s){ if(!s.p){s.p=[];s.acc=0;}s.acc++;if(s.acc%40===0){const ox=mx>=0?mx:Math.random()*w,oy=my>=0?my:Math.random()*h*0.6,hue=Math.random()*360;for(let i=0;i<50;i++){const a=Math.random()*6.28,sp=Math.random()*3+1;s.p.push({x:ox,y:oy,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,life:1,hue});}}ctx.fillStyle='rgba(6,6,14,0.22)';ctx.fillRect(0,0,w,h);s.p=s.p.filter(p=>p.life>0);for(const p of s.p){p.x+=p.vx;p.y+=p.vy;p.vy+=0.04;p.life-=0.012;ctx.fillStyle='hsla('+p.hue+',90%,65%,'+p.life.toFixed(2)+')';ctx.fillRect(p.x,p.y,2.4,2.4);} };\nconst cv = document.getElementById('fx-fireworks');\nconst ctx = cv.getContext('2d');\nconst DPR = Math.min(2, window.devicePixelRatio || 1);\nconst state = {};\nlet mx = -9999, my = -9999; // -9999 == not hovering (CONTRACT 2)\ncv.addEventListener('pointermove', (e) => {\n  const r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top;\n});\ncv.addEventListener('pointerleave', () => { mx = -9999; my = -9999; });\nconst t0 = performance.now();\n(function frame() {\n  const w = Math.max(1, cv.clientWidth || 300), h = Math.max(1, cv.clientHeight || 240);\n  if (cv.width !== Math.round(w * DPR) || cv.height !== Math.round(h * DPR)) {\n    cv.width = Math.round(w * DPR); cv.height = Math.round(h * DPR);\n  }\n  ctx.setTransform(DPR, 0, 0, DPR, 0, 0); // draw in CSS px\n  const t = (performance.now() - t0) / 1000;\n  draw(ctx, w, h, t, mx, my, state);\n  requestAnimationFrame(frame);\n})();\n</script>",
+  "mountSnippet": "import { mount } from 'fx-lab';\nmount(document.querySelector('#app'), 'fireworks');",
+  "runtimeNotes": "Canvas2D: draw(ctx, w, h, t, mx, my, state) runs each frame; w/h and mx/my are CSS px (mx,my = -9999 when not hovering), ctx is pre-scaled by DPR = min(2, devicePixelRatio). Perf budget — gpu: low, cpu: low, mobileSafe: true. Persistent accumulator: Particle array s.p and frame counter s.acc persist; bursts fire automatically every 40 frames; canvas fades partially each frame Non-deterministic: uses unseeded randomness or wall-clock time, so output differs run to run. Reduced motion: freeze.",
+  "url": "/effects/fireworks.md",
+  "preview": null
+}

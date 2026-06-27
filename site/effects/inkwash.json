@@ -1,0 +1,47 @@
+{
+  "id": "inkwash",
+  "kind": "canvas",
+  "name": "Ink Wash",
+  "nameLocal": "水墨",
+  "section": "world-patterns",
+  "summary": "Soft ink blobs drift on cream paper; hover to drop a brushstroke wash at the cursor.",
+  "description": "Five radial-gradient ink blobs drift in slow Lissajous paths across a warm cream background, building a gently stained ink-wash field. Moving the cursor adds a darker ink mark at the pointer, simulating a brush touching paper. Use for meditative overlays or East Asian-themed interfaces.",
+  "descriptionZh": "晕染笔触 · 跟手",
+  "tags": [
+    "ink",
+    "canvas2d",
+    "background",
+    "overlay"
+  ],
+  "vibe": [
+    "calm",
+    "meditative",
+    "cultural",
+    "minimal"
+  ],
+  "culture": "China",
+  "accuracyNote": "Procedural approximation of Chinese ink wash painting; not a faithful reproduction of any specific historical motif.",
+  "perf": {
+    "gpu": "low",
+    "cpu": "low",
+    "mobileSafe": true
+  },
+  "interactive": {
+    "followsCursor": true,
+    "trigger": "hover"
+  },
+  "reducedMotion": "freeze",
+  "deterministic": false,
+  "state": {
+    "persistent": true,
+    "notes": "Ink blob positions generated once on first frame via Math.random."
+  },
+  "license": "MIT",
+  "attribution": null,
+  "source": "function inkwash(ctx,w,h,t,mx,my,s){ if(!s.init){s.init=1;s.b=[];for(let i=0;i<5;i++)s.b.push({x:Math.random()*w,y:Math.random()*h,r:24+Math.random()*40,p:Math.random()*6});} ctx.fillStyle='#f3efe6';ctx.fillRect(0,0,w,h);\n      for(const b of s.b){ const cx=b.x+Math.sin(t*0.2+b.p)*22,cy=b.y+Math.cos(t*0.17+b.p)*16; const g=ctx.createRadialGradient(cx,cy,0,cx,cy,b.r); g.addColorStop(0,'rgba(18,18,22,0.5)');g.addColorStop(0.6,'rgba(28,28,34,0.2)');g.addColorStop(1,'rgba(40,40,46,0)'); ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,b.r,0,7);ctx.fill(); }\n      if(mx>=0){ const g=ctx.createRadialGradient(mx,my,0,mx,my,42);g.addColorStop(0,'rgba(8,8,12,0.55)');g.addColorStop(1,'rgba(8,8,12,0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(mx,my,42,0,7);ctx.fill(); } }",
+  "snippet": "<!-- fx-lab effect: inkwash — Ink Wash (canvas) · license MIT\n     accuracy: Procedural approximation of Chinese ink wash painting; not a faithful reproduction of any specific historical motif. -->\n<canvas id=\"fx-inkwash\" style=\"display:block;width:100%;height:100%;min-height:240px\"></canvas>\n<script type=\"module\">\nconst draw = function inkwash(ctx,w,h,t,mx,my,s){ if(!s.init){s.init=1;s.b=[];for(let i=0;i<5;i++)s.b.push({x:Math.random()*w,y:Math.random()*h,r:24+Math.random()*40,p:Math.random()*6});} ctx.fillStyle='#f3efe6';ctx.fillRect(0,0,w,h);\n      for(const b of s.b){ const cx=b.x+Math.sin(t*0.2+b.p)*22,cy=b.y+Math.cos(t*0.17+b.p)*16; const g=ctx.createRadialGradient(cx,cy,0,cx,cy,b.r); g.addColorStop(0,'rgba(18,18,22,0.5)');g.addColorStop(0.6,'rgba(28,28,34,0.2)');g.addColorStop(1,'rgba(40,40,46,0)'); ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,b.r,0,7);ctx.fill(); }\n      if(mx>=0){ const g=ctx.createRadialGradient(mx,my,0,mx,my,42);g.addColorStop(0,'rgba(8,8,12,0.55)');g.addColorStop(1,'rgba(8,8,12,0)');ctx.fillStyle=g;ctx.beginPath();ctx.arc(mx,my,42,0,7);ctx.fill(); } };\nconst cv = document.getElementById('fx-inkwash');\nconst ctx = cv.getContext('2d');\nconst DPR = Math.min(2, window.devicePixelRatio || 1);\nconst state = {};\nlet mx = -9999, my = -9999; // -9999 == not hovering (CONTRACT 2)\ncv.addEventListener('pointermove', (e) => {\n  const r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top;\n});\ncv.addEventListener('pointerleave', () => { mx = -9999; my = -9999; });\nconst t0 = performance.now();\n(function frame() {\n  const w = Math.max(1, cv.clientWidth || 300), h = Math.max(1, cv.clientHeight || 240);\n  if (cv.width !== Math.round(w * DPR) || cv.height !== Math.round(h * DPR)) {\n    cv.width = Math.round(w * DPR); cv.height = Math.round(h * DPR);\n  }\n  ctx.setTransform(DPR, 0, 0, DPR, 0, 0); // draw in CSS px\n  const t = (performance.now() - t0) / 1000;\n  draw(ctx, w, h, t, mx, my, state);\n  requestAnimationFrame(frame);\n})();\n</script>",
+  "mountSnippet": "import { mount } from 'fx-lab';\nmount(document.querySelector('#app'), 'inkwash');",
+  "runtimeNotes": "Canvas2D: draw(ctx, w, h, t, mx, my, state) runs each frame; w/h and mx/my are CSS px (mx,my = -9999 when not hovering), ctx is pre-scaled by DPR = min(2, devicePixelRatio). Perf budget — gpu: low, cpu: low, mobileSafe: true. Persistent accumulator: Ink blob positions generated once on first frame via Math.random. Non-deterministic: uses unseeded randomness or wall-clock time, so output differs run to run. Reduced motion: freeze.",
+  "url": "/effects/inkwash.md",
+  "preview": null
+}

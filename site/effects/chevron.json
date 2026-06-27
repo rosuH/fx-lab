@@ -1,0 +1,45 @@
+{
+  "id": "chevron",
+  "kind": "canvas",
+  "name": "Chevron",
+  "nameLocal": null,
+  "section": "geometry-and-curves",
+  "summary": "Scrolling multicolor chevron stripes; vivid zigzag rows stream in retro palette.",
+  "description": "Draws alternating V-shaped chevron rows in four vivid colors — coral, yellow, teal, and violet — that scroll horizontally over time. The repeating zigzag creates an energetic, retro-textile feel. Ideal as a lively background or banner pattern.",
+  "descriptionZh": "人字折线 · 流动",
+  "tags": [
+    "chevron",
+    "stripes",
+    "geometry",
+    "lines",
+    "canvas2d",
+    "background"
+  ],
+  "vibe": [
+    "energetic",
+    "playful",
+    "retro"
+  ],
+  "culture": null,
+  "accuracyNote": null,
+  "perf": {
+    "gpu": "low",
+    "cpu": "low",
+    "mobileSafe": true
+  },
+  "interactive": {
+    "followsCursor": false,
+    "trigger": "auto"
+  },
+  "reducedMotion": "freeze",
+  "deterministic": true,
+  "state": null,
+  "license": "MIT",
+  "attribution": null,
+  "source": "function chevron(ctx,w,h,t){ const cols=['#ff6b5a','#ffd23f','#34d1c4','#7b6cf6'],S=26,off=(t*20)%(S*2); for(let r=0,y=-S;y<h+S;r++,y+=S/2+0)for(let x=-S*2;x<w+S;x+=S*2){ctx.strokeStyle=cols[r%4];ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(x+off,y+S/2);ctx.lineTo(x+S+off,y);ctx.lineTo(x+2*S+off,y+S/2);ctx.stroke();} }",
+  "snippet": "<!-- fx-lab effect: chevron — Chevron (canvas) · license MIT -->\n<canvas id=\"fx-chevron\" style=\"display:block;width:100%;height:100%;min-height:240px\"></canvas>\n<script type=\"module\">\nconst draw = function chevron(ctx,w,h,t){ const cols=['#ff6b5a','#ffd23f','#34d1c4','#7b6cf6'],S=26,off=(t*20)%(S*2); for(let r=0,y=-S;y<h+S;r++,y+=S/2+0)for(let x=-S*2;x<w+S;x+=S*2){ctx.strokeStyle=cols[r%4];ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(x+off,y+S/2);ctx.lineTo(x+S+off,y);ctx.lineTo(x+2*S+off,y+S/2);ctx.stroke();} };\nconst cv = document.getElementById('fx-chevron');\nconst ctx = cv.getContext('2d');\nconst DPR = Math.min(2, window.devicePixelRatio || 1);\nconst state = {};\nlet mx = -9999, my = -9999; // -9999 == not hovering (CONTRACT 2)\ncv.addEventListener('pointermove', (e) => {\n  const r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top;\n});\ncv.addEventListener('pointerleave', () => { mx = -9999; my = -9999; });\nconst t0 = performance.now();\n(function frame() {\n  const w = Math.max(1, cv.clientWidth || 300), h = Math.max(1, cv.clientHeight || 240);\n  if (cv.width !== Math.round(w * DPR) || cv.height !== Math.round(h * DPR)) {\n    cv.width = Math.round(w * DPR); cv.height = Math.round(h * DPR);\n  }\n  ctx.setTransform(DPR, 0, 0, DPR, 0, 0); // draw in CSS px\n  const t = (performance.now() - t0) / 1000;\n  draw(ctx, w, h, t, mx, my, state);\n  requestAnimationFrame(frame);\n})();\n</script>",
+  "mountSnippet": "import { mount } from 'fx-lab';\nmount(document.querySelector('#app'), 'chevron');",
+  "runtimeNotes": "Canvas2D: draw(ctx, w, h, t, mx, my, state) runs each frame; w/h and mx/my are CSS px (mx,my = -9999 when not hovering), ctx is pre-scaled by DPR = min(2, devicePixelRatio). Perf budget — gpu: low, cpu: low, mobileSafe: true. Reduced motion: freeze.",
+  "url": "/effects/chevron.md",
+  "preview": null
+}

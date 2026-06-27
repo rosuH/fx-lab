@@ -1,0 +1,34 @@
+{
+  "id": "scramble",
+  "kind": "dom",
+  "name": "Decode Text",
+  "nameLocal": null,
+  "section": "interaction",
+  "summary": "",
+  "description": "",
+  "descriptionZh": "乱码归位",
+  "tags": [],
+  "vibe": [],
+  "culture": "UI / typography",
+  "accuracyNote": null,
+  "perf": {
+    "gpu": "low",
+    "cpu": "low",
+    "mobileSafe": true
+  },
+  "interactive": {
+    "followsCursor": false,
+    "trigger": "auto"
+  },
+  "reducedMotion": "freeze",
+  "deterministic": true,
+  "state": null,
+  "license": "MIT",
+  "attribution": null,
+  "source": "init(root) {\n    const el = root.querySelector('[data-scramble]');\n    if (!el) return { stop() {} };\n    const words = ['CANVAS', 'SHADER', 'EFFECT', 'MOTION'], chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ#%@&/<>*0123456789';\n    let wi = 0, scrTimer = 0;\n    const setWord = (target) => {\n      let frame = 0; const len = target.length; clearInterval(scrTimer);\n      scrTimer = setInterval(() => {\n        let s = '';\n        for (let i = 0; i < len; i++) { s += i < frame / 2.4 ? target[i] : chars[Math.floor(Math.random() * chars.length)]; }\n        el.textContent = s; frame++; if (frame / 2.4 > len) clearInterval(scrTimer);\n      }, 42);\n    };\n    setWord(words[0]);\n    const scrCycle = setInterval(() => { wi = (wi + 1) % words.length; setWord(words[wi]); }, 2200);\n    return { stop() { clearInterval(scrTimer); clearInterval(scrCycle); } };\n  }",
+  "snippet": "<!-- fx-lab effect: scramble — Decode Text (dom) · license MIT -->\n<div id=\"fx-root-scramble\"><p data-scramble style=\"font-family:ui-monospace,monospace;font-size:2rem;letter-spacing:.1em;color:#CDE85A;margin:0\">DECODE</p></div>\n<script type=\"module\">\nconst init = ({ init(root) {\n    const el = root.querySelector('[data-scramble]');\n    if (!el) return { stop() {} };\n    const words = ['CANVAS', 'SHADER', 'EFFECT', 'MOTION'], chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ#%@&/<>*0123456789';\n    let wi = 0, scrTimer = 0;\n    const setWord = (target) => {\n      let frame = 0; const len = target.length; clearInterval(scrTimer);\n      scrTimer = setInterval(() => {\n        let s = '';\n        for (let i = 0; i < len; i++) { s += i < frame / 2.4 ? target[i] : chars[Math.floor(Math.random() * chars.length)]; }\n        el.textContent = s; frame++; if (frame / 2.4 > len) clearInterval(scrTimer);\n      }, 42);\n    };\n    setWord(words[0]);\n    const scrCycle = setInterval(() => { wi = (wi + 1) % words.length; setWord(words[wi]); }, 2200);\n    return { stop() { clearInterval(scrTimer); clearInterval(scrCycle); } };\n  } }).init;\nconst root = document.getElementById('fx-root-scramble');\nconst inst = init(root) || {};\nif (inst.step) {\n  const t0 = performance.now();\n  (function loop() { inst.step((performance.now() - t0) / 1000); requestAnimationFrame(loop); })();\n}\n</script>",
+  "mountSnippet": "import { mount } from 'fx-lab';\nmount(document.querySelector('#app'), 'scramble');",
+  "runtimeNotes": "DOM: init(root) wires listeners/timers and returns { step?(t), stop() }; stop() releases everything for leak-free remounts. Perf budget — gpu: low, cpu: low, mobileSafe: true. Reduced motion: freeze.",
+  "url": "/effects/scramble.md",
+  "preview": null
+}

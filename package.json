@@ -1,0 +1,27 @@
+{
+  "name": "fx-lab",
+  "version": "0.1.0",
+  "description": "99 zero-dependency web effects (WebGL2 / Canvas2D / DOM) — a gallery + an LLM-friendly catalog (llms.txt) you can paste anywhere.",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/fx-lab.esm.js",
+      "default": "./dist/fx-lab.iife.js"
+    },
+    "./src": "./src/index.js"
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "validate": "node build/validate.mjs",
+    "build": "node build/build.mjs",
+    "bundle": "node build/bundle.mjs",
+    "test": "node test/smoke.mjs",
+    "dev": "node build/serve.mjs",
+    "preview": "node build/serve.mjs site"
+  },
+  "keywords": ["webgl", "canvas", "shaders", "effects", "generative", "llms-txt", "gallery"],
+  "devDependencies": {
+    "@playwright/test": "^1.49.0"
+  }
+}

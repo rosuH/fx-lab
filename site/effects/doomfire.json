@@ -1,0 +1,50 @@
+{
+  "id": "doomfire",
+  "kind": "canvas",
+  "name": "Doom Fire",
+  "nameLocal": null,
+  "section": "cellular-and-physics",
+  "summary": "Roiling orange-red fire climbs from a white-hot base; retro demoscene flame in warm pixel blocks.",
+  "description": "Recreation of the Doom (1993) fire algorithm: a bottom row of max-heat pixels propagates upward with random lateral drift and gradual cooling each step. Produces natural-looking animated flame rendered as coloured 4-pixel blocks on a black background. Classic demoscene effect; ideal as a dramatic or retro fullscreen background.",
+  "descriptionZh": "毁灭战士火焰",
+  "tags": [
+    "fire",
+    "particles",
+    "noise",
+    "trail",
+    "pixel",
+    "canvas2d",
+    "background"
+  ],
+  "vibe": [
+    "dramatic",
+    "aggressive",
+    "retro",
+    "energetic"
+  ],
+  "culture": null,
+  "accuracyNote": null,
+  "perf": {
+    "gpu": "low",
+    "cpu": "high",
+    "mobileSafe": false
+  },
+  "interactive": {
+    "followsCursor": false,
+    "trigger": "auto"
+  },
+  "reducedMotion": "freeze",
+  "deterministic": false,
+  "state": {
+    "persistent": true,
+    "notes": "Uint8Array heat-propagation grid accumulates upward each frame; bottom row stays at max heat."
+  },
+  "license": "MIT",
+  "attribution": null,
+  "source": "function doomfire(ctx,w,h,t,mx,my,s){ const C=4,gw=Math.ceil(w/C),gh=Math.ceil(h/C);if(!s.p||s.gw!==gw){s.gw=gw;s.gh=gh;s.p=new Uint8Array(gw*gh);for(let x=0;x<gw;x++)s.p[(gh-1)*gw+x]=36;s.pal=[];for(let i=0;i<37;i++){const f=i/36;s.pal.push('rgb('+Math.min(255,f*510|0)+','+Math.min(255,f*f*400|0)+','+(f>0.7?(f-0.7)*600|0:0)+')');}}for(let x=0;x<gw;x++)for(let y=1;y<gh;y++){const src=y*gw+x,r=Math.random(),dst=src-gw+(r<0.5?-1:r<0.66?1:0),nv=Math.max(0,s.p[src]-(r<0.4?1:0));if(dst>=0)s.p[dst]=nv;}ctx.fillStyle='#000';ctx.fillRect(0,0,w,h);for(let y=0;y<gh;y++)for(let x=0;x<gw;x++){const v=s.p[y*gw+x];if(v>0){ctx.fillStyle=s.pal[v];ctx.fillRect(x*C,y*C,C,C);}} }",
+  "snippet": "<!-- fx-lab effect: doomfire — Doom Fire (canvas) · license MIT -->\n<canvas id=\"fx-doomfire\" style=\"display:block;width:100%;height:100%;min-height:240px\"></canvas>\n<script type=\"module\">\nconst draw = function doomfire(ctx,w,h,t,mx,my,s){ const C=4,gw=Math.ceil(w/C),gh=Math.ceil(h/C);if(!s.p||s.gw!==gw){s.gw=gw;s.gh=gh;s.p=new Uint8Array(gw*gh);for(let x=0;x<gw;x++)s.p[(gh-1)*gw+x]=36;s.pal=[];for(let i=0;i<37;i++){const f=i/36;s.pal.push('rgb('+Math.min(255,f*510|0)+','+Math.min(255,f*f*400|0)+','+(f>0.7?(f-0.7)*600|0:0)+')');}}for(let x=0;x<gw;x++)for(let y=1;y<gh;y++){const src=y*gw+x,r=Math.random(),dst=src-gw+(r<0.5?-1:r<0.66?1:0),nv=Math.max(0,s.p[src]-(r<0.4?1:0));if(dst>=0)s.p[dst]=nv;}ctx.fillStyle='#000';ctx.fillRect(0,0,w,h);for(let y=0;y<gh;y++)for(let x=0;x<gw;x++){const v=s.p[y*gw+x];if(v>0){ctx.fillStyle=s.pal[v];ctx.fillRect(x*C,y*C,C,C);}} };\nconst cv = document.getElementById('fx-doomfire');\nconst ctx = cv.getContext('2d');\nconst DPR = Math.min(2, window.devicePixelRatio || 1);\nconst state = {};\nlet mx = -9999, my = -9999; // -9999 == not hovering (CONTRACT 2)\ncv.addEventListener('pointermove', (e) => {\n  const r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top;\n});\ncv.addEventListener('pointerleave', () => { mx = -9999; my = -9999; });\nconst t0 = performance.now();\n(function frame() {\n  const w = Math.max(1, cv.clientWidth || 300), h = Math.max(1, cv.clientHeight || 240);\n  if (cv.width !== Math.round(w * DPR) || cv.height !== Math.round(h * DPR)) {\n    cv.width = Math.round(w * DPR); cv.height = Math.round(h * DPR);\n  }\n  ctx.setTransform(DPR, 0, 0, DPR, 0, 0); // draw in CSS px\n  const t = (performance.now() - t0) / 1000;\n  draw(ctx, w, h, t, mx, my, state);\n  requestAnimationFrame(frame);\n})();\n</script>",
+  "mountSnippet": "import { mount } from 'fx-lab';\nmount(document.querySelector('#app'), 'doomfire');",
+  "runtimeNotes": "Canvas2D: draw(ctx, w, h, t, mx, my, state) runs each frame; w/h and mx/my are CSS px (mx,my = -9999 when not hovering), ctx is pre-scaled by DPR = min(2, devicePixelRatio). Perf budget — gpu: low, cpu: high, mobileSafe: false. Persistent accumulator: Uint8Array heat-propagation grid accumulates upward each frame; bottom row stays at max heat. Non-deterministic: uses unseeded randomness or wall-clock time, so output differs run to run. Reduced motion: freeze.",
+  "url": "/effects/doomfire.md",
+  "preview": null
+}

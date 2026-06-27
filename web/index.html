@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FX Lab — 99 zero-dependency web effects</title>
+<meta name="description" content="99 paste-anywhere web effects (WebGL2 / Canvas2D / DOM). Find one by vibe, copy a self-contained snippet.">
+<!-- LLM/agent discovery: a slim, vibe-first catalog lives at /llms.txt -->
+<link rel="alternate" type="text/markdown" href="/llms.txt">
+<meta name="llms-txt" content="/llms.txt">
+<style>
+  :root { --bg:#0a0b0d; --panel:#101216; --line:#23262d; --fg:#e7e9ee; --dim:#9aa3b2; --accent:#CDE85A; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  header { padding:48px 24px 16px; max-width:1200px; margin:0 auto; }
+  h1 { font-size:clamp(28px,5vw,44px); margin:0 0 8px; letter-spacing:-.02em; }
+  h1 b { color:var(--accent); }
+  .sub { color:var(--dim); max-width:60ch; line-height:1.5; }
+  .links { margin-top:16px; display:flex; gap:10px; flex-wrap:wrap; }
+  .links a { color:var(--fg); text-decoration:none; border:1px solid var(--line); padding:6px 12px; border-radius:999px; font-size:13px; }
+  .links a:hover { border-color:var(--accent); color:var(--accent); }
+  main { max-width:1200px; margin:0 auto; padding:8px 24px 80px; }
+  section { margin-top:40px; }
+  section > h2 { font-size:14px; text-transform:uppercase; letter-spacing:.12em; color:var(--dim); border-bottom:1px solid var(--line); padding-bottom:8px; margin:0 0 16px; }
+  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); }
+  .tile { background:var(--panel); border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; }
+  .fx { position:relative; height:200px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .fx canvas { display:block; width:100%; height:100%; }
+  .cap { padding:12px 14px; border-top:1px solid var(--line); }
+  .cap .name { font-weight:650; font-size:15px; }
+  .cap .name small { color:var(--dim); font-weight:400; margin-left:6px; }
+  .cap .summary { color:var(--dim); font-size:13px; line-height:1.45; margin-top:4px; }
+  .badges { margin-top:10px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+  .kind { font-size:10px; letter-spacing:.08em; text-transform:uppercase; padding:2px 7px; border-radius:5px; font-weight:700; }
+  .kind.shader { background:#1f6feb33; color:#7fb0ff; }
+  .kind.canvas { background:#cde85a22; color:var(--accent); }
+  .kind.dom { background:#ff8f3f22; color:#ffb27f; }
+  .tag { font-size:11px; color:var(--dim); }
+  .vibe { font-size:11px; color:#b58cff; }
+  a.detail { margin-left:auto; font-size:12px; color:var(--dim); text-decoration:none; }
+  a.detail:hover { color:var(--accent); }
+  footer { color:var(--dim); text-align:center; padding:24px; font-size:13px; border-top:1px solid var(--line); }
+  /* Loading overlay — dogfoods our own 'spinners' (Loaders) effect while the catalog loads. */
+  #loader { position:fixed; inset:0; z-index:50; background:var(--bg); display:flex; flex-direction:column;
+            align-items:center; justify-content:center; gap:20px; transition:opacity .5s ease; }
+  #loader.hide { opacity:0; pointer-events:none; }
+  #loader .loader-fx { width:180px; height:130px; }
+  #loader .loader-fx canvas { width:100%; height:100%; display:block; }
+  #loader .loader-text { color:var(--dim); font-size:13px; letter-spacing:.14em; text-transform:uppercase; }
+  #loader .loader-text b { color:var(--accent); }
+  .lang { margin-left:auto; display:flex; gap:6px; }
+  .lang button { cursor:pointer; background:transparent; color:var(--dim); border:1px solid var(--line); padding:6px 12px; border-radius:999px; font:inherit; font-size:13px; }
+  .lang button:hover { color:var(--fg); }
+  .lang button.active { border-color:var(--accent); color:var(--accent); }
+</style>
+</head>
+<body>
+<div id="loader"><div class="loader-fx"></div><div class="loader-text" id="loader-text"></div></div>
+<header>
+  <h1>FX <b>Lab</b></h1>
+  <p class="sub" id="sub"></p>
+  <div class="links">
+    <a href="./llms.txt">llms.txt</a>
+    <a href="./llms.zh.txt">llms.zh.txt</a>
+    <a href="./fx-index.json">fx-index.json</a>
+    <span class="lang"><button type="button" data-lang="en">EN</button><button type="button" data-lang="zh">中文</button></span>
+  </div>
+</header>
+<main id="app"></main>
+<footer id="footer"></footer>
+
+<script type="module">
+import { mount } from './src/index.js';
+
+// Sentinel markup for the 6 DOM effects (they query their own [data-*] hooks inside the mount root).
+const DOM_SENTINELS = {
+  scramble: `<p data-scramble style="font-family:ui-monospace,monospace;font-size:2rem;letter-spacing:.1em;color:#CDE85A;margin:0">DECODE</p>`,
+  magnetic: `<div data-magnetic style="position:relative;width:100%;height:100%;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap"><div data-magcursor style="position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;border:1px solid #CDE85A;pointer-events:none"></div><span data-magchip style="padding:6px 14px;border:1px solid #333;border-radius:999px">Home</span><span data-magchip style="padding:6px 14px;border:1px solid #333;border-radius:999px">Work</span><span data-magchip style="padding:6px 14px;border:1px solid #333;border-radius:999px">About</span></div>`,
+  kinetic: `<div data-kinetic style="color:#fff;font-family:system-ui,sans-serif"></div>`,
+  marquee: `<div style="overflow:hidden;white-space:nowrap;width:100%;color:#fff;font-family:ui-monospace,monospace"><div data-marquee style="display:inline-block">FX LAB · ZERO-DEP WEB EFFECTS · PASTE ANYWHERE · FX LAB · ZERO-DEP WEB EFFECTS · PASTE ANYWHERE · </div></div>`,
+  tilt: `<div data-tilt style="width:200px;height:140px;perspective:600px"><div data-tiltcard style="width:100%;height:100%;background:linear-gradient(135deg,#1f6feb,#CDE85A);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#0a0b0d;font-weight:700;font-family:system-ui">Tilt me</div></div>`,
+  spot: `<div data-spot style="position:relative;width:100%;height:100%;background:#111;color:#fff;overflow:hidden;-webkit-mask-image:radial-gradient(140px circle at var(--mx,50%) var(--my,50%),#000 0,transparent 72%);mask-image:radial-gradient(140px circle at var(--mx,50%) var(--my,50%),#000 0,transparent 72%)"><div style="padding:1rem;font-size:.95rem;line-height:1.5">Move the cursor to reveal the spotlight mask.</div></div>`,
+};
+
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]));
+
+// --- i18n: standard locale dict + browser-language detection + persisted toggle ---
+const STRINGS = {
+  en: {
+    sub: "99 zero-dependency web effects — WebGL2 shaders, Canvas-2D, and DOM. Each is a paste-anywhere snippet. Browse below, or if you're an LLM, start at /llms.txt.",
+    loading: 'loading 99 effects…', footer: 'fx-lab · MIT · the paste is the install',
+    snippet: 'snippet →', failed: 'Failed to load fx-index.json — run `npm run build`.',
+  },
+  zh: {
+    sub: '99 个零依赖网页特效 —— WebGL2 着色器、Canvas-2D 与 DOM，每个都是可粘贴即用的片段。向下浏览；若你是 LLM，请从 /llms.txt 开始。',
+    loading: '正在加载 99 个特效…', footer: 'fx-lab · MIT · 粘贴即安装',
+    snippet: '代码 →', failed: '加载 fx-index.json 失败 —— 请运行 `npm run build`。',
+  },
+};
+let lang = (() => {
+  const saved = localStorage.getItem('fxlab-lang');
+  if (saved === 'en' || saved === 'zh') return saved;
+  return (navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en';
+})();
+const titleOf   = (fx) => lang === 'zh' ? (fx.nameLocal || fx.name) : fx.name;
+const subOf     = (fx) => lang === 'zh' ? (fx.nameLocal ? fx.name : '') : (fx.nameLocal || '');
+const summaryOf = (fx) => lang === 'zh' ? (fx.descriptionZh || fx.summary) : fx.summary;
+const sectionOf = (s)  => lang === 'zh' ? (s.nameLocal || s.name) : s.name;
+
+const secRefs = [], tileRefs = []; // refs so a language switch re-labels in place — effects keep running
+function applyLang() {
+  const S = STRINGS[lang];
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.getElementById('sub').textContent = S.sub;
+  document.getElementById('footer').textContent = S.footer;
+  const lt = document.getElementById('loader-text'); if (lt) lt.innerHTML = '<b>FX Lab</b> · ' + esc(S.loading);
+  for (const b of document.querySelectorAll('.lang button')) b.classList.toggle('active', b.dataset.lang === lang);
+  for (const r of secRefs) r.el.textContent = sectionOf(r.s);
+  for (const r of tileRefs) {
+    r.name.innerHTML = esc(titleOf(r.fx)) + (subOf(r.fx) ? `<small>${esc(subOf(r.fx))}</small>` : '');
+    r.summary.textContent = summaryOf(r.fx);
+    r.detail.textContent = S.snippet;
+  }
+}
+function setLang(l) { lang = l; localStorage.setItem('fxlab-lang', l); applyLang(); }
+for (const b of document.querySelectorAll('.lang button')) b.addEventListener('click', () => setLang(b.dataset.lang));
+applyLang(); // loader text + toggle state before data arrives
+
+// Lazy mount/unmount: keeps live WebGL2 contexts under the ~8 cap and saves battery.
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) {
+    const fx = e.target;
+    if (e.isIntersecting && !fx._handle) {
+      const id = fx.dataset.id, kind = fx.dataset.kind;
+      if (kind === 'dom') fx.innerHTML = DOM_SENTINELS[id] || '';
+      fx._handle = mount(fx, id);
+    } else if (!e.isIntersecting && fx._handle) {
+      fx._handle.stop(); fx._handle = null;
+      if (fx.dataset.kind === 'dom') fx.innerHTML = '';
+    }
+  }
+}, { rootMargin: '100px' });
+
+// Loading effect: mount our own 'spinners' (Loaders) effect on the overlay until the grid is ready.
+const loaderEl = document.getElementById('loader');
+const loaderHandle = mount(loaderEl.querySelector('.loader-fx'), 'spinners');
+function dismissLoader(startedAt) {
+  const wait = Math.max(0, 500 - (performance.now() - startedAt)); // keep it on screen >=0.5s so it doesn't flash
+  setTimeout(() => {
+    loaderEl.classList.add('hide');
+    setTimeout(() => { loaderHandle.stop(); loaderEl.remove(); }, 550);
+  }, wait);
+}
+
+(async () => {
+  const startedAt = performance.now();
+  const data = await fetch('./fx-index.json').then(r => r.json()).catch((e) => {
+    document.getElementById('loader-text').textContent = STRINGS[lang].failed;
+    throw e;
+  });
+  const bySection = new Map(data.sections.map(s => [s.id, []]));
+  for (const fx of data.effects) (bySection.get(fx.section) || []).push(fx);
+
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  for (const s of data.sections) {
+    const items = bySection.get(s.id) || [];
+    if (!items.length) continue;
+    const sec = document.createElement('section');
+    const h2 = document.createElement('h2'); sec.appendChild(h2);
+    secRefs.push({ s, el: h2 });
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+    for (const fx of items) {
+      const tile = document.createElement('article');
+      tile.className = 'tile';
+      const tags = (fx.tags || []).slice(0, 3).map(t => `<span class="tag">#${esc(t)}</span>`).join(' ');
+      const vibe = (fx.vibe || []).slice(0, 2).map(v => `<span class="vibe">${esc(v)}</span>`).join(' ');
+      tile.innerHTML =
+        `<div class="fx" data-id="${esc(fx.id)}" data-kind="${esc(fx.kind)}"></div>` +
+        `<div class="cap"><div class="name"></div><div class="summary"></div>` +
+        `<div class="badges"><span class="kind ${esc(fx.kind)}">${esc(fx.kind)}</span>${vibe} ${tags}` +
+        `<a class="detail" href="./effects/${esc(fx.id)}.md"></a></div></div>`;
+      grid.appendChild(tile);
+      tileRefs.push({ fx, name: tile.querySelector('.name'), summary: tile.querySelector('.summary'), detail: tile.querySelector('.detail') });
+      io.observe(tile.querySelector('.fx'));
+    }
+    sec.appendChild(grid);
+    app.appendChild(sec);
+  }
+  applyLang();           // fill section + tile text in the current language
+  dismissLoader(startedAt);
+})();
+</script>
+</body>
+</html>

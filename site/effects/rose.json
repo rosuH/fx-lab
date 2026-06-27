@@ -1,0 +1,45 @@
+{
+  "id": "rose",
+  "kind": "canvas",
+  "name": "Rose Curve",
+  "nameLocal": null,
+  "section": "geometry-and-curves",
+  "summary": "Soft pink rose curve cycling through 3-to-8-petal forms on a dark field; elegant math bloom.",
+  "description": "Traces the polar rose equation r = cos(k·θ), stepping k through integer values over time to produce 3-, 4-, 5-, 6-, 7-, and 8-petal flowers. Each petal count redraws cleanly with a single pink stroke. A minimal, elegant mathematical curve suited to dark inline or background use.",
+  "descriptionZh": "玫瑰线 · 玫瑰花形",
+  "tags": [
+    "curves",
+    "geometry",
+    "spiral",
+    "rings",
+    "canvas2d",
+    "inline"
+  ],
+  "vibe": [
+    "elegant",
+    "minimal",
+    "calm"
+  ],
+  "culture": null,
+  "accuracyNote": null,
+  "perf": {
+    "gpu": "low",
+    "cpu": "low",
+    "mobileSafe": true
+  },
+  "interactive": {
+    "followsCursor": false,
+    "trigger": "auto"
+  },
+  "reducedMotion": "freeze",
+  "deterministic": true,
+  "state": null,
+  "license": "MIT",
+  "attribution": null,
+  "source": "function rose(ctx,w,h,t){ ctx.fillStyle='#0b0a12';ctx.fillRect(0,0,w,h); const cx=w/2,cy=h/2,R=Math.min(w,h)*0.42,k=Math.floor(t*0.2)%6+3; ctx.strokeStyle='#ff7ab0';ctx.lineWidth=1.5;ctx.beginPath(); for(let a=0;a<6.30;a+=0.01){const r=R*Math.cos(k*a);a?ctx.lineTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r):ctx.moveTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r);} ctx.stroke(); }",
+  "snippet": "<!-- fx-lab effect: rose — Rose Curve (canvas) · license MIT -->\n<canvas id=\"fx-rose\" style=\"display:block;width:100%;height:100%;min-height:240px\"></canvas>\n<script type=\"module\">\nconst draw = function rose(ctx,w,h,t){ ctx.fillStyle='#0b0a12';ctx.fillRect(0,0,w,h); const cx=w/2,cy=h/2,R=Math.min(w,h)*0.42,k=Math.floor(t*0.2)%6+3; ctx.strokeStyle='#ff7ab0';ctx.lineWidth=1.5;ctx.beginPath(); for(let a=0;a<6.30;a+=0.01){const r=R*Math.cos(k*a);a?ctx.lineTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r):ctx.moveTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r);} ctx.stroke(); };\nconst cv = document.getElementById('fx-rose');\nconst ctx = cv.getContext('2d');\nconst DPR = Math.min(2, window.devicePixelRatio || 1);\nconst state = {};\nlet mx = -9999, my = -9999; // -9999 == not hovering (CONTRACT 2)\ncv.addEventListener('pointermove', (e) => {\n  const r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top;\n});\ncv.addEventListener('pointerleave', () => { mx = -9999; my = -9999; });\nconst t0 = performance.now();\n(function frame() {\n  const w = Math.max(1, cv.clientWidth || 300), h = Math.max(1, cv.clientHeight || 240);\n  if (cv.width !== Math.round(w * DPR) || cv.height !== Math.round(h * DPR)) {\n    cv.width = Math.round(w * DPR); cv.height = Math.round(h * DPR);\n  }\n  ctx.setTransform(DPR, 0, 0, DPR, 0, 0); // draw in CSS px\n  const t = (performance.now() - t0) / 1000;\n  draw(ctx, w, h, t, mx, my, state);\n  requestAnimationFrame(frame);\n})();\n</script>",
+  "mountSnippet": "import { mount } from 'fx-lab';\nmount(document.querySelector('#app'), 'rose');",
+  "runtimeNotes": "Canvas2D: draw(ctx, w, h, t, mx, my, state) runs each frame; w/h and mx/my are CSS px (mx,my = -9999 when not hovering), ctx is pre-scaled by DPR = min(2, devicePixelRatio). Perf budget — gpu: low, cpu: low, mobileSafe: true. Reduced motion: freeze.",
+  "url": "/effects/rose.md",
+  "preview": null
+}

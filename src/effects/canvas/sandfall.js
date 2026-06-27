@@ -1,0 +1,32 @@
+export default {
+  meta: {
+    "id": "sandfall",
+    "kind": "canvas",
+    "name": "Falling Sand",
+    "nameLocal": null,
+    "section": "cellular-and-physics",
+    "summary": "Colorful sand grains pour from the cursor and settle into dunes; playful particle physics.",
+    "description": "Colored sand grains spawn at the cursor position (or screen center) each frame and fall under cellular gravity, piling and avalanching into natural dunes. Five distinct particle colors accumulate in a persistent grid each session. Use for playful or generative-art backgrounds.",
+    "descriptionZh": "落沙模拟 · 跟手",
+    "tags": ["particles", "cellular", "grid", "dots", "canvas2d", "background"],
+    "vibe": ["playful", "organic", "ambient"],
+    "culture": null,
+    "accuracyNote": null,
+    "perf": {
+      "gpu": "low",
+      "cpu": "high",
+      "mobileSafe": false
+    },
+    "interactive": {
+      "followsCursor": true,
+      "trigger": "auto"
+    },
+    "reducedMotion": "freeze",
+    "deterministic": false,
+    "state": {"persistent": true, "notes": "Uint8Array particle grid accumulates settled grains each frame; dunes grow until canvas is full."},
+    "license": "MIT",
+    "attribution": null
+  },
+  // `this` is bound by the runtime to { vhash, vnoise }
+  draw: function sandfall(ctx,w,h,t,mx,my,s){ const C=4,gw=Math.ceil(w/C),gh=Math.ceil(h/C);if(!s.g||s.gw!==gw){s.gw=gw;s.gh=gh;s.g=new Uint8Array(gw*gh);}const sx=mx>=0?Math.floor(mx/C):gw>>1;for(let k=-1;k<=1;k++){const xx=sx+k;if(xx>=0&&xx<gw)s.g[xx]=1+Math.floor(Math.random()*5);}for(let y=gh-2;y>=0;y--)for(let x=0;x<gw;x++){const i=y*gw+x;if(s.g[i]){if(!s.g[(y+1)*gw+x])s.g[(y+1)*gw+x]=s.g[i],s.g[i]=0;else{const dir=Math.random()<0.5?-1:1,bx=x+dir;if(bx>=0&&bx<gw&&!s.g[(y+1)*gw+bx]){s.g[(y+1)*gw+bx]=s.g[i];s.g[i]=0;}}}}ctx.fillStyle='#0a0a0c';ctx.fillRect(0,0,w,h);const cols=['','#ff6b5a','#ffd23f','#34d1c4','#7b6cf6','#ff8f3f'];for(let y=0;y<gh;y++)for(let x=0;x<gw;x++){const v=s.g[y*gw+x];if(v){ctx.fillStyle=cols[v];ctx.fillRect(x*C,y*C,C,C);}} },
+};
