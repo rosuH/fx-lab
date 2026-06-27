@@ -175,7 +175,7 @@ export function buildSite() {
     const meta = mod.meta;
     const { snippet, mountSnippet } = buildSnippet(mod);
     const source = sourceOf(mod);
-    const url = `/effects/${id}.md`;
+    const url = `${HOMEPAGE}/effects/${id}.md`;
 
     // self-contained per-effect JSON
     w(`effects/${id}.json`, JSON.stringify(

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://fx-lab.example/schema/manifest.schema.json",
+  "$id": "https://rosuh.github.io/fx-lab/schema/manifest.schema.json",
   "title": "FX Lab fx-index.json manifest",
   "type": "object",
   "required": ["name", "version", "homepage", "sections", "effects"],
