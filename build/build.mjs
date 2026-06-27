@@ -10,8 +10,8 @@ import { buildSnippet } from './snippet.js';
 import { validateAll, validate, loadEffectSchema } from './validate.mjs';
 import { readFileSync } from 'node:fs';
 
-// homepage: edit here. No trailing slash.
-const HOMEPAGE = 'https://fx-lab.example';
+// homepage: edit here. No trailing slash. (GitHub Pages project site; host is lowercased.)
+const HOMEPAGE = 'https://rosuh.github.io/fx-lab';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = join(ROOT, 'site');

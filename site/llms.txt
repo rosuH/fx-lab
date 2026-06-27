@@ -5,127 +5,127 @@
 Vibes (map intent first): calm · ambient · meditative · minimal · elegant · cozy · energetic · playful · hypnotic · psychedelic · dramatic · aggressive · organic · geometric · technical · cultural · retro · futuristic.
 
 ## Generative
-- [Gradient Flow](https://fx-lab.example/effects/gradient.md): Silky domain-warped color field in deep blue, purple and teal; slow hypnotic drift.
-- [Dot-Matrix Wave](https://fx-lab.example/effects/dots.md): Blue-teal dot grid pulses in rolling waves; cursor pushes dots outward in a satisfying bulge.
-- [Metaballs](https://fx-lab.example/effects/metaballs.md): Five glowing purple-magenta blobs orbit and merge organically; cursor draws in a sixth.
-- [Aurora Ribbons](https://fx-lab.example/effects/aurora.md): Shimmering green-and-purple aurora curtains stream down a starry night sky; serene fullscreen background.
-- [Ripple Grid](https://fx-lab.example/effects/ripple.md): Teal grid lines bend under expanding ripple rings that emanate from the cursor.
-- [Voronoi Cells](https://fx-lab.example/effects/voronoi.md): Animated colour-cell mosaic with drifting seeds in jewel tones; organic and hypnotic.
-- [Truchet Tiles](https://fx-lab.example/effects/truchet.md): Scrolling arc-tile maze in dark teal; endlessly generative, calm, low-contrast texture.
-- [Kaleidoscope](https://fx-lab.example/effects/kaleido.md): 8-fold FBM kaleidoscope blooms with shifting hues; cursor tilts the mandala in real time.
-- [Raymarch SDF](https://fx-lab.example/effects/raymarch.md): Glowing torus spins in deep space via 48-step SDF raymarching; blue-to-magenta Fresnel rim.
+- [Gradient Flow](https://rosuh.github.io/fx-lab/effects/gradient.md): Silky domain-warped color field in deep blue, purple and teal; slow hypnotic drift.
+- [Dot-Matrix Wave](https://rosuh.github.io/fx-lab/effects/dots.md): Blue-teal dot grid pulses in rolling waves; cursor pushes dots outward in a satisfying bulge.
+- [Metaballs](https://rosuh.github.io/fx-lab/effects/metaballs.md): Five glowing purple-magenta blobs orbit and merge organically; cursor draws in a sixth.
+- [Aurora Ribbons](https://rosuh.github.io/fx-lab/effects/aurora.md): Shimmering green-and-purple aurora curtains stream down a starry night sky; serene fullscreen background.
+- [Ripple Grid](https://rosuh.github.io/fx-lab/effects/ripple.md): Teal grid lines bend under expanding ripple rings that emanate from the cursor.
+- [Voronoi Cells](https://rosuh.github.io/fx-lab/effects/voronoi.md): Animated colour-cell mosaic with drifting seeds in jewel tones; organic and hypnotic.
+- [Truchet Tiles](https://rosuh.github.io/fx-lab/effects/truchet.md): Scrolling arc-tile maze in dark teal; endlessly generative, calm, low-contrast texture.
+- [Kaleidoscope](https://rosuh.github.io/fx-lab/effects/kaleido.md): 8-fold FBM kaleidoscope blooms with shifting hues; cursor tilts the mandala in real time.
+- [Raymarch SDF](https://rosuh.github.io/fx-lab/effects/raymarch.md): Glowing torus spins in deep space via 48-step SDF raymarching; blue-to-magenta Fresnel rim.
 
 ## Post & Print
-- [Vaporwave Grid](https://fx-lab.example/effects/vapor.md): Retro vaporwave: banded sunset sun over a perspective cyan neon grid scrolling to the horizon.
-- [Chromatic Glitch](https://fx-lab.example/effects/glitch.md): Horizontal RGB bands jitter and split over CRT scanlines; aggressive retro glitch.
+- [Vaporwave Grid](https://rosuh.github.io/fx-lab/effects/vapor.md): Retro vaporwave: banded sunset sun over a perspective cyan neon grid scrolling to the horizon.
+- [Chromatic Glitch](https://rosuh.github.io/fx-lab/effects/glitch.md): Horizontal RGB bands jitter and split over CRT scanlines; aggressive retro glitch.
 
 ## World Patterns
-- [Seigaiha](https://fx-lab.example/effects/seigaiha.md): Serene overlapping blue-white wave fans tile the screen; calm Japanese oceanic elegance.
-- [Girih](https://fx-lab.example/effects/girih.md): Dark ground of slowly rotating golden octagram lattice; elegant Islamic geometric meditation.
-- [Celtic Knot](https://fx-lab.example/effects/celtic.md): Glowing green interlace arcs weave across a dark field with a flowing animated dash; hypnotic.
-- [Dot Painting](https://fx-lab.example/effects/aboriginal.md): Warm earth-tone concentric dot rings orbit fixed anchors on dark brown; organic and meditative.
-- [Ink Wash](https://fx-lab.example/effects/inkwash.md): Soft ink blobs drift on cream paper; hover to drop a brushstroke wash at the cursor.
+- [Seigaiha](https://rosuh.github.io/fx-lab/effects/seigaiha.md): Serene overlapping blue-white wave fans tile the screen; calm Japanese oceanic elegance.
+- [Girih](https://rosuh.github.io/fx-lab/effects/girih.md): Dark ground of slowly rotating golden octagram lattice; elegant Islamic geometric meditation.
+- [Celtic Knot](https://rosuh.github.io/fx-lab/effects/celtic.md): Glowing green interlace arcs weave across a dark field with a flowing animated dash; hypnotic.
+- [Dot Painting](https://rosuh.github.io/fx-lab/effects/aboriginal.md): Warm earth-tone concentric dot rings orbit fixed anchors on dark brown; organic and meditative.
+- [Ink Wash](https://rosuh.github.io/fx-lab/effects/inkwash.md): Soft ink blobs drift on cream paper; hover to drop a brushstroke wash at the cursor.
 
 ## Design Movements
-- [Op-Art Moiré](https://fx-lab.example/effects/opart.md): Black-and-white concentric rings create a dizzying moiré illusion; cursor shifts the offset.
-- [Bauhaus](https://fx-lab.example/effects/bauhaus.md): Bold Bauhaus shapes — blue circle, red arc, yellow triangle — slow-turn in primary colours.
-- [Memphis 80s](https://fx-lab.example/effects/memphis.md): Neon Memphis shapes drift and spin on dark; vibrant 80s pop-design energy.
+- [Op-Art Moiré](https://rosuh.github.io/fx-lab/effects/opart.md): Black-and-white concentric rings create a dizzying moiré illusion; cursor shifts the offset.
+- [Bauhaus](https://rosuh.github.io/fx-lab/effects/bauhaus.md): Bold Bauhaus shapes — blue circle, red arc, yellow triangle — slow-turn in primary colours.
+- [Memphis 80s](https://rosuh.github.io/fx-lab/effects/memphis.md): Neon Memphis shapes drift and spin on dark; vibrant 80s pop-design energy.
 
 ## Data & System
-- [Flow Field](https://fx-lab.example/effects/field.md): Dim constellation of drifting particles draws faint connecting lines; cursor repels the swarm.
-- [Matrix Rain](https://fx-lab.example/effects/matrix.md): Green Katakana glyphs cascade in columns on black; iconic hacker-terminal rain effect.
-- [Oscilloscope](https://fx-lab.example/effects/scope.md): Phosphor-green oscilloscope waveform glows on a dim CRT grid; calm technical atmosphere.
-- [Starfield Warp](https://fx-lab.example/effects/starfield.md): Stars streak inward at warp speed from a deep-space vanishing point; hypnotic forward pull.
+- [Flow Field](https://rosuh.github.io/fx-lab/effects/field.md): Dim constellation of drifting particles draws faint connecting lines; cursor repels the swarm.
+- [Matrix Rain](https://rosuh.github.io/fx-lab/effects/matrix.md): Green Katakana glyphs cascade in columns on black; iconic hacker-terminal rain effect.
+- [Oscilloscope](https://rosuh.github.io/fx-lab/effects/scope.md): Phosphor-green oscilloscope waveform glows on a dim CRT grid; calm technical atmosphere.
+- [Starfield Warp](https://rosuh.github.io/fx-lab/effects/starfield.md): Stars streak inward at warp speed from a deep-space vanishing point; hypnotic forward pull.
 
 ## Interaction
-- [Decode Text](https://fx-lab.example/effects/scramble.md): 乱码归位
-- [Magnetic Cursor](https://fx-lab.example/effects/magnetic.md): 磁吸自定义光标
-- [Kinetic Type](https://fx-lab.example/effects/kinetic.md): 可变字重波动
-- [Marquee Ticker](https://fx-lab.example/effects/marquee.md): 无缝跑马灯
-- [3D Tilt Card](https://fx-lab.example/effects/tilt.md): 透视倾斜 · 跟手
-- [Spotlight Mask](https://fx-lab.example/effects/spot.md): 光标聚光揭示
+- [Decode Text](https://rosuh.github.io/fx-lab/effects/scramble.md): 乱码归位
+- [Magnetic Cursor](https://rosuh.github.io/fx-lab/effects/magnetic.md): 磁吸自定义光标
+- [Kinetic Type](https://rosuh.github.io/fx-lab/effects/kinetic.md): 可变字重波动
+- [Marquee Ticker](https://rosuh.github.io/fx-lab/effects/marquee.md): 无缝跑马灯
+- [3D Tilt Card](https://rosuh.github.io/fx-lab/effects/tilt.md): 透视倾斜 · 跟手
+- [Spotlight Mask](https://rosuh.github.io/fx-lab/effects/spot.md): 光标聚光揭示
 
 ## Geometry & Curves
-- [Phyllotaxis](https://fx-lab.example/effects/phyllotaxis.md): Sunflower spiral of rainbow glowing dots; golden-angle phyllotaxis slowly rotating outward.
-- [Rose Curve](https://fx-lab.example/effects/rose.md): Soft pink rose curve cycling through 3-to-8-petal forms on a dark field; elegant math bloom.
-- [Spirograph](https://fx-lab.example/effects/spiro.md): Electric-blue spirograph tracing a hypotrochoid; intricate lace-like winding slowly rotates.
-- [Lissajous](https://fx-lab.example/effects/lissajous.md): Glowing green Lissajous figure cycling through phase; oscilloscope curve on dark background.
-- [Superformula](https://fx-lab.example/effects/superformula.md): Purple superformula outline morphing through stars, flowers, and polygons; organic math shapes.
-- [Hex Grid](https://fx-lab.example/effects/hexgrid.md): Pulsing blue honeycomb grid; a rippling brightness wave sweeps across hex cells.
-- [Concentric](https://fx-lab.example/effects/concentric.md): Rainbow concentric squares scrolling outward from center; bold, cycling hue tunnel effect.
-- [Spiral](https://fx-lab.example/effects/spiralarc.md): Clean white Archimedean spiral slowly rotating on pure black; minimal and meditative.
-- [Chevron](https://fx-lab.example/effects/chevron.md): Scrolling multicolor chevron stripes; vivid zigzag rows stream in retro palette.
-- [Herringbone](https://fx-lab.example/effects/herringbone.md): Warm gold herringbone tile weave on dark brown; a rich static textile pattern.
-- [Polka Dots](https://fx-lab.example/effects/polka.md): White polka dots gently breathing on vivid hot-pink; cheerful and playful pop-art pattern.
-- [Houndstooth](https://fx-lab.example/effects/houndstooth.md): Classic black-and-white houndstooth check slowly scrolling; crisp tailoring pattern.
-- [Tartan Plaid](https://fx-lab.example/effects/plaid.md): Scrolling tartan plaid in forest green, red, and cream; classic Scottish textile in motion.
-- [Starburst](https://fx-lab.example/effects/starburst.md): Yellow and pink radiating wedges slowly spinning; bold retro sunburst from canvas center.
-- [Wave Lines](https://fx-lab.example/effects/wavelines.md): Stacked rainbow sine waves undulating on dark blue-black; hypnotic layered ribbon flow.
+- [Phyllotaxis](https://rosuh.github.io/fx-lab/effects/phyllotaxis.md): Sunflower spiral of rainbow glowing dots; golden-angle phyllotaxis slowly rotating outward.
+- [Rose Curve](https://rosuh.github.io/fx-lab/effects/rose.md): Soft pink rose curve cycling through 3-to-8-petal forms on a dark field; elegant math bloom.
+- [Spirograph](https://rosuh.github.io/fx-lab/effects/spiro.md): Electric-blue spirograph tracing a hypotrochoid; intricate lace-like winding slowly rotates.
+- [Lissajous](https://rosuh.github.io/fx-lab/effects/lissajous.md): Glowing green Lissajous figure cycling through phase; oscilloscope curve on dark background.
+- [Superformula](https://rosuh.github.io/fx-lab/effects/superformula.md): Purple superformula outline morphing through stars, flowers, and polygons; organic math shapes.
+- [Hex Grid](https://rosuh.github.io/fx-lab/effects/hexgrid.md): Pulsing blue honeycomb grid; a rippling brightness wave sweeps across hex cells.
+- [Concentric](https://rosuh.github.io/fx-lab/effects/concentric.md): Rainbow concentric squares scrolling outward from center; bold, cycling hue tunnel effect.
+- [Spiral](https://rosuh.github.io/fx-lab/effects/spiralarc.md): Clean white Archimedean spiral slowly rotating on pure black; minimal and meditative.
+- [Chevron](https://rosuh.github.io/fx-lab/effects/chevron.md): Scrolling multicolor chevron stripes; vivid zigzag rows stream in retro palette.
+- [Herringbone](https://rosuh.github.io/fx-lab/effects/herringbone.md): Warm gold herringbone tile weave on dark brown; a rich static textile pattern.
+- [Polka Dots](https://rosuh.github.io/fx-lab/effects/polka.md): White polka dots gently breathing on vivid hot-pink; cheerful and playful pop-art pattern.
+- [Houndstooth](https://rosuh.github.io/fx-lab/effects/houndstooth.md): Classic black-and-white houndstooth check slowly scrolling; crisp tailoring pattern.
+- [Tartan Plaid](https://rosuh.github.io/fx-lab/effects/plaid.md): Scrolling tartan plaid in forest green, red, and cream; classic Scottish textile in motion.
+- [Starburst](https://rosuh.github.io/fx-lab/effects/starburst.md): Yellow and pink radiating wedges slowly spinning; bold retro sunburst from canvas center.
+- [Wave Lines](https://rosuh.github.io/fx-lab/effects/wavelines.md): Stacked rainbow sine waves undulating on dark blue-black; hypnotic layered ribbon flow.
 
 ## Fractal & Chaos
-- [Lorenz](https://fx-lab.example/effects/lorenz.md): Electric-blue butterfly trace of the Lorenz attractor; calm chaotic orbit on dark navy.
-- [Dragon Curve](https://fx-lab.example/effects/dragon.md): Purple dragon-curve fractal slowly rotates; clean self-similar line on dark violet.
-- [Fractal Tree](https://fx-lab.example/effects/fractaltree.md): Wind-blown fractal tree sways gently; organic green branches on dark, calm and alive.
+- [Lorenz](https://rosuh.github.io/fx-lab/effects/lorenz.md): Electric-blue butterfly trace of the Lorenz attractor; calm chaotic orbit on dark navy.
+- [Dragon Curve](https://rosuh.github.io/fx-lab/effects/dragon.md): Purple dragon-curve fractal slowly rotates; clean self-similar line on dark violet.
+- [Fractal Tree](https://rosuh.github.io/fx-lab/effects/fractaltree.md): Wind-blown fractal tree sways gently; organic green branches on dark, calm and alive.
 
 ## Cellular & Physics
-- [Boids Flocking](https://fx-lab.example/effects/boids.md): 60 pale-blue flecks flock and steer toward the cursor; fluid organic swarm with motion trails.
-- [Double Pendulum](https://fx-lab.example/effects/pendulum.md): A double pendulum traces chaotic pink arcs on a deep-blue field; beautiful deterministic chaos.
-- [Orbits](https://fx-lab.example/effects/orbits.md): Four colored planets orbit a golden sun on deep space; calm, minimal cosmic loop.
+- [Boids Flocking](https://rosuh.github.io/fx-lab/effects/boids.md): 60 pale-blue flecks flock and steer toward the cursor; fluid organic swarm with motion trails.
+- [Double Pendulum](https://rosuh.github.io/fx-lab/effects/pendulum.md): A double pendulum traces chaotic pink arcs on a deep-blue field; beautiful deterministic chaos.
+- [Orbits](https://rosuh.github.io/fx-lab/effects/orbits.md): Four colored planets orbit a golden sun on deep space; calm, minimal cosmic loop.
 
 ## World Patterns II
-- [Asanoha](https://fx-lab.example/effects/asanoha.md): Crisp blue-white hemp-leaf hexagonal lattice on indigo; serene Japanese textile geometry.
-- [Kolam](https://fx-lab.example/effects/kolam.md): Pink circle rings and warm dots repeat on deep plum; delicate South Indian threshold geometry.
-- [Greek Key](https://fx-lab.example/effects/greekkey.md): Gold meander hooks scroll steadily across deep navy, forming a flowing ancient Greek frieze.
-- [Aztec Step-Fret](https://fx-lab.example/effects/aztec.md): Earthy step-fret squares in terracotta and teal tile boldly; vivid Mesoamerican graphic rhythm.
-- [Kente Cloth](https://fx-lab.example/effects/kente.md): Vivid gold, green and red colour bands tile in the rhythm of West African Kente weaving.
-- [Talavera](https://fx-lab.example/effects/talavera.md): Cream tiles edged in cobalt, petalled in gold; bright repeating Mexican Talavera ceramics.
-- [Ruyi Cloud](https://fx-lab.example/effects/cloud.md): Crimson field of pulsing five-lobed cloud medallions; festive and elegant Chinese folk pattern.
-- [Koru](https://fx-lab.example/effects/koru.md): Cream fern spirals slowly uncoil across a dark forest ground; meditative Māori koru motif.
-- [Paisley](https://fx-lab.example/effects/paisley.md): Jewel-toned boteh teardrops gently sway on deep indigo; lush Persian paisley textile rhythm.
+- [Asanoha](https://rosuh.github.io/fx-lab/effects/asanoha.md): Crisp blue-white hemp-leaf hexagonal lattice on indigo; serene Japanese textile geometry.
+- [Kolam](https://rosuh.github.io/fx-lab/effects/kolam.md): Pink circle rings and warm dots repeat on deep plum; delicate South Indian threshold geometry.
+- [Greek Key](https://rosuh.github.io/fx-lab/effects/greekkey.md): Gold meander hooks scroll steadily across deep navy, forming a flowing ancient Greek frieze.
+- [Aztec Step-Fret](https://rosuh.github.io/fx-lab/effects/aztec.md): Earthy step-fret squares in terracotta and teal tile boldly; vivid Mesoamerican graphic rhythm.
+- [Kente Cloth](https://rosuh.github.io/fx-lab/effects/kente.md): Vivid gold, green and red colour bands tile in the rhythm of West African Kente weaving.
+- [Talavera](https://rosuh.github.io/fx-lab/effects/talavera.md): Cream tiles edged in cobalt, petalled in gold; bright repeating Mexican Talavera ceramics.
+- [Ruyi Cloud](https://rosuh.github.io/fx-lab/effects/cloud.md): Crimson field of pulsing five-lobed cloud medallions; festive and elegant Chinese folk pattern.
+- [Koru](https://rosuh.github.io/fx-lab/effects/koru.md): Cream fern spirals slowly uncoil across a dark forest ground; meditative Māori koru motif.
+- [Paisley](https://rosuh.github.io/fx-lab/effects/paisley.md): Jewel-toned boteh teardrops gently sway on deep indigo; lush Persian paisley textile rhythm.
 
 ## Screen & Signal
-- [Copper Bars](https://fx-lab.example/effects/copperbars.md): Five glowing colored bars bounce on black; warm Amiga Copper demoscene glow.
-- [7-Segment](https://fx-lab.example/effects/sevenseg.md): Red seven-segment digits show a live HH:MM:SS clock on near-black; crisp retro electronics.
-- [LED Matrix](https://fx-lab.example/effects/ledmatrix.md): Amber LED dot grid ripples with a traveling sine wave; warm retro electronics glow.
-- [Radar Sweep](https://fx-lab.example/effects/radar.md): Phosphor-green radar sweep rotates over range rings on dark; tense sci-fi monitor.
-- [EKG Monitor](https://fx-lab.example/effects/ekg.md): Green heartbeat trace scrolls across a dark grid; tense clinical EKG monitor simulation.
+- [Copper Bars](https://rosuh.github.io/fx-lab/effects/copperbars.md): Five glowing colored bars bounce on black; warm Amiga Copper demoscene glow.
+- [7-Segment](https://rosuh.github.io/fx-lab/effects/sevenseg.md): Red seven-segment digits show a live HH:MM:SS clock on near-black; crisp retro electronics.
+- [LED Matrix](https://rosuh.github.io/fx-lab/effects/ledmatrix.md): Amber LED dot grid ripples with a traveling sine wave; warm retro electronics glow.
+- [Radar Sweep](https://rosuh.github.io/fx-lab/effects/radar.md): Phosphor-green radar sweep rotates over range rings on dark; tense sci-fi monitor.
+- [EKG Monitor](https://rosuh.github.io/fx-lab/effects/ekg.md): Green heartbeat trace scrolls across a dark grid; tense clinical EKG monitor simulation.
 
 ## Interaction & Generative II
-- [Cursor Trail](https://fx-lab.example/effects/cursortrail.md): Flowing rainbow streak follows the cursor across a dark canvas; playful, energetic overlay.
-- [Crosshair HUD](https://fx-lab.example/effects/crosshair.md): Sci-fi HUD crosshair locks to the cursor with real-time coordinate readout; minimal, technical.
-- [Iron Filings](https://fx-lab.example/effects/ironfilings.md): Tiny iron filings snap to magnetic field lines emanating from the cursor; geometric, hypnotic.
-- [Vortex](https://fx-lab.example/effects/vortex.md): Colourful particles spiral into the cursor in an accelerating vortex; hypnotic, energetic overlay.
-- [Confetti](https://fx-lab.example/effects/confetti.md): Colourful confetti flakes drift down with gentle sine sway; celebratory, playful overlay.
-- [Fireworks](https://fx-lab.example/effects/fireworks.md): Glittering firework bursts erupt automatically across a dark sky with gravity fade; dramatic.
-- [Bokeh](https://fx-lab.example/effects/bokeh.md): Soft luminous circles drift upward like out-of-focus lights; calm, elegant background.
-- [Nebula](https://fx-lab.example/effects/nebula.md): Drifting cloud wisps and twinkling stars form a deep-space nebula; ambient, meditative background.
-- [Lightning](https://fx-lab.example/effects/lightning.md): Jagged electric bolt crackles from top to cursor with blue glow flicker; dramatic, aggressive overlay.
-- [Neon Pipes](https://fx-lab.example/effects/neonpipes.md): Six glowing neon sine waves undulate in cyan, magenta, and lime; retro, energetic background.
-- [Loaders](https://fx-lab.example/effects/spinners.md): Six loading spinner variants — arc, tick, pulse, ring, bar, fade — minimal, technical demo.
-- [Wave Grid](https://fx-lab.example/effects/wavegrid.md): Perspective dot grid ripples with sine waves receding into depth; geometric, hypnotic background.
-- [Audio Bars](https://fx-lab.example/effects/audiobars.md): Simulated spectrum bars pulse in blue-green gradient (no mic); energetic audio-visualiser look.
+- [Cursor Trail](https://rosuh.github.io/fx-lab/effects/cursortrail.md): Flowing rainbow streak follows the cursor across a dark canvas; playful, energetic overlay.
+- [Crosshair HUD](https://rosuh.github.io/fx-lab/effects/crosshair.md): Sci-fi HUD crosshair locks to the cursor with real-time coordinate readout; minimal, technical.
+- [Iron Filings](https://rosuh.github.io/fx-lab/effects/ironfilings.md): Tiny iron filings snap to magnetic field lines emanating from the cursor; geometric, hypnotic.
+- [Vortex](https://rosuh.github.io/fx-lab/effects/vortex.md): Colourful particles spiral into the cursor in an accelerating vortex; hypnotic, energetic overlay.
+- [Confetti](https://rosuh.github.io/fx-lab/effects/confetti.md): Colourful confetti flakes drift down with gentle sine sway; celebratory, playful overlay.
+- [Fireworks](https://rosuh.github.io/fx-lab/effects/fireworks.md): Glittering firework bursts erupt automatically across a dark sky with gravity fade; dramatic.
+- [Bokeh](https://rosuh.github.io/fx-lab/effects/bokeh.md): Soft luminous circles drift upward like out-of-focus lights; calm, elegant background.
+- [Nebula](https://rosuh.github.io/fx-lab/effects/nebula.md): Drifting cloud wisps and twinkling stars form a deep-space nebula; ambient, meditative background.
+- [Lightning](https://rosuh.github.io/fx-lab/effects/lightning.md): Jagged electric bolt crackles from top to cursor with blue glow flicker; dramatic, aggressive overlay.
+- [Neon Pipes](https://rosuh.github.io/fx-lab/effects/neonpipes.md): Six glowing neon sine waves undulate in cyan, magenta, and lime; retro, energetic background.
+- [Loaders](https://rosuh.github.io/fx-lab/effects/spinners.md): Six loading spinner variants — arc, tick, pulse, ring, bar, fade — minimal, technical demo.
+- [Wave Grid](https://rosuh.github.io/fx-lab/effects/wavegrid.md): Perspective dot grid ripples with sine waves receding into depth; geometric, hypnotic background.
+- [Audio Bars](https://rosuh.github.io/fx-lab/effects/audiobars.md): Simulated spectrum bars pulse in blue-green gradient (no mic); energetic audio-visualiser look.
 
 ## Optional
 Heavier or niche effects (cpu: high or not mobile-safe) — short-context agents can skip.
-- [Halftone CMYK](https://fx-lab.example/effects/halftone.md): Warm CMYK halftone dots bloom from cursor position; editorial print-design feel.
-- [ASCII Field](https://fx-lab.example/effects/ascii.md): Blue-purple ASCII characters pulse in sine-wave brightness waves; retro terminal glow.
-- [Topographic](https://fx-lab.example/effects/topo.md): Animated teal contour lines map slowly shifting noise terrain; cursor warps the topology.
-- [Quasicrystal](https://fx-lab.example/effects/quasicrystal.md): Shimmering five-fold crystal interference; blue-purple moiré tiles slowly pulse and breathe.
-- [Interference](https://fx-lab.example/effects/interference.md): Blue interference fringes from two point-sources pulsing across canvas; hypnotic wave moiré.
-- [Mandelbrot](https://fx-lab.example/effects/mandelbrot.md): Hypnotic zoom into the Mandelbrot set; cycling hues trace infinite fractal complexity.
-- [Julia Set](https://fx-lab.example/effects/julia.md): Julia set blooms through parameter space; vivid fractal shapes drift and morph in cyan-blue.
-- [Clifford Attractor](https://fx-lab.example/effects/clifford.md): Electric-blue dust swirls into alien strange-attractor shapes; meditative accumulator on dark.
-- [De Jong](https://fx-lab.example/effects/dejong.md): Pink dust drifts into strange alien loops; a De Jong attractor slowly builds on dark violet.
-- [Barnsley Fern](https://fx-lab.example/effects/fern.md): Bright green Barnsley fern materializes from chaos; organic fractal nature on dark green.
-- [Sierpinski](https://fx-lab.example/effects/sierpinski.md): Warm amber Sierpinski triangle emerges from the chaos game; minimal fractal on dark.
-- [Game of Life](https://fx-lab.example/effects/life.md): Glowing green cells flicker on a dark grid; Conway's Game of Life evolves hypnotic patterns.
-- [Brian's Brain](https://fx-lab.example/effects/briansbrain.md): White sparks and blue trailing echoes pulse across a dark grid; three-state cellular automaton.
-- [Langton's Ant](https://fx-lab.example/effects/langton.md): A lone ant traces deterministic yellow highways on a black grid, growing complex structure from nothing.
-- [Doom Fire](https://fx-lab.example/effects/doomfire.md): Roiling orange-red fire climbs from a white-hot base; retro demoscene flame in warm pixel blocks.
-- [Falling Sand](https://fx-lab.example/effects/sandfall.md): Colorful sand grains pour from the cursor and settle into dunes; playful particle physics.
-- [Tunnel](https://fx-lab.example/effects/tunnel.md): Hypnotic blue checkerboard rushes toward you in an infinite demoscene tunnel flythrough.
-- [Plasma](https://fx-lab.example/effects/plasma.md): Swirling rainbow sine-wave blobs morph endlessly; psychedelic demoscene classic.
-- [Rotozoom](https://fx-lab.example/effects/rotozoom.md): Pink-and-dark checkerboard spins and zooms in and out; retro demoscene rotozoom.
-- [Water Ripple](https://fx-lab.example/effects/ripplewater.md): Blue water ripples spread from cursor touch across a CPU-simulated height field; calm, fluid.
-- [Gooey Blob](https://fx-lab.example/effects/blobcursor.md): Pulsing purple gooey blob clings to the cursor with orbiting metaball satellites; playful, organic.
-- [Heatmap](https://fx-lab.example/effects/heatmap.md): Noise-driven heatmap shifts cool-to-hot; cursor adds a warm bloom; technical, hypnotic overlay.
+- [Halftone CMYK](https://rosuh.github.io/fx-lab/effects/halftone.md): Warm CMYK halftone dots bloom from cursor position; editorial print-design feel.
+- [ASCII Field](https://rosuh.github.io/fx-lab/effects/ascii.md): Blue-purple ASCII characters pulse in sine-wave brightness waves; retro terminal glow.
+- [Topographic](https://rosuh.github.io/fx-lab/effects/topo.md): Animated teal contour lines map slowly shifting noise terrain; cursor warps the topology.
+- [Quasicrystal](https://rosuh.github.io/fx-lab/effects/quasicrystal.md): Shimmering five-fold crystal interference; blue-purple moiré tiles slowly pulse and breathe.
+- [Interference](https://rosuh.github.io/fx-lab/effects/interference.md): Blue interference fringes from two point-sources pulsing across canvas; hypnotic wave moiré.
+- [Mandelbrot](https://rosuh.github.io/fx-lab/effects/mandelbrot.md): Hypnotic zoom into the Mandelbrot set; cycling hues trace infinite fractal complexity.
+- [Julia Set](https://rosuh.github.io/fx-lab/effects/julia.md): Julia set blooms through parameter space; vivid fractal shapes drift and morph in cyan-blue.
+- [Clifford Attractor](https://rosuh.github.io/fx-lab/effects/clifford.md): Electric-blue dust swirls into alien strange-attractor shapes; meditative accumulator on dark.
+- [De Jong](https://rosuh.github.io/fx-lab/effects/dejong.md): Pink dust drifts into strange alien loops; a De Jong attractor slowly builds on dark violet.
+- [Barnsley Fern](https://rosuh.github.io/fx-lab/effects/fern.md): Bright green Barnsley fern materializes from chaos; organic fractal nature on dark green.
+- [Sierpinski](https://rosuh.github.io/fx-lab/effects/sierpinski.md): Warm amber Sierpinski triangle emerges from the chaos game; minimal fractal on dark.
+- [Game of Life](https://rosuh.github.io/fx-lab/effects/life.md): Glowing green cells flicker on a dark grid; Conway's Game of Life evolves hypnotic patterns.
+- [Brian's Brain](https://rosuh.github.io/fx-lab/effects/briansbrain.md): White sparks and blue trailing echoes pulse across a dark grid; three-state cellular automaton.
+- [Langton's Ant](https://rosuh.github.io/fx-lab/effects/langton.md): A lone ant traces deterministic yellow highways on a black grid, growing complex structure from nothing.
+- [Doom Fire](https://rosuh.github.io/fx-lab/effects/doomfire.md): Roiling orange-red fire climbs from a white-hot base; retro demoscene flame in warm pixel blocks.
+- [Falling Sand](https://rosuh.github.io/fx-lab/effects/sandfall.md): Colorful sand grains pour from the cursor and settle into dunes; playful particle physics.
+- [Tunnel](https://rosuh.github.io/fx-lab/effects/tunnel.md): Hypnotic blue checkerboard rushes toward you in an infinite demoscene tunnel flythrough.
+- [Plasma](https://rosuh.github.io/fx-lab/effects/plasma.md): Swirling rainbow sine-wave blobs morph endlessly; psychedelic demoscene classic.
+- [Rotozoom](https://rosuh.github.io/fx-lab/effects/rotozoom.md): Pink-and-dark checkerboard spins and zooms in and out; retro demoscene rotozoom.
+- [Water Ripple](https://rosuh.github.io/fx-lab/effects/ripplewater.md): Blue water ripples spread from cursor touch across a CPU-simulated height field; calm, fluid.
+- [Gooey Blob](https://rosuh.github.io/fx-lab/effects/blobcursor.md): Pulsing purple gooey blob clings to the cursor with orbiting metaball satellites; playful, organic.
+- [Heatmap](https://rosuh.github.io/fx-lab/effects/heatmap.md): Noise-driven heatmap shifts cool-to-hot; cursor adds a warm bloom; technical, hypnotic overlay.
