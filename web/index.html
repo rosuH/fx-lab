@@ -3,69 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FX Lab — 99 zero-dependency web effects</title>
-<meta name="description" content="99 paste-anywhere web effects (WebGL2 / Canvas2D / DOM). Find one by vibe, copy a self-contained snippet.">
+<title>FX Lab — a standing exhibition of 99 zero-dependency web effects</title>
+<meta name="description" content="99 paste-anywhere web effects (WebGL2 / Canvas2D / DOM), hung like artworks. Find one by vibe, copy a self-contained snippet.">
 <!-- LLM/agent discovery: a slim, vibe-first catalog lives at /llms.txt -->
 <link rel="alternate" type="text/markdown" href="./llms.txt">
 <meta name="llms-txt" content="./llms.txt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#0a0b0d; --panel:#101216; --line:#23262d; --fg:#e7e9ee; --dim:#9aa3b2; --accent:#CDE85A; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
-  header { padding:48px 24px 16px; max-width:1200px; margin:0 auto; }
-  h1 { font-size:clamp(28px,5vw,44px); margin:0 0 8px; letter-spacing:-.02em; }
-  h1 b { color:var(--accent); }
-  .sub { color:var(--dim); max-width:60ch; line-height:1.5; }
-  .links { margin-top:16px; display:flex; gap:10px; flex-wrap:wrap; }
-  .links a { color:var(--fg); text-decoration:none; border:1px solid var(--line); padding:6px 12px; border-radius:999px; font-size:13px; }
-  .links a:hover { border-color:var(--accent); color:var(--accent); }
-  main { max-width:1200px; margin:0 auto; padding:8px 24px 80px; }
-  section { margin-top:40px; }
-  section > h2 { font-size:14px; text-transform:uppercase; letter-spacing:.12em; color:var(--dim); border-bottom:1px solid var(--line); padding-bottom:8px; margin:0 0 16px; }
-  .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); }
-  .tile { background:var(--panel); border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; }
-  .fx { position:relative; height:200px; background:#000; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-  .fx canvas { display:block; width:100%; height:100%; }
-  .cap { padding:12px 14px; border-top:1px solid var(--line); }
-  .cap .name { font-weight:650; font-size:15px; }
-  .cap .name small { color:var(--dim); font-weight:400; margin-left:6px; }
-  .cap .summary { color:var(--dim); font-size:13px; line-height:1.45; margin-top:4px; }
-  .badges { margin-top:10px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
-  .kind { font-size:10px; letter-spacing:.08em; text-transform:uppercase; padding:2px 7px; border-radius:5px; font-weight:700; }
-  .kind.shader { background:#1f6feb33; color:#7fb0ff; }
-  .kind.canvas { background:#cde85a22; color:var(--accent); }
-  .kind.dom { background:#ff8f3f22; color:#ffb27f; }
-  .tag { font-size:11px; color:var(--dim); }
-  .vibe { font-size:11px; color:#b58cff; }
-  a.detail { margin-left:auto; font-size:12px; color:var(--dim); text-decoration:none; }
-  a.detail:hover { color:var(--accent); }
-  footer { color:var(--dim); text-align:center; padding:24px; font-size:13px; border-top:1px solid var(--line); }
-  /* Loading overlay — dogfoods our own 'spinners' (Loaders) effect while the catalog loads. */
-  #loader { position:fixed; inset:0; z-index:50; background:var(--bg); display:flex; flex-direction:column;
-            align-items:center; justify-content:center; gap:20px; transition:opacity .5s ease; }
-  #loader.hide { opacity:0; pointer-events:none; }
-  #loader .loader-fx { width:180px; height:130px; }
-  #loader .loader-fx canvas { width:100%; height:100%; display:block; }
-  #loader .loader-text { color:var(--dim); font-size:13px; letter-spacing:.14em; text-transform:uppercase; }
-  #loader .loader-text b { color:var(--accent); }
-  .lang { margin-left:auto; display:flex; gap:6px; }
-  .lang button { cursor:pointer; background:transparent; color:var(--dim); border:1px solid var(--line); padding:6px 12px; border-radius:999px; font:inherit; font-size:13px; }
-  .lang button:hover { color:var(--fg); }
-  .lang button.active { border-color:var(--accent); color:var(--accent); }
+  :root{
+    /* darkened-gallery palette — warm ink wall, bone placard paper, one vermilion mark. */
+    --ink:#0c0a0a; --ink-2:#141010; --ink-3:#1c1714;
+    --bone:#ECE5D8; --bone-dim:#9c9488;
+    --line:#2a2320; --flare:#FF5638; --flare-soft:rgba(255,86,56,.42);
+    --flare-wash:rgba(255,86,56,.06); /* ponytail: folded from body::before inline */
+    --canvas-bg:#000;
+    --display:'Bricolage Grotesque', system-ui, sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    --shell:1240px;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0; background:var(--ink); color:var(--bone);
+    font-family:var(--display); font-optical-sizing:auto;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  /* a single soft wash from the top — gallery wall-wash lighting, no stripes, no noise. */
+  body::before{
+    content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background:radial-gradient(130% 80% at 50% -12%, var(--flare-wash), transparent 58%);
+  }
+  a{ color:inherit; }
+  /* on-brand focus ring — vermilion, 2px, offset so it clears the element edge */
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--flare); outline-offset:3px; border-radius:2px; }
+
+  /* ---------- entrance wall ---------- */
+  .entrance{ max-width:var(--shell); margin:0 auto; padding:clamp(40px,7vw,92px) clamp(20px,5vw,56px) 0; }
+  .entrance-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:clamp(24px,5vw,56px); flex-wrap:wrap; }
+  .wordmark{
+    margin:0; color:var(--bone); font-weight:800;
+    font-size:clamp(58px,13vw,170px); line-height:.84; letter-spacing:-.055em;
+  }
+  .wordmark .lab{ color:var(--flare); }
+  .colophon{ display:flex; flex-direction:column; align-items:flex-end; gap:16px; padding-top:10px; }
+  .catalog{ display:flex; gap:20px; flex-wrap:wrap; justify-content:flex-end; }
+  .catalog a{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:.02em; color:var(--bone-dim);
+    text-decoration:none; padding:11px 4px 11px; border-bottom:1px solid var(--line);
+    display:inline-flex; align-items:center; min-height:44px; /* a11y: touch target */
+    transition:color .25s ease, border-color .25s ease;
+  }
+  .catalog a:hover{ color:var(--flare); border-color:var(--flare-soft); }
+  /* pill toggle — pill is the border, buttons are the cells */
+  .lang{ display:inline-flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; }
+  .lang button{
+    cursor:pointer; background:transparent; border:0; color:var(--bone-dim);
+    font-family:var(--mono); font-size:11px; letter-spacing:.04em;
+    padding:0 15px; min-height:44px; /* a11y: touch target */
+    transition:color .2s ease, background .2s ease;
+  }
+  .lang button:not(.active):hover{ color:var(--bone); }
+  .lang button.active{ background:var(--flare); color:var(--ink); }
+  .sub{
+    margin:clamp(30px,4.5vw,50px) 0 0; max-width:60ch;
+    font-size:clamp(15px,1.8vw,20px); line-height:1.55; color:var(--bone-dim); font-weight:400;
+  }
+  .sub::before{
+    content:''; display:block; width:46px; height:2px; background:var(--flare);
+    margin-bottom:clamp(20px,2.5vw,28px);
+  }
+  /* C-graft: quiet mono inventory strip under the hero sub-line */
+  .inventory{
+    margin:clamp(14px,1.8vw,20px) 0 0; font-family:var(--mono); font-size:11.5px;
+    letter-spacing:.04em; color:var(--bone-dim); opacity:.72;
+  }
+  .gap{ height:clamp(54px,9vw,120px); }
+
+  /* ---------- the wall ---------- */
+  main{ max-width:var(--shell); margin:0 auto; padding:0 clamp(20px,5vw,56px) clamp(80px,12vw,160px); }
+  .room{ margin-top:clamp(72px,11vw,150px); }
+  .room:first-child{ margin-top:0; }
+  .room-head{
+    display:flex; align-items:baseline; justify-content:space-between; gap:24px;
+    padding-bottom:clamp(18px,2.4vw,26px); margin-bottom:clamp(30px,4.5vw,52px);
+    border-bottom:1px solid var(--line);
+  }
+  .room-title{
+    margin:0; color:var(--bone); font-weight:600; line-height:1;
+    font-size:clamp(28px,4.6vw,52px); letter-spacing:-.04em;
+  }
+  .tally{ font-family:var(--mono); font-size:13px; color:var(--bone-dim); letter-spacing:.16em; white-space:nowrap; }
+
+  .wall{
+    display:grid; gap:clamp(20px,2.7vw,42px);
+    grid-template-columns:repeat(auto-fill, minmax(min(100%,320px), 1fr));
+  }
+
+  /* ---------- each piece: a matted, mounted artwork ---------- */
+  .piece{
+    margin:0; background:var(--ink-2); border:1px solid var(--line); border-radius:3px;
+    overflow:hidden; display:flex; flex-direction:column;
+    transition:border-color .35s ease, transform .35s ease;
+  }
+  .piece:hover{ border-color:var(--flare-soft); transform:translateY(-4px); }
+  .fx{
+    position:relative; height:clamp(208px,24vw,300px); background:var(--canvas-bg);
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .fx canvas{ display:block; width:100%; height:100%; }
+
+  /* C-graft: feature tile spans full grid width, fx bleeds edge-to-edge without border-radius */
+  @media (min-width:760px){
+    .piece.feature{ grid-column:1 / -1; border-radius:0; border-left:0; border-right:0; }
+    .piece.feature .fx{ height:clamp(340px,38vw,540px); }
+  }
+
+  /* placard — the small museum label. always legible; hover only sharpens it. */
+  .placard{
+    position:relative; padding:18px 20px 22px; border-top:1px solid var(--line);
+    display:flex; flex-direction:column; gap:9px;
+  }
+  .placard::before{
+    content:''; position:absolute; left:20px; top:-1px; height:2px; width:0;
+    background:var(--flare); transition:width .4s ease;
+  }
+  .piece:hover .placard::before{ width:36px; }
+  .placard-row{ display:flex; align-items:baseline; gap:16px; }
+  .name{
+    flex:1; min-width:0; margin:0; color:var(--bone); font-weight:600;
+    font-size:clamp(18px,1.5vw,21px); line-height:1.16; letter-spacing:-.02em;
+  }
+  .name small{
+    display:block; margin-top:4px; font-family:var(--mono); font-weight:400;
+    font-size:11.5px; letter-spacing:.01em; color:var(--bone-dim);
+  }
+  .medium{
+    flex:none; font-family:var(--mono); font-size:10.5px; letter-spacing:.06em;
+    color:var(--bone-dim); white-space:nowrap; transition:color .25s ease;
+  }
+  .piece:hover .medium{ color:var(--flare); }
+  .summary{ margin:0; max-width:48ch; color:var(--bone-dim); font-size:14px; line-height:1.5; font-weight:400; }
+  /* a11y: touch target on per-tile detail link */
+  .detail{
+    align-self:flex-start; font-family:var(--mono); font-size:11.5px;
+    color:var(--bone-dim); text-decoration:none; border-bottom:1px solid transparent;
+    display:inline-flex; align-items:center; min-height:44px; /* a11y: touch target */
+    transition:color .25s ease, border-color .25s ease;
+  }
+  .piece:hover .detail, .detail:hover{ color:var(--flare); border-color:var(--flare-soft); }
+
+  /* ---------- colophon plate ---------- */
+  footer{
+    max-width:var(--shell); margin:0 auto; padding:34px clamp(20px,5vw,56px) 60px;
+    border-top:1px solid var(--line); color:var(--bone-dim);
+    font-family:var(--mono); font-size:12px; letter-spacing:.05em;
+  }
+
+  /* ---------- loading overlay — dogfoods our own 'spinners' (Loaders) effect ---------- */
+  #loader{
+    position:fixed; inset:0; z-index:50; background:var(--ink);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px;
+    transition:opacity .5s ease;
+  }
+  #loader.hide{ opacity:0; pointer-events:none; }
+  #loader .loader-fx{ width:180px; height:130px; }
+  #loader .loader-fx canvas{ width:100%; height:100%; display:block; }
+  #loader .loader-text{ color:var(--bone-dim); font-family:var(--mono); font-size:12.5px; letter-spacing:.1em; }
+  #loader .loader-text b{ color:var(--flare); font-weight:500; }
+
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{ transition:none !important; animation:none !important; }
+    .piece:hover{ transform:none; }
+    .placard::before{ width:36px; } /* static registration tick */
+  }
 </style>
 </head>
 <body>
 <div id="loader"><div class="loader-fx"></div><div class="loader-text" id="loader-text"></div></div>
-<header>
-  <h1>FX <b>Lab</b></h1>
-  <p class="sub" id="sub"></p>
-  <div class="links">
-    <a href="./llms.txt">llms.txt</a>
-    <a href="./llms.zh.txt">llms.zh.txt</a>
-    <a href="./fx-index.json">fx-index.json</a>
-    <span class="lang"><button type="button" data-lang="en">EN</button><button type="button" data-lang="zh">中文</button></span>
+
+<header class="entrance">
+  <div class="entrance-top">
+    <h1 class="wordmark">FX&nbsp;<span class="lab">Lab</span></h1>
+    <div class="colophon">
+      <nav class="catalog" aria-label="External resources">
+        <a href="./llms.txt">llms.txt</a>
+        <a href="./llms.zh.txt">llms.zh.txt</a>
+        <a href="./fx-index.json">fx-index.json</a>
+      </nav>
+      <!-- a11y: aria-pressed set by applyLang(); defaults match lang detection fallback (en) -->
+      <span class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+      </span>
+    </div>
   </div>
+  <p class="sub" id="sub"></p>
+  <!-- C-graft: mono inventory strip anchors the hero with factual counts -->
+  <p class="inventory" id="inventory" aria-live="polite"></p>
+  <div class="gap"></div>
 </header>
+
 <main id="app"></main>
 <footer id="footer"></footer>
 
@@ -74,27 +213,30 @@ import { mount } from './src/index.js';
 
 // Sentinel markup for the 6 DOM effects (they query their own [data-*] hooks inside the mount root).
 const DOM_SENTINELS = {
-  scramble: `<p data-scramble style="font-family:ui-monospace,monospace;font-size:2rem;letter-spacing:.1em;color:#CDE85A;margin:0">DECODE</p>`,
-  magnetic: `<div data-magnetic style="position:relative;width:100%;height:100%;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap"><div data-magcursor style="position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;border:1px solid #CDE85A;pointer-events:none"></div><span data-magchip style="padding:6px 14px;border:1px solid #333;border-radius:999px">Home</span><span data-magchip style="padding:6px 14px;border:1px solid #333;border-radius:999px">Work</span><span data-magchip style="padding:6px 14px;border:1px solid #333;border-radius:999px">About</span></div>`,
-  kinetic: `<div data-kinetic style="color:#fff;font-family:system-ui,sans-serif"></div>`,
-  marquee: `<div style="overflow:hidden;white-space:nowrap;width:100%;color:#fff;font-family:ui-monospace,monospace"><div data-marquee style="display:inline-block">FX LAB · ZERO-DEP WEB EFFECTS · PASTE ANYWHERE · FX LAB · ZERO-DEP WEB EFFECTS · PASTE ANYWHERE · </div></div>`,
-  tilt: `<div data-tilt style="width:200px;height:140px;perspective:600px"><div data-tiltcard style="width:100%;height:100%;background:linear-gradient(135deg,#1f6feb,#CDE85A);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#0a0b0d;font-weight:700;font-family:system-ui">Tilt me</div></div>`,
-  spot: `<div data-spot style="position:relative;width:100%;height:100%;background:#111;color:#fff;overflow:hidden;-webkit-mask-image:radial-gradient(140px circle at var(--mx,50%) var(--my,50%),#000 0,transparent 72%);mask-image:radial-gradient(140px circle at var(--mx,50%) var(--my,50%),#000 0,transparent 72%)"><div style="padding:1rem;font-size:.95rem;line-height:1.5">Move the cursor to reveal the spotlight mask.</div></div>`,
+  scramble: `<p data-scramble style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:2rem;letter-spacing:.12em;color:#FF5638;margin:0">DECODE</p>`,
+  magnetic: `<div data-magnetic style="position:relative;width:100%;height:100%;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap"><div data-magcursor style="position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;border:1px solid #FF5638;pointer-events:none"></div><span data-magchip style="padding:6px 14px;border:1px solid #2a2320;border-radius:999px;color:#ECE5D8">Home</span><span data-magchip style="padding:6px 14px;border:1px solid #2a2320;border-radius:999px;color:#ECE5D8">Work</span><span data-magchip style="padding:6px 14px;border:1px solid #2a2320;border-radius:999px;color:#ECE5D8">About</span></div>`,
+  kinetic: `<div data-kinetic style="color:#ECE5D8;font-family:'Bricolage Grotesque',system-ui,sans-serif"></div>`,
+  marquee: `<div style="overflow:hidden;white-space:nowrap;width:100%;color:#ECE5D8;font-family:'JetBrains Mono',ui-monospace,monospace"><div data-marquee style="display:inline-block">FX LAB · ZERO-DEP WEB EFFECTS · PASTE ANYWHERE · FX LAB · ZERO-DEP WEB EFFECTS · PASTE ANYWHERE · </div></div>`,
+  tilt: `<div data-tilt style="width:200px;height:140px;perspective:600px"><div data-tiltcard style="width:100%;height:100%;background:linear-gradient(135deg,#FF5638,#1b1614);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#ECE5D8;font-weight:700;font-family:'Bricolage Grotesque',system-ui,sans-serif">Tilt me</div></div>`,
+  spot: `<div data-spot style="position:relative;width:100%;height:100%;background:#141010;color:#ECE5D8;overflow:hidden;-webkit-mask-image:radial-gradient(140px circle at var(--mx,50%) var(--my,50%),#000 0,transparent 72%);mask-image:radial-gradient(140px circle at var(--mx,50%) var(--my,50%),#000 0,transparent 72%)"><div style="padding:1rem;font-size:.95rem;line-height:1.5">Move the cursor to reveal the spotlight mask.</div></div>`,
 };
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]));
 
+// medium label, museum-placard style (replaces the old kind-pill).
+const MEDIUM = { shader:'glsl · webgl2', canvas:'canvas · 2d', dom:'dom · css' };
+
 // --- i18n: standard locale dict + browser-language detection + persisted toggle ---
 const STRINGS = {
   en: {
-    sub: "99 zero-dependency web effects — WebGL2 shaders, Canvas-2D, and DOM. Each is a paste-anywhere snippet. Browse below, or if you're an LLM, start at /llms.txt.",
+    sub: "99 zero-dependency web effects — WebGL2 shaders, Canvas-2D, and DOM — hung like artworks. Each is a paste-anywhere snippet. Walk the wall below, or if you're an LLM, start at /llms.txt.",
     loading: 'loading 99 effects…', footer: 'fx-lab · MIT · the paste is the install',
-    snippet: 'snippet →', failed: 'Failed to load fx-index.json — run `npm run build`.',
+    snippet: 'read the snippet →', failed: 'Failed to load fx-index.json — run `npm run build`.',
   },
   zh: {
-    sub: '99 个零依赖网页特效 —— WebGL2 着色器、Canvas-2D 与 DOM，每个都是可粘贴即用的片段。向下浏览；若你是 LLM，请从 /llms.txt 开始。',
+    sub: '99 个零依赖网页特效 —— WebGL2 着色器、Canvas-2D 与 DOM，如同展墙上的作品。每个都是可粘贴即用的片段。向下浏览展墙；若你是 LLM，请从 /llms.txt 开始。',
     loading: '正在加载 99 个特效…', footer: 'fx-lab · MIT · 粘贴即安装',
-    snippet: '代码 →', failed: '加载 fx-index.json 失败 —— 请运行 `npm run build`。',
+    snippet: '查看片段 →', failed: '加载 fx-index.json 失败 —— 请运行 `npm run build`。',
   },
 };
 let lang = (() => {
@@ -114,7 +256,10 @@ function applyLang() {
   document.getElementById('sub').textContent = S.sub;
   document.getElementById('footer').textContent = S.footer;
   const lt = document.getElementById('loader-text'); if (lt) lt.innerHTML = '<b>FX Lab</b> · ' + esc(S.loading);
-  for (const b of document.querySelectorAll('.lang button')) b.classList.toggle('active', b.dataset.lang === lang);
+  for (const b of document.querySelectorAll('.lang button')) {
+    b.classList.toggle('active', b.dataset.lang === lang);
+    b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false'); // a11y: reflect state
+  }
   for (const r of secRefs) r.el.textContent = sectionOf(r.s);
   for (const r of tileRefs) {
     r.name.innerHTML = esc(titleOf(r.fx)) + (subOf(r.fx) ? `<small>${esc(subOf(r.fx))}</small>` : '');
@@ -161,31 +306,46 @@ function dismissLoader(startedAt) {
   const bySection = new Map(data.sections.map(s => [s.id, []]));
   for (const fx of data.effects) (bySection.get(fx.section) || []).push(fx);
 
+  // C-graft: populate mono inventory strip with factual counts
+  const counts = data.effects.reduce((acc, fx) => { acc[fx.kind] = (acc[fx.kind] || 0) + 1; return acc; }, {});
+  const inv = document.getElementById('inventory');
+  if (inv) inv.textContent = `${data.effects.length} effects · ${counts.canvas || 0} canvas · ${counts.shader || 0} shader · 0 dependencies`;
+
   const app = document.getElementById('app');
   app.innerHTML = '';
   for (const s of data.sections) {
     const items = bySection.get(s.id) || [];
     if (!items.length) continue;
     const sec = document.createElement('section');
-    const h2 = document.createElement('h2'); sec.appendChild(h2);
+    sec.className = 'room';
+    const head = document.createElement('div');
+    head.className = 'room-head';
+    const h2 = document.createElement('h2'); h2.className = 'room-title';
+    const tally = document.createElement('span'); tally.className = 'tally';
+    tally.textContent = String(items.length).padStart(2, '0'); // language-neutral room count
+    head.append(h2, tally);
     secRefs.push({ s, el: h2 });
-    const grid = document.createElement('div');
-    grid.className = 'grid';
-    for (const fx of items) {
-      const tile = document.createElement('article');
-      tile.className = 'tile';
-      const tags = (fx.tags || []).slice(0, 3).map(t => `<span class="tag">#${esc(t)}</span>`).join(' ');
-      const vibe = (fx.vibe || []).slice(0, 2).map(v => `<span class="vibe">${esc(v)}</span>`).join(' ');
-      tile.innerHTML =
-        `<div class="fx" data-id="${esc(fx.id)}" data-kind="${esc(fx.kind)}"></div>` +
-        `<div class="cap"><div class="name"></div><div class="summary"></div>` +
-        `<div class="badges"><span class="kind ${esc(fx.kind)}">${esc(fx.kind)}</span>${vibe} ${tags}` +
-        `<a class="detail" href="./effects/${esc(fx.id)}.md"></a></div></div>`;
-      grid.appendChild(tile);
-      tileRefs.push({ fx, name: tile.querySelector('.name'), summary: tile.querySelector('.summary'), detail: tile.querySelector('.detail') });
-      io.observe(tile.querySelector('.fx'));
-    }
-    sec.appendChild(grid);
+
+    const wall = document.createElement('div');
+    wall.className = 'wall';
+    items.forEach((fx, idx) => {
+      const piece = document.createElement('figure');
+      piece.className = 'piece' + (idx === 0 ? ' feature' : ''); // first work of each room hangs large
+      piece.innerHTML =
+        // a11y: aria-hidden on decorative canvas mount targets — screen readers skip the canvas noise
+        `<div class="fx" aria-hidden="true" data-id="${esc(fx.id)}" data-kind="${esc(fx.kind)}"></div>` +
+        `<figcaption class="placard">` +
+          `<div class="placard-row"><h3 class="name"></h3>` +
+          `<span class="medium">${esc(MEDIUM[fx.kind] || fx.kind)}</span></div>` +
+          `<p class="summary"></p>` +
+          `<a class="detail" href="./effects/${esc(fx.id)}.md"></a>` +
+        `</figcaption>`;
+      wall.appendChild(piece);
+      tileRefs.push({ fx, name: piece.querySelector('.name'), summary: piece.querySelector('.summary'), detail: piece.querySelector('.detail') });
+      io.observe(piece.querySelector('.fx'));
+    });
+
+    sec.append(head, wall);
     app.appendChild(sec);
   }
   applyLang();           // fill section + tile text in the current language
