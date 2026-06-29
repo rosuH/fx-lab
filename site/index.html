@@ -203,8 +203,11 @@
     .placard::before{ width:36px; } /* static registration tick */
   }
 </style>
-<!-- Privacy-friendly analytics (Rybbit, cookieless). The site id is intentionally public — it only identifies which site events belong to. -->
-<script src="https://app.rybbit.io/api/script.js" data-site-id="22d7bf17b5a5" defer></script>
+<!-- Mixpanel analytics. The project token is public by design (same as GA/Plausible) — it only identifies which project events belong to; it grants no read access to dashboard data. -->
+<script>
+(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b){var c=b.split(".");2==c.length&&(b=b[c[0]],a[c[0]]=a[c[0]]||{},a=a[c[0]])}b._q.push({a:d});f("track");f("identify");f("reset");f("register");f("alias");f("people.set");f("people.increment");f("track_charge");f("append");b._i[d]={};a&&"function"==typeof a&&(b._i[d]=a)};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://cdn.mxpnl.com/libs/mixpanel-js/2.56.0/mixpanel.gsl.js";e.crossOrigin="anonymous";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+mixpanel.init("72970b4dccaded033cafffc4bb48e196", { debug: false, track_pageview: true, persistence: "localStorage" });
+</script>
 </head>
 <body>
 <div id="loader"><div class="loader-fx"></div><div class="loader-text" id="loader-text"></div></div>
@@ -294,9 +297,32 @@ function applyLang() {
     r.detail.textContent = S.snippet;
   }
 }
-function setLang(l) { lang = l; localStorage.setItem('fxlab-lang', l); applyLang(); }
+function setLang(l) { const prev = lang; lang = l; localStorage.setItem('fxlab-lang', l); applyLang(); if (window.mixpanel) mixpanel.track('language_switch', { language: l, from: prev }); }
 for (const b of document.querySelectorAll('.lang button')) b.addEventListener('click', () => setLang(b.dataset.lang));
 applyLang(); // loader text + toggle state before data arrives
+
+// Mixpanel engagement tracking. Gallery has no auth, so events are anonymous
+// (the SDK auto-generates a stable distinct_id). We track explicit actions,
+// not autotrack, because each tile is a <canvas>-hosting <div> and autotrack
+// would log noise on every scroll-driven mount.
+document.addEventListener('click', (e) => {
+  if (!window.mixpanel) return;
+  const a = e.target.closest('a');
+  if (!a) return;
+  // Catalog / GitHub links in the header (external or non-effect files).
+  const detail = a.classList.contains('detail') ? null : (a.getAttribute('href') || '');
+  if (a.classList.contains('detail')) {
+    // The per-effect "view details" link — the primary engagement signal.
+    const fx = a.closest('.piece') && a.closest('.piece').querySelector('.fx');
+    mixpanel.track('effect_view', { effect_id: fx ? fx.dataset.id : null, kind: fx ? fx.dataset.kind : null });
+  } else if (a.classList.contains('gh')) {
+    mixpanel.track('github_click');
+  } else if (detail && /\.txt$/.test(detail)) {
+    mixpanel.track('catalog_view', { file: detail.split('/').pop() });
+  } else if (detail && /\.json$/.test(detail)) {
+    mixpanel.track('catalog_view', { file: detail.split('/').pop() });
+  }
+});
 
 // Lazy mount/unmount: keeps live WebGL2 contexts under the ~8 cap and saves battery.
 const io = new IntersectionObserver((entries) => {
