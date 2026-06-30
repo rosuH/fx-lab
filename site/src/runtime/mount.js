@@ -80,7 +80,7 @@ export function mount(el, id, opts = {}) {
   if (!module || !el) { console.error(`fx-lab: cannot mount "${id}" (unknown id or missing element).`); return { stop() {} }; }
   switch (module.meta.kind) {
     case 'shader': return mountRendered(el, module, opts, (c) => makeGL(c, module.glsl, opts));
-    case 'canvas': return mountRendered(el, module, opts, (c) => makeCanvas2D(c, module));
+    case 'canvas': return mountRendered(el, module, opts, (c) => makeCanvas2D(c, module, opts));
     case 'dom': return mountDom(el, module);
     default: console.error(`fx-lab: unknown kind "${module.meta.kind}" for "${id}".`); return { stop() {} };
   }
