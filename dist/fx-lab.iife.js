@@ -364,7 +364,7 @@
     },
     glsl: `void main(){ vec2 res=iResolution.xy; vec2 uv=gl_FragCoord.xy/res; vec3 col; float hz=0.55;
         if(uv.y>hz){ vec3 sky=mix(vec3(0.18,0.05,0.32),vec3(0.95,0.32,0.55),(uv.y-hz)/(1.0-hz)); float sd=length((uv-vec2(0.5,0.8))*vec2(res.x/res.y,1.0)); float sun=smoothstep(0.26,0.25,sd); float bands=step(0.5,fract(uv.y*26.0)); sun*=(uv.y>0.8)?1.0:bands; col=mix(sky,vec3(1.0,0.85,0.4),sun); }
-        else { vec2 p=vec2(uv.x-0.5,hz-uv.y); float gz=1.0/max(p.y,0.02); vec2 gp=abs(fract(vec2((p.x*gz)*1.2,gz*0.6-iTime*1.5))-0.5); float line=smoothstep(0.06,0.0,min(gp.x,gp.y)); col=mix(vec3(0.05,0.0,0.1),vec3(0.2,0.9,0.95),line); }
+        else { vec2 p=vec2(uv.x-0.5,hz-uv.y); float gz=1.0/max(p.y,0.02); vec2 g=vec2((p.x*gz)*1.2,gz*0.6-iTime*1.5); vec2 gp=abs(fract(g)-0.5); vec2 gw=fwidth(g); vec2 li=1.0-smoothstep(vec2(0.6),vec2(2.0),gp/max(gw,vec2(1e-4))); float line=max(li.x,li.y); line*=smoothstep(0.0,0.12,p.y); col=mix(vec3(0.05,0.0,0.1),vec3(0.2,0.9,0.95),line); }
         o=vec4(col,1.0); }`,
   };
 
@@ -3829,22 +3829,36 @@
   // src/runtime/canvas.js
   // Canvas2D renderer. ctx.setTransform(dpr) each frame (coords in CSS px); draw is called with
   // `this === NOISE` so effects that use this.vhash/this.vnoise resolve. state persists per mount.
+  //
+  // opts.resScale (0–1) shrinks the LOGICAL canvas handed to draw(): effects loop over fewer pixels
+  // (work drops ~scale²), then the browser upscales the smaller bitmap to fill the box. Critical for
+  // per-pixel effects (mandelbrot, julia, plasma, …) whose cost is the JS loop, not fillRect. The
+  // coordinate space stays self-consistent at any scale — effects see a smaller w/h, not a squished
+  // one. Defaults to 1 (full res); the gallery passes 0.5 for cpu:"high" effects.
 
 
-  // makeCanvas2D(canvas, module) -> { resize(w,h,dpr), render(t, mxCss, myCss), dispose() }
-  function makeCanvas2D(canvas, module) {
+  // makeCanvas2D(canvas, module, opts?) -> { resize(w,h,dpr), render(t, mxCss, myCss), dispose() }
+  function makeCanvas2D(canvas, module, opts = {}) {
     const ctx = canvas.getContext('2d');
+    const resScale = Math.min(1, Math.max(0.1, Number(opts.resScale) || 1));
     const state = {}; // persisted across frames for this mount
     let w = 0, h = 0, dpr = 1;
     return {
       resize(_w, _h, _dpr) {
         w = _w; h = _h; dpr = _dpr;
-        canvas.width = Math.max(1, Math.round(_w * dpr));
-        canvas.height = Math.max(1, Math.round(_h * dpr));
+        // Backing store matches the scaled logical size × dpr; CSS box (width/height:100%) upscales it.
+        const sw = Math.max(1, Math.round(_w * resScale));
+        const sh = Math.max(1, Math.round(_h * resScale));
+        canvas.width = Math.max(1, Math.round(sw * dpr));
+        canvas.height = Math.max(1, Math.round(sh * dpr));
       },
       render(t, mx, my) {
+        // dpr maps the (scaled) logical space onto the backing store. Pass the scaled w/h so the
+        // effect's pixel loops iterate over fewer cells.
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0); // CSS-px coords; resets any transform the effect left behind
-        module.draw.call(NOISE, ctx, w, h, t, mx, my, state); // mx,my are CSS px, -9999 when not hovering
+        const sw = Math.max(1, Math.round(w * resScale));
+        const sh = Math.max(1, Math.round(h * resScale));
+        module.draw.call(NOISE, ctx, sw, sh, t, mx, my, state); // mx,my are CSS px, -9999 when not hovering
       },
       dispose() {},
     };
@@ -3940,7 +3954,7 @@
     if (!module || !el) { console.error(`fx-lab: cannot mount "${id}" (unknown id or missing element).`); return { stop() {} }; }
     switch (module.meta.kind) {
       case 'shader': return mountRendered(el, module, opts, (c) => makeGL(c, module.glsl, opts));
-      case 'canvas': return mountRendered(el, module, opts, (c) => makeCanvas2D(c, module));
+      case 'canvas': return mountRendered(el, module, opts, (c) => makeCanvas2D(c, module, opts));
       case 'dom': return mountDom(el, module);
       default: console.error(`fx-lab: unknown kind "${module.meta.kind}" for "${id}".`); return { stop() {} };
     }

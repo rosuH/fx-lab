@@ -256,6 +256,12 @@ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, c => ({ '&':'&amp;','<':'&
 // medium label, museum-placard style (replaces the old kind-pill).
 const MEDIUM = { shader:'glsl · webgl2', canvas:'canvas · 2d', dom:'dom · css' };
 
+// Per-pixel canvas effects flagged cpu:"high" render at a lower internal resolution and let the
+// browser upscale (CSS size is 100%). Costs drop ~scale² with no coordinate-space change — a
+// thumbnail is too small to notice the softness. Tune here; 1 disables.
+const HEAVY_RES_SCALE = 0.5;
+const mountOpts = (el) => el.dataset.perfCpu === 'high' ? { resScale: HEAVY_RES_SCALE } : {};
+
 // --- i18n: standard locale dict + browser-language detection + persisted toggle ---
 const STRINGS = {
   en: {
@@ -331,7 +337,7 @@ const io = new IntersectionObserver((entries) => {
     if (e.isIntersecting && !fx._handle) {
       const id = fx.dataset.id, kind = fx.dataset.kind;
       if (kind === 'dom') fx.innerHTML = DOM_SENTINELS[id] || '';
-      fx._handle = mount(fx, id);
+      fx._handle = mount(fx, id, mountOpts(fx));
     } else if (!e.isIntersecting && fx._handle) {
       fx._handle.stop(); fx._handle = null;
       if (fx.dataset.kind === 'dom') fx.innerHTML = '';
@@ -386,7 +392,8 @@ function dismissLoader(startedAt) {
       piece.className = 'piece' + (idx === 0 ? ' feature' : ''); // first work of each room hangs large
       piece.innerHTML =
         // a11y: aria-hidden on decorative canvas mount targets — screen readers skip the canvas noise
-        `<div class="fx" aria-hidden="true" data-id="${esc(fx.id)}" data-kind="${esc(fx.kind)}"></div>` +
+        // data-perf-cpu drives resScale downscaling for cpu:"high" effects (see mountOpts).
+        `<div class="fx" aria-hidden="true" data-id="${esc(fx.id)}" data-kind="${esc(fx.kind)}" data-perf-cpu="${esc((fx.perf && fx.perf.cpu) || '')}"></div>` +
         `<figcaption class="placard">` +
           `<div class="placard-row"><h3 class="name"></h3>` +
           `<span class="medium">${esc(MEDIUM[fx.kind] || fx.kind)}</span></div>` +
